@@ -237,7 +237,7 @@ const createSlider = () => {
                 spaceBetween: 10
             },
             350:{
-                slidesPerView: 4.1,
+                slidesPerView: 4.3,
                 spaceBetween: 10
             },
             280:{
