@@ -7,6 +7,7 @@ import dropDown from "./components/dropDown.js";
 import stars from "./components/slide.js";
 import { useDynamicAdapt } from './components/dynamicAdapt.js';
 import scrollPositionMobileButton from "./components/scrollMobileButtons.js";
+import catalog from "./components/catalog.js";
 
 useDynamicAdapt();
 createSlider();
@@ -17,3 +18,4 @@ buttonsPointer();
 dropDown();
 stars();
 scrollPositionMobileButton();
+catalog();
