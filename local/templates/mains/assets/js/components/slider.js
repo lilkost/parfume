@@ -140,15 +140,14 @@ const createSlider = () => {
             }
         }
     });
+    const node = document.querySelector('.sales__list .swiper-wrapper').innerHTML
 
-    if(document.documentElement.offsetWidth <= 992) {
-        sliderSale.slideTo(1);
-        // const nodeBullets = document.querySelector('.sales__list .sales-pagination').innerHTML
-        // const node = document.querySelector('.sales__list .swiper-wrapper').innerHTML
-        // document.querySelector('.sales__list .swiper-wrapper').innerHTML = document.querySelector('.sales__list .swiper-wrapper').innerHTML + node
+    if(document.documentElement.offsetWidth <= 460) {
+        document.querySelector('.sales__list .swiper-wrapper').innerHTML = document.querySelector('.sales__list .swiper-wrapper').innerHTML + node
     }
     else {
-        console.log(false);
+        document.querySelector('.sales__list .swiper-wrapper').innerHTML =  ''
+        document.querySelector('.sales__list .swiper-wrapper').innerHTML = node
     }
 
     const sliderNew = new Swiper('.new-slider', {
