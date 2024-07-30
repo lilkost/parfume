@@ -110,7 +110,6 @@ const createSlider = () => {
         loop: false,
         slidesPerView: 3,
         spaceBetween: 0,
-        loopAddBlankSlides: false,
 
         pagination: {
             el: '.sales-pagination',
@@ -122,24 +121,22 @@ const createSlider = () => {
                 spaceBetween: 0,
                 loop: true,
                 centeredSlides: false,
-                loopAddBlankSlides: false,
             },
             560: {
                 slidesPerView: 2,
                 spaceBetween: 20,
                 loop: true,
                 centeredSlides: false,
-                loopAddBlankSlides: false,
             },
             280: {
                 slidesPerView: 1.44,
                 spaceBetween: 20,
                 loop: true,
                 centeredSlides: true,
-                reverseDirection: false,
             }
         }
     });
+
     const node = document.querySelector('.sales__list .swiper-wrapper').innerHTML
 
     if(document.documentElement.offsetWidth <= 460) {
