@@ -47,26 +47,6 @@ const createSlider = () => {
         resizeSliderSales()
     })
 
-    resizeSliderSales()
-
-    function resizeSliderSales () {
-        if(document.documentElement.clientWidth <=992){
-            document.querySelectorAll('.sales__item').forEach(itm=> {
-                itm.classList.remove('salse__item_width')
-            })
-            document.querySelectorAll('.news__slide-js ').forEach(itm=> {
-                itm.classList.remove('news__slide-js_width')
-            })
-        }else {
-            document.querySelectorAll('.sales__item').forEach(itm=> {
-                itm.classList.add('salse__item_width')
-            })
-            document.querySelectorAll('.news__slide-js ').forEach(itm=> {
-                itm.classList.add('news__slide-js_width')
-            })
-        }
-    }
-
     const newsSliderMainPage = new Swiper('.news-slider', {
         direction: 'horizontal',
         loop: true,
@@ -104,33 +84,72 @@ const createSlider = () => {
         }
     });
 
+    resizeSliderSales()
+
+    function resizeSliderSales () {
+        if(document.documentElement.clientWidth <=992){
+            document.querySelectorAll('.sales__item').forEach(itm=> {
+                itm.classList.remove('salse__item_width')
+            })
+            document.querySelectorAll('.news__slide-js ').forEach(itm=> {
+                itm.classList.remove('news__slide-js_width')
+            })
+        }
+        else{
+            document.querySelectorAll('.sales__item').forEach(itm=> {
+                itm.classList.add('salse__item_width')
+            })
+            document.querySelectorAll('.news__slide-js ').forEach(itm=> {
+                itm.classList.add('news__slide-js_width')
+            })
+        }
+    }
+
     const sliderSale = new Swiper('.sales__list', {
-        // Optional parameters
         direction: 'horizontal',
         loop: false,
         slidesPerView: 3,
+        spaceBetween: 0,
+        loopAddBlankSlides: false,
+
         pagination: {
             el: '.sales-pagination',
         },
+
         breakpoints: {
             993: {
                 slidesPerView: 3,
+                spaceBetween: 0,
+                loop: true,
                 centeredSlides: false,
+                loopAddBlankSlides: false,
             },
             560: {
                 slidesPerView: 2,
-                centeredSlides: false,
-                reverseDirection: false,
                 spaceBetween: 20,
+                loop: true,
+                centeredSlides: false,
+                loopAddBlankSlides: false,
             },
             280: {
                 slidesPerView: 1.44,
-                centeredSlides: true,
-                reverseDirection: true,
                 spaceBetween: 20,
+                loop: true,
+                centeredSlides: true,
+                reverseDirection: false,
             }
         }
     });
+
+    if(document.documentElement.offsetWidth <= 992) {
+        sliderSale.slideTo(1);
+        // const nodeBullets = document.querySelector('.sales__list .sales-pagination').innerHTML
+        // const node = document.querySelector('.sales__list .swiper-wrapper').innerHTML
+        // document.querySelector('.sales__list .swiper-wrapper').innerHTML = document.querySelector('.sales__list .swiper-wrapper').innerHTML + node
+    }
+    else {
+        console.log(false);
+    }
 
     const sliderNew = new Swiper('.new-slider', {
         direction: 'horizontal',
@@ -143,6 +162,7 @@ const createSlider = () => {
             nextEl: '.new-slider-next',
             prevEl: '.new-slider-prev',
         },
+
         breakpoints: {
             1301: {
                 slidesPerView: 4,
@@ -315,7 +335,6 @@ const createSlider = () => {
                 slidesPerView: 3,
                 spaceBetween: 20,
             },
-
             768:{
                 slidesPerView: 2.5,
                 spaceBetween: 20,
