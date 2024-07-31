@@ -93,7 +93,6 @@ const createSlider = () => {
     const sliderSale = new Swiper('.sales__list', {
         direction: 'horizontal',
         loop: false,
-        cssMode: false,
         slidesPerView: 3,
         spaceBetween: 0,
 
@@ -107,21 +106,18 @@ const createSlider = () => {
                 spaceBetween: 0,
                 loop: true,
                 centeredSlides: false,
-                cssMode: true,
             },
             560: {
                 slidesPerView: 2,
                 spaceBetween: 20,
                 loop: true,
                 centeredSlides: false,
-                cssMode: true,
             },
             280: {
                 slidesPerView: 1.44,
                 spaceBetween: 20,
                 loop: true,
                 centeredSlides: true,
-                cssMode: true,
             }
         }
     });
