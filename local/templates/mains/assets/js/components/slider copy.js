@@ -357,7 +357,6 @@ const createSlider = () => {
                 allowTouchMove: false,
                 centeredSlides: false,
                 spaceBetween: 10,
-                loop: false,
             },
             280:{
                 slidesPerView: 3,
@@ -365,30 +364,7 @@ const createSlider = () => {
                 allowTouchMove: true,
                 centeredSlides: true,
                 spaceBetween: 20,
-                loop: true,
             }
-        }
-    });
-
-    const nodeAdvantage = document.querySelector('.advantages__list .swiper-wrapper').innerHTML
-
-    if(document.documentElement.offsetWidth <= 460) {
-        document.querySelector('.advantages__list .swiper-wrapper').innerHTML = document.querySelector('.advantages__list .swiper-wrapper').innerHTML + nodeAdvantage
-        advantagesSlider.update();
-    }
-    else {
-        document.querySelector('.advantages__list .swiper-wrapper').innerHTML =  ''
-        document.querySelector('.advantages__list .swiper-wrapper').innerHTML = nodeAdvantage
-    }
-
-    window.addEventListener('resize', ()=> {
-        if(document.documentElement.offsetWidth <= 460) {
-            document.querySelector('.advantages__list .swiper-wrapper').innerHTML = document.querySelector('.advantages__list .swiper-wrapper').innerHTML + nodeAdvantage
-            advantagesSlider.update();
-        }
-        else {
-            document.querySelector('.advantages__list .swiper-wrapper').innerHTML =  ''
-            document.querySelector('.advantages__list .swiper-wrapper').innerHTML = nodeAdvantage
         }
     });
 }
