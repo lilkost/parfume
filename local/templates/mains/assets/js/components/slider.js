@@ -1,19 +1,4 @@
 const createSlider = () => {
-    // const sliderBottomThumbs = new Swiper('.slider-bottom', {
-    //     direction: 'horizontal',
-    //     loop: false,
-    //     slidesPerView: 26,
-    //     spaceBetween: 26,
-    //     breakpoints: {
-    //         1100: {
-    //             spaceBetween: 26
-    //         },
-    //         992: {
-    //             spaceBetween: 15
-    //         }
-    //     }
-    // });
-
     const sliderTop = new Swiper('.slider-top', {
         direction: 'horizontal',
         loop: false,
@@ -84,8 +69,8 @@ const createSlider = () => {
         }
     });
 
+    // sale slider
     resizeSliderSales()
-
     function resizeSliderSales () {
         if(document.documentElement.clientWidth <=992){
             document.querySelectorAll('.sales__item').forEach(itm=> {
@@ -108,6 +93,7 @@ const createSlider = () => {
     const sliderSale = new Swiper('.sales__list', {
         direction: 'horizontal',
         loop: false,
+        cssMode: false,
         slidesPerView: 3,
         spaceBetween: 0,
 
@@ -121,18 +107,21 @@ const createSlider = () => {
                 spaceBetween: 0,
                 loop: true,
                 centeredSlides: false,
+                cssMode: true,
             },
             560: {
                 slidesPerView: 2,
                 spaceBetween: 20,
                 loop: true,
                 centeredSlides: false,
+                cssMode: true,
             },
             280: {
                 slidesPerView: 1.44,
                 spaceBetween: 20,
                 loop: true,
                 centeredSlides: true,
+                cssMode: true,
             }
         }
     });
@@ -146,6 +135,17 @@ const createSlider = () => {
         document.querySelector('.sales__list .swiper-wrapper').innerHTML =  ''
         document.querySelector('.sales__list .swiper-wrapper').innerHTML = node
     }
+
+    window.addEventListener('resize', ()=> {
+        if(document.documentElement.offsetWidth <= 460) {
+            document.querySelector('.sales__list .swiper-wrapper').innerHTML = document.querySelector('.sales__list .swiper-wrapper').innerHTML + node
+        }
+        else {
+            document.querySelector('.sales__list .swiper-wrapper').innerHTML =  ''
+            document.querySelector('.sales__list .swiper-wrapper').innerHTML = node
+        }
+    });
+    // end sale slider
 
     const sliderNew = new Swiper('.new-slider', {
         direction: 'horizontal',
@@ -368,7 +368,7 @@ const createSlider = () => {
                 spaceBetween: 20,
             }
         }
-    })
+    });
 }
 
 export default createSlider;
