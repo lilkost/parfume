@@ -328,6 +328,7 @@
             </div>
         </header>
 <main class="main">
+
   <div class="sliders sliders_mt sliders_mb container">
     <div class="slider-top slider-top_mb">
       <div class="swiper-wrapper">
@@ -554,7 +555,9 @@
                         fill="white" />
                     </svg>
                 </div>
-                <img src="local/templates/mains/assets/images/sales/1.png" alt="">
+                <picture>
+                    <img src="local/templates/mains/assets/images/sales/1.png" alt="">
+                </picture>
                 <div class="sales__item-info">
                     <strong class="sales__item-info-sale">
                     40%
@@ -575,7 +578,9 @@
                         fill="white" />
                     </svg>
                 </div>
-                <img src="local/templates/mains/assets/images/sales/2.png" alt="">
+                <picture>
+                    <img src="local/templates/mains/assets/images/sales/2.png" alt="">
+                </picture>
                 <div class="sales__item-info">
                     <strong class="sales__item-info-sale">
                     25%
@@ -598,7 +603,10 @@
                         fill="white" />
                     </svg>
                 </div>
-                <img src="local/templates/mains/assets/images/sales/3.png" alt="">
+                <picture class="img-position-top-left" > <!-- Класс для выравнивания по верхнему левому краю картинки -->
+                    <source srcset="local/templates/mains/assets/images/sales/m3.png" media="(max-width: 460px)">
+                    <img src="local/templates/mains/assets/images/sales/3.png" alt="">
+                </picture>
                 <div class="sales__item-info">
                     <strong class="sales__item-info-sale">
                     15%
@@ -2897,10 +2905,10 @@
     <div class="modal-catalog__right">
         <ul class="modal-catalog__list">
             <li class="modal-catalog__item is-active" data-id="1">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.5896 6.38488C20.1286 5.68841 19.4742 5.14169 18.7069 4.81182C18.2604 4.62841 17.7726 4.56927 17.2952 4.64066C16.6691 3.73459 15.8325 2.99399 14.8571 2.48243C13.8818 1.97086 12.7969 1.70361 11.6955 1.70361H6.05349C5.8195 1.70361 5.59509 1.79657 5.42963 1.96202C5.26418 2.12748 5.17123 2.35188 5.17123 2.58587C5.17123 2.81986 5.26418 3.04427 5.42963 3.20973C5.59509 3.37518 5.8195 3.46813 6.05349 3.46813H8.70027V4.35039H7.81801C7.58402 4.35039 7.35961 4.44335 7.19416 4.6088C7.0287 4.77426 6.93575 4.99866 6.93575 5.23265V7.53271C5.42325 8.15026 4.17252 9.27448 3.39777 10.7128C2.62302 12.1511 2.37246 13.8141 2.689 15.4169C3.00555 17.0196 3.86949 18.4625 5.13288 19.4983C6.39626 20.5341 7.98047 21.0984 9.61419 21.0946C11.2479 21.0908 12.8295 20.5191 14.088 19.4774C15.3465 18.4357 16.2037 16.9888 16.5128 15.3846C16.8219 13.7804 16.5635 12.1186 15.7821 10.6839C15.0006 9.24922 13.7447 8.13085 12.2293 7.52035V5.23265C12.2293 4.99866 12.1364 4.77426 11.9709 4.6088C11.8054 4.44335 11.581 4.35039 11.347 4.35039H10.4648V3.46813H11.6955C12.5045 3.4682 13.3015 3.66277 14.0195 4.03543C14.7375 4.40808 15.3553 4.9479 15.821 5.60938C15.5231 6.21003 15.4025 6.8831 15.4733 7.54981C15.5441 8.21651 15.8033 8.84926 16.2207 9.37398C16.6817 10.0705 17.336 10.6172 18.1034 10.9471C18.4394 11.0855 18.7987 11.1583 19.1621 11.1614C19.6018 11.1656 20.0325 11.0364 20.3973 10.7909C21.6227 9.95363 21.7065 8.01707 20.5896 6.38488ZM8.70027 6.11491H10.4648V7.87943H8.70027V6.11491ZM14.8761 14.0553C14.8762 14.9957 14.6258 15.9191 14.1507 16.7307C13.6755 17.5422 12.9928 18.2125 12.1726 18.6726C11.3525 19.1328 10.4245 19.3661 9.48429 19.3487C8.54404 19.3312 7.62542 19.0636 6.82291 18.5733C6.0204 18.0831 5.36298 17.3879 4.91827 16.5593C4.47355 15.7307 4.25761 14.7986 4.29264 13.8588C4.32767 12.9191 4.61242 12.0056 5.11759 11.2124C5.62276 10.4192 6.33012 9.77489 7.1669 9.34575C7.24808 9.43877 7.34812 9.51347 7.46038 9.56488C7.57263 9.6163 7.69454 9.64325 7.81801 9.64395H11.347C11.4688 9.64338 11.5891 9.61733 11.7001 9.5675C11.8112 9.51766 11.9106 9.44513 11.992 9.35457C12.8564 9.79967 13.5823 10.4732 14.0908 11.3019C14.5993 12.1307 14.8709 13.083 14.8761 14.0553ZM19.4012 9.33516C19.2997 9.38 19.1894 9.40108 19.0785 9.3968C18.9677 9.39252 18.8593 9.36299 18.7616 9.31046C18.3188 9.109 17.9427 8.78551 17.6773 8.37791C17.0694 7.48859 17.1117 6.62662 17.4126 6.42282C17.4847 6.37798 17.5687 6.35614 17.6534 6.36018C17.7904 6.36486 17.9253 6.39477 18.0513 6.44841C18.4941 6.64987 18.8702 6.97336 19.1356 7.38096C19.7418 8.26939 19.6985 9.13224 19.4012 9.33516Z" fill="black"/>
-                    </svg>
-                    <span>Женская парфюмерия</span>
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.5896 6.38488C20.1286 5.68841 19.4742 5.14169 18.7069 4.81182C18.2604 4.62841 17.7726 4.56927 17.2952 4.64066C16.6691 3.73459 15.8325 2.99399 14.8571 2.48243C13.8818 1.97086 12.7969 1.70361 11.6955 1.70361H6.05349C5.8195 1.70361 5.59509 1.79657 5.42963 1.96202C5.26418 2.12748 5.17123 2.35188 5.17123 2.58587C5.17123 2.81986 5.26418 3.04427 5.42963 3.20973C5.59509 3.37518 5.8195 3.46813 6.05349 3.46813H8.70027V4.35039H7.81801C7.58402 4.35039 7.35961 4.44335 7.19416 4.6088C7.0287 4.77426 6.93575 4.99866 6.93575 5.23265V7.53271C5.42325 8.15026 4.17252 9.27448 3.39777 10.7128C2.62302 12.1511 2.37246 13.8141 2.689 15.4169C3.00555 17.0196 3.86949 18.4625 5.13288 19.4983C6.39626 20.5341 7.98047 21.0984 9.61419 21.0946C11.2479 21.0908 12.8295 20.5191 14.088 19.4774C15.3465 18.4357 16.2037 16.9888 16.5128 15.3846C16.8219 13.7804 16.5635 12.1186 15.7821 10.6839C15.0006 9.24922 13.7447 8.13085 12.2293 7.52035V5.23265C12.2293 4.99866 12.1364 4.77426 11.9709 4.6088C11.8054 4.44335 11.581 4.35039 11.347 4.35039H10.4648V3.46813H11.6955C12.5045 3.4682 13.3015 3.66277 14.0195 4.03543C14.7375 4.40808 15.3553 4.9479 15.821 5.60938C15.5231 6.21003 15.4025 6.8831 15.4733 7.54981C15.5441 8.21651 15.8033 8.84926 16.2207 9.37398C16.6817 10.0705 17.336 10.6172 18.1034 10.9471C18.4394 11.0855 18.7987 11.1583 19.1621 11.1614C19.6018 11.1656 20.0325 11.0364 20.3973 10.7909C21.6227 9.95363 21.7065 8.01707 20.5896 6.38488ZM8.70027 6.11491H10.4648V7.87943H8.70027V6.11491ZM14.8761 14.0553C14.8762 14.9957 14.6258 15.9191 14.1507 16.7307C13.6755 17.5422 12.9928 18.2125 12.1726 18.6726C11.3525 19.1328 10.4245 19.3661 9.48429 19.3487C8.54404 19.3312 7.62542 19.0636 6.82291 18.5733C6.0204 18.0831 5.36298 17.3879 4.91827 16.5593C4.47355 15.7307 4.25761 14.7986 4.29264 13.8588C4.32767 12.9191 4.61242 12.0056 5.11759 11.2124C5.62276 10.4192 6.33012 9.77489 7.1669 9.34575C7.24808 9.43877 7.34812 9.51347 7.46038 9.56488C7.57263 9.6163 7.69454 9.64325 7.81801 9.64395H11.347C11.4688 9.64338 11.5891 9.61733 11.7001 9.5675C11.8112 9.51766 11.9106 9.44513 11.992 9.35457C12.8564 9.79967 13.5823 10.4732 14.0908 11.3019C14.5993 12.1307 14.8709 13.083 14.8761 14.0553ZM19.4012 9.33516C19.2997 9.38 19.1894 9.40108 19.0785 9.3968C18.9677 9.39252 18.8593 9.36299 18.7616 9.31046C18.3188 9.109 17.9427 8.78551 17.6773 8.37791C17.0694 7.48859 17.1117 6.62662 17.4126 6.42282C17.4847 6.37798 17.5687 6.35614 17.6534 6.36018C17.7904 6.36486 17.9253 6.39477 18.0513 6.44841C18.4941 6.64987 18.8702 6.97336 19.1356 7.38096C19.7418 8.26939 19.6985 9.13224 19.4012 9.33516Z" fill="black"/>
+                </svg>
+                <span>Женская парфюмерия</span>
             </li>
             <li class="modal-catalog__item" data-id="2">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3259,8 +3267,8 @@
     </div>
 </div>
 
-<div class="modal-card">
-    <div class="modal-card__inner">
+<div class="modal-card is-open">
+    <div class="modal-card__inner is-open">
         <button class="modal-card__btn-close" type="button" aria-label="Закрыть модальное окно">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM15.7071 9.70711C16.0976 9.31658 16.0976 8.68342 15.7071 8.29289C15.3166 7.90237 14.6834 7.90237 14.2929 8.29289L12 10.5858L9.70711 8.29291C9.31658 7.90238 8.68342 7.90238 8.29289 8.29291C7.90237 8.68343 7.90237 9.3166 8.29289 9.70712L10.5858 12L8.2929 14.2929C7.90238 14.6834 7.90238 15.3166 8.2929 15.7071C8.68342 16.0976 9.31659 16.0976 9.70711 15.7071L12 13.4142L14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L13.4142 12L15.7071 9.70711Z" fill="#090B18"/>
@@ -3332,9 +3340,53 @@
                 </svg>
             </button>
         </div>
-        <select class="modal-card__select js-example-basic-single" name="" id="">
+        <!-- <select class="modal-card__select js-example-basic-single" name="" id="">
             <option value="5 мл атомайзер">5 мл атомайзер</option>
-        </select>
+        </select> -->
+        <div class="modal-card__dropdown">
+            <div class="modal-card__dropdown-top">
+                <p class="modal-card__dropdown-title">Выбрать формат</p>
+                <button class="modal-card__dropdown-close" type="button">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 7.5L10 12.5L15 7.5" stroke="#919191" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-card__dropdown-body">
+                <div class="modal-card__dropdown-body-inner">
+                    <label for="i1" class="modal-card__dropdown-item">
+                        <input id="i1" type="radio" class="modal-card__dropdown-item-input" name="format">
+                        <div class="modal-card__dropdown-item-decor"></div>
+                        <p class="modal-card__dropdown-item-text">50 мл</p>
+                    </label>
+                    <label for="i2" class="modal-card__dropdown-item">
+                        <input id="i2" type="radio" class="modal-card__dropdown-item-input" name="format">
+                        <div class="modal-card__dropdown-item-decor"></div>
+                        <p class="modal-card__dropdown-item-text">1 мл</p>
+                    </label>
+                    <label for="i3" class="modal-card__dropdown-item">
+                        <input id="i3" type="radio" class="modal-card__dropdown-item-input" name="format">
+                        <div class="modal-card__dropdown-item-decor"></div>
+                        <p class="modal-card__dropdown-item-text">мл</p>
+                    </label>
+                    <label for="i4" class="modal-card__dropdown-item">
+                        <input id="i4" type="radio" class="modal-card__dropdown-item-input" name="format">
+                        <div class="modal-card__dropdown-item-decor"></div>
+                        <p class="modal-card__dropdown-item-text">50 мл</p>
+                    </label>
+                    <label for="i5" class="modal-card__dropdown-item">
+                        <input id="i5" type="radio" class="modal-card__dropdown-item-input" name="format">
+                        <div class="modal-card__dropdown-item-decor"></div>
+                        <p class="modal-card__dropdown-item-text">1 мл</p>
+                    </label>
+                    <label for="i6" class="modal-card__dropdown-item">
+                        <input id="i6" type="radio" class="modal-card__dropdown-item-input" name="format">
+                        <div class="modal-card__dropdown-item-decor"></div>
+                        <p class="modal-card__dropdown-item-text">мл</p>
+                    </label>
+                </div>
+            </div>
+        </div>
         <div class="modal-card__price">
             <div class="modal-card__price-item modal-card__price-item_price" data-da=".modal-card__row-price, 568, 1">Цена товара: <strong>   900 ₽</strong></div>
             <div class="modal-card__price-item modal-card__price-item_sale" data-da=".modal-card__row-price, 568, 2">Цена со скидкой <strong>  700 ₽</strong></div>
