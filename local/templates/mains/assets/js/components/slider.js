@@ -124,7 +124,7 @@ const createSlider = () => {
 
     const node = document.querySelector('.sales__list .swiper-wrapper').innerHTML
 
-    if(document.documentElement.offsetWidth <= 460) {
+    if(document.documentElement.offsetWidth <= 480) {
         document.querySelector('.sales__list .swiper-wrapper').innerHTML = document.querySelector('.sales__list .swiper-wrapper').innerHTML + node
         sliderSale.update();
     }
@@ -134,7 +134,7 @@ const createSlider = () => {
     }
 
     window.addEventListener('resize', ()=> {
-        if(document.documentElement.offsetWidth <= 460) {
+        if(document.documentElement.offsetWidth <= 480) {
             document.querySelector('.sales__list .swiper-wrapper').innerHTML = document.querySelector('.sales__list .swiper-wrapper').innerHTML + node
             sliderSale.update();
         }
