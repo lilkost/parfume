@@ -122,18 +122,9 @@ const createSlider = () => {
         }
     });
 
-    const node = document.querySelector('.sales__list .swiper-wrapper').innerHTML
+    if(document.querySelector('.sales__list .swiper-wrapper')) {
+        const node = document.querySelector('.sales__list .swiper-wrapper').innerHTML
 
-    if(document.documentElement.offsetWidth <= 480) {
-        document.querySelector('.sales__list .swiper-wrapper').innerHTML = document.querySelector('.sales__list .swiper-wrapper').innerHTML + node
-        sliderSale.update();
-    }
-    else {
-        document.querySelector('.sales__list .swiper-wrapper').innerHTML =  ''
-        document.querySelector('.sales__list .swiper-wrapper').innerHTML = node
-    }
-
-    window.addEventListener('resize', ()=> {
         if(document.documentElement.offsetWidth <= 480) {
             document.querySelector('.sales__list .swiper-wrapper').innerHTML = document.querySelector('.sales__list .swiper-wrapper').innerHTML + node
             sliderSale.update();
@@ -142,7 +133,19 @@ const createSlider = () => {
             document.querySelector('.sales__list .swiper-wrapper').innerHTML =  ''
             document.querySelector('.sales__list .swiper-wrapper').innerHTML = node
         }
-    });
+    
+        window.addEventListener('resize', ()=> {
+            if(document.documentElement.offsetWidth <= 480) {
+                document.querySelector('.sales__list .swiper-wrapper').innerHTML = document.querySelector('.sales__list .swiper-wrapper').innerHTML + node
+                sliderSale.update();
+            }
+            else {
+                document.querySelector('.sales__list .swiper-wrapper').innerHTML =  ''
+                document.querySelector('.sales__list .swiper-wrapper').innerHTML = node
+            }
+        });
+    }
+
     // end sale slider
 
     const sliderNew = new Swiper('.new-slider', {
@@ -370,18 +373,9 @@ const createSlider = () => {
         }
     });
 
-    const nodeAdvantage = document.querySelector('.advantages__list .swiper-wrapper').innerHTML
+    if(document.querySelector('.advantages__list .swiper-wrapper')) {
+        const nodeAdvantage = document.querySelector('.advantages__list .swiper-wrapper').innerHTML
 
-    if(document.documentElement.offsetWidth <= 460) {
-        document.querySelector('.advantages__list .swiper-wrapper').innerHTML = document.querySelector('.advantages__list .swiper-wrapper').innerHTML + nodeAdvantage
-        advantagesSlider.update();
-    }
-    else {
-        document.querySelector('.advantages__list .swiper-wrapper').innerHTML =  ''
-        document.querySelector('.advantages__list .swiper-wrapper').innerHTML = nodeAdvantage
-    }
-
-    window.addEventListener('resize', ()=> {
         if(document.documentElement.offsetWidth <= 460) {
             document.querySelector('.advantages__list .swiper-wrapper').innerHTML = document.querySelector('.advantages__list .swiper-wrapper').innerHTML + nodeAdvantage
             advantagesSlider.update();
@@ -390,7 +384,19 @@ const createSlider = () => {
             document.querySelector('.advantages__list .swiper-wrapper').innerHTML =  ''
             document.querySelector('.advantages__list .swiper-wrapper').innerHTML = nodeAdvantage
         }
-    });
+    
+        window.addEventListener('resize', ()=> {
+            if(document.documentElement.offsetWidth <= 460) {
+                document.querySelector('.advantages__list .swiper-wrapper').innerHTML = document.querySelector('.advantages__list .swiper-wrapper').innerHTML + nodeAdvantage
+                advantagesSlider.update();
+            }
+            else {
+                document.querySelector('.advantages__list .swiper-wrapper').innerHTML =  ''
+                document.querySelector('.advantages__list .swiper-wrapper').innerHTML = nodeAdvantage
+            }
+        });
+    }
+
 }
 
 export default createSlider;

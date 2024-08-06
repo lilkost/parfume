@@ -43,6 +43,19 @@ const dropDown = ()=> {
             dropDownTop.classList.toggle('is-open');
         })
     }
+
+    if(document.querySelector('.catalog__aside-accordion')){
+        const accordions = document.querySelectorAll('.catalog__aside-accordion');
+        
+        accordions.forEach(accordion=> {
+            const accordionTop = accordion.querySelector('.catalog__aside-accordion-top');
+
+            accordionTop.addEventListener('click', ()=> {
+                accordion.classList.toggle('catalog__aside-accordion_hidden');
+                accordionTop.classList.toggle('is-open');
+            });
+        })
+    }
 }
 
 export default dropDown;
