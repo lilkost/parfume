@@ -8,6 +8,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="local/templates/mains/assets/js/main.min.js" defer></script>
     <script src="local/templates/mains/assets/js/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" ></script>
     <script src="local/templates/mains/assets/js/index.js" type="module"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -395,18 +397,18 @@
                 <div class="detail__slider">
                     <div class="detail__slider-big detail__slider-big_mb">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide detail__slide-big">
+                            <a class="swiper-slide detail__slide-big" data-fancybox="gallery" href="local/templates/mains/assets/images/detail/1.png">
                                 <img src="local/templates/mains/assets/images/detail/1.png" alt="Tom Ford Lost Cherry">
-                            </div>
-                            <div class="swiper-slide detail__slide-big">
+                            </a>
+                            <a class="swiper-slide detail__slide-big" data-fancybox="gallery" href="local/templates/mains/assets/images/detail/2.png">
                                 <img src="local/templates/mains/assets/images/detail/2.png" alt="Tom Ford Lost Cherry">
-                            </div>
-                            <div class="swiper-slide detail__slide-big">
+                            </a>
+                            <a class="swiper-slide detail__slide-big" data-fancybox="gallery" href="local/templates/mains/assets/images/detail/3.png">
                                 <img src="local/templates/mains/assets/images/detail/3.png" alt="Tom Ford Lost Cherry">
-                            </div>
-                            <div class="swiper-slide detail__slide-big">
+                            </a>
+                            <a class="swiper-slide detail__slide-big" data-fancybox="gallery" href="local/templates/mains/assets/images/detail/4.png">
                                 <img src="local/templates/mains/assets/images/detail/4.png" alt="Tom Ford Lost Cherry">
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="detail__slider-controll">
@@ -2271,6 +2273,10 @@
 
 <script>
     $('.js-example-basic-single').select2();
+
+    Fancybox.bind('[data-fancybox="gallery"', {
+  // Your custom options
+});
 </script>
 
 </body>
