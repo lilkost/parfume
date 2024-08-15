@@ -8,6 +8,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="local/templates/mains/assets/js/main.min.js" defer></script>
     <script src="local/templates/mains/assets/js/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" ></script>
     <script src="local/templates/mains/assets/js/index.js" type="module"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -92,7 +94,7 @@
                                 </a>
                             </div>
                         </li>
-                        <li class="header__item">
+                        <li class="header__item header__item_center">
                             <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -328,6 +330,39 @@
             </div>
         </header>
 <main class="main">
+    <div class="catalog-mobile-top">
+        <h2 class="catalog-mobile-top__title">
+            <button class="catalog-mobile-top__back-btn" type="button" aria-label="Кнопка выбора категории">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+            </button>
+            <button class="catalog-mobile-top__back-btn-filter" type="button" aria-label="Кнопка выбора категории">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+            </button>
+            <button class="catalog-mobile-top__back-close-filter" type="button" aria-label="Кнопка выбора категории">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+            </button>
+            <span></span>
+        </h2>
+        <search class="catalog-mobile-top__search">
+            <form action="#!">
+                <input type="text" placeholder="Поиск...">
+                <button class="catalog-mobile-top__btn" type="button">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.0918 16.9084L15.0002 13.8417C16.2002 12.3454 16.7814 10.4461 16.6242 8.53446C16.4669 6.62279 15.5832 4.84403 14.1548 3.56391C12.7263 2.2838 10.8617 1.59963 8.94427 1.6521C7.02686 1.70457 5.20243 2.48968 3.84612 3.84599C2.4898 5.20231 1.70469 7.02674 1.65222 8.94415C1.59976 10.8615 2.28392 12.7262 3.56403 14.1546C4.84415 15.5831 6.62292 16.4668 8.53458 16.6241C10.4462 16.7813 12.3455 16.2001 13.8418 15L16.9085 18.0667C16.986 18.1448 17.0781 18.2068 17.1797 18.2491C17.2812 18.2914 17.3902 18.3132 17.5002 18.3132C17.6102 18.3132 17.7191 18.2914 17.8206 18.2491C17.9222 18.2068 18.0144 18.1448 18.0918 18.0667C18.242 17.9113 18.326 17.7037 18.326 17.4875C18.326 17.2714 18.242 17.0638 18.0918 16.9084ZM9.16683 15C8.01311 15 6.88529 14.6579 5.926 14.0169C4.96672 13.376 4.21904 12.4649 3.77753 11.399C3.33602 10.3331 3.2205 9.16024 3.44558 8.02868C3.67066 6.89713 4.22624 5.85773 5.04204 5.04192C5.85785 4.22611 6.89725 3.67054 8.0288 3.44546C9.16036 3.22038 10.3332 3.3359 11.3992 3.77741C12.4651 4.21892 13.3761 4.9666 14.0171 5.92588C14.658 6.88517 15.0002 8.01299 15.0002 9.16671C15.0002 10.7138 14.3856 12.1975 13.2916 13.2915C12.1977 14.3855 10.7139 15 9.16683 15Z" fill="#0E0922"/>
+                    </svg>                        
+                </button>
+                <button class="catalog-mobile-top__close-btn" type="button">
+                    отмена
+                </button>
+            </form>
+        </search>
+    </div>
     <div class="bread-crumbs container">
         <ul class="bread-crumbs__list">
             <li class="bread-crumbs__item">
@@ -395,9 +430,16 @@
             </li>
         </ul>
     </div>
+
     <div class="catalog">
         <div class="catalog__inner catalog__inner_mb-153 container">
             <aside class="catalog__aside">
+                <button class="catalog__aside-close" type="button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM15.7071 9.70711C16.0976 9.31658 16.0976 8.68342 15.7071 8.29289C15.3166 7.90237 14.6834 7.90237 14.2929 8.29289L12 10.5858L9.70711 8.29291C9.31658 7.90238 8.68342 7.90238 8.29289 8.29291C7.90237 8.68343 7.90237 9.3166 8.29289 9.70712L10.5858 12L8.2929 14.2929C7.90238 14.6834 7.90238 15.3166 8.2929 15.7071C8.68342 16.0976 9.31659 16.0976 9.70711 15.7071L12 13.4142L14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L13.4142 12L15.7071 9.70711Z" fill="#090B18"/>
+                    </svg>
+                </button>
+                <div class="catalog__aside-top"></div>
                 <form class="catalog__aside-form catalog__aside-form_mb-48" action="">
                     <div class="catalog__aside-form-box catalog__aside-form-box_mb-31">
                         <label for="r1" class="catalog__aside-form-label catalog__aside-form-label_mb-18">
@@ -434,58 +476,136 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="catalog__aside-accordion catalog__aside-accordion_pb-27 catalog__aside-accordion_mb-32">
                         <div class="catalog__aside-accordion-top is-open">
                             <strong class="catalog__aside-accordion-header">Для кого</strong>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 9L12 15L18 9" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
+                            <button class="catalog__mobile-btn-all-fillter" type="button" aria-label="Показать полный фильтр">
+                                Все
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="#4789EB" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                        </div>
+                        <search class="catalog__aside-accordion-search">
+                            <label for="">
+                                <input class="catalog__aside-accordion-search-input" type="text" placeholder="Искать: burberry бёрберри бурберри">
+                                <button class="catalog__aside-accordion-search-btn">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.0918 16.9084L15.0002 13.8417C16.2002 12.3454 16.7814 10.4461 16.6242 8.53446C16.4669 6.62279 15.5832 4.84403 14.1548 3.56391C12.7263 2.2838 10.8617 1.59963 8.94427 1.6521C7.02686 1.70457 5.20243 2.48968 3.84612 3.84599C2.4898 5.20231 1.70469 7.02674 1.65222 8.94415C1.59976 10.8615 2.28392 12.7262 3.56403 14.1546C4.84415 15.5831 6.62292 16.4668 8.53458 16.6241C10.4462 16.7813 12.3455 16.2001 13.8418 15L16.9085 18.0667C16.986 18.1448 17.0781 18.2068 17.1797 18.2491C17.2812 18.2914 17.3902 18.3132 17.5002 18.3132C17.6102 18.3132 17.7191 18.2914 17.8206 18.2491C17.9222 18.2068 18.0144 18.1448 18.0918 18.0667C18.242 17.9113 18.326 17.7037 18.326 17.4875C18.326 17.2714 18.242 17.0638 18.0918 16.9084ZM9.16683 15C8.01311 15 6.88529 14.6579 5.926 14.0169C4.96672 13.376 4.21904 12.4649 3.77753 11.399C3.33602 10.3331 3.2205 9.16024 3.44558 8.02868C3.67066 6.89713 4.22624 5.85773 5.04204 5.04192C5.85785 4.22611 6.89725 3.67054 8.0288 3.44546C9.16036 3.22038 10.3332 3.3359 11.3992 3.77741C12.4651 4.21892 13.3761 4.9666 14.0171 5.92588C14.658 6.88517 15.0002 8.01299 15.0002 9.16671C15.0002 10.7138 14.3856 12.1975 13.2916 13.2915C12.1977 14.3855 10.7139 15 9.16683 15Z" fill="#0E0922"/>
+                                    </svg>                                        
+                                </button>
+                            </label>
+                        </search>
+                        <div class="catalog__aside-accordion-body-mobile">
+                            <label for="o11" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">Мужской</p>
+                                <input id="o11" type="checkbox" class="catalog__aside-form-checbox" name="name1">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
+                            <label for="o22" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">Женский</p>
+                                <input id="o22" type="checkbox" class="catalog__aside-form-checbox" name="name2">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
+                            <label for="o33" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">Унисекс</p>
+                                <input id="o33" type="checkbox" class="catalog__aside-form-checbox" name="name3">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
                         </div>
                         <div class="catalog__aside-accordion-body">
+                            <label for="all1" class="catalog__aside-accordion-item catalog__aside-accordion-item_all">
+                                <p class="catalog__aside-form-title">Все</p>
+                                <input id="all1" type="checkbox" class="catalog__aside-form-checbox" name="name1">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
                             <label for="o1" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">Мужской</p>
-                                <input id="o1" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o1" type="checkbox" class="catalog__aside-form-checbox" name="name1">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                             <label for="o2" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">Женский</p>
-                                <input id="o2" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o2" type="checkbox" class="catalog__aside-form-checbox" name="name2">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                             <label for="o3" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">Унисекс</p>
-                                <input id="o3" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o3" type="checkbox" class="catalog__aside-form-checbox" name="name3"> 
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                         </div>
                     </div>
+
                     <div class="catalog__aside-accordion catalog__aside-accordion_pb-24 catalog__aside-accordion_mb-32">
                         <div class="catalog__aside-accordion-top catalog__aside-accordion-top_mb-22 is-open">
                             <strong class="catalog__aside-accordion-header">Бренд</strong>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 9L12 15L18 9" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
+                            <button class="catalog__mobile-btn-all-fillter" type="button" aria-label="Показать полный фильтр">
+                                Все
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="#4789EB" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                        </div>
+                        <search class="catalog__aside-accordion-search">
+                            <label for="">
+                                <input class="catalog__aside-accordion-search-input" type="text" placeholder="Искать: burberry бёрберри бурберри">
+                                <button class="catalog__aside-accordion-search-btn">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.0918 16.9084L15.0002 13.8417C16.2002 12.3454 16.7814 10.4461 16.6242 8.53446C16.4669 6.62279 15.5832 4.84403 14.1548 3.56391C12.7263 2.2838 10.8617 1.59963 8.94427 1.6521C7.02686 1.70457 5.20243 2.48968 3.84612 3.84599C2.4898 5.20231 1.70469 7.02674 1.65222 8.94415C1.59976 10.8615 2.28392 12.7262 3.56403 14.1546C4.84415 15.5831 6.62292 16.4668 8.53458 16.6241C10.4462 16.7813 12.3455 16.2001 13.8418 15L16.9085 18.0667C16.986 18.1448 17.0781 18.2068 17.1797 18.2491C17.2812 18.2914 17.3902 18.3132 17.5002 18.3132C17.6102 18.3132 17.7191 18.2914 17.8206 18.2491C17.9222 18.2068 18.0144 18.1448 18.0918 18.0667C18.242 17.9113 18.326 17.7037 18.326 17.4875C18.326 17.2714 18.242 17.0638 18.0918 16.9084ZM9.16683 15C8.01311 15 6.88529 14.6579 5.926 14.0169C4.96672 13.376 4.21904 12.4649 3.77753 11.399C3.33602 10.3331 3.2205 9.16024 3.44558 8.02868C3.67066 6.89713 4.22624 5.85773 5.04204 5.04192C5.85785 4.22611 6.89725 3.67054 8.0288 3.44546C9.16036 3.22038 10.3332 3.3359 11.3992 3.77741C12.4651 4.21892 13.3761 4.9666 14.0171 5.92588C14.658 6.88517 15.0002 8.01299 15.0002 9.16671C15.0002 10.7138 14.3856 12.1975 13.2916 13.2915C12.1977 14.3855 10.7139 15 9.16683 15Z" fill="#0E0922"/>
+                                    </svg>                                        
+                                </button>
+                            </label>
+                        </search>
+                        <div class="catalog__aside-accordion-body-mobile">
+                            <label for="o44" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">#BVB_HOME</p>
+                                <input id="o44" type="checkbox" class="catalog__aside-form-checbox" name="name4">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
+                            <label for="o55" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">ACQUA DI PARMA</p>
+                                <input id="o55" type="checkbox" class="catalog__aside-form-checbox" name="name5">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
+                            <label for="o66" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">AL AMBRA PERFUMES</p>
+                                <input id="o66" type="checkbox" class="catalog__aside-form-checbox" name="name6">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
                         </div>
                         <div class="catalog__aside-accordion-body">
+                            <label for="all2" class="catalog__aside-accordion-item catalog__aside-accordion-item_all">
+                                <p class="catalog__aside-form-title">Все</p>
+                                <input id="all2" type="checkbox" class="catalog__aside-form-checbox" name="name1">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
                             <label for="o4" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">#BVB_HOME</p>
-                                <input id="o4" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o4" type="checkbox" class="catalog__aside-form-checbox" name="name4">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                             <label for="o5" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">ACQUA DI PARMA</p>
-                                <input id="o5" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o5" type="checkbox" class="catalog__aside-form-checbox" name="name5">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                             <label for="o6" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">AL AMBRA PERFUMES</p>
-                                <input id="o6" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o6" type="checkbox" class="catalog__aside-form-checbox" name="name6">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                         </label>
                         <label for="o7" class="catalog__aside-accordion-item">
                             <p class="catalog__aside-form-title">ARIDA HOME</p>
-                            <input id="o7" type="checkbox" class="catalog__aside-form-checbox">
+                            <input id="o7" type="checkbox" class="catalog__aside-form-checbox" name="name77">
                             <div class="catalog__aside-form-checbox-decor"></div>
                         </label>
                         <label for="" class="catalog__aside-accordion-item">
@@ -493,163 +613,365 @@
                         </label>
                         </div>
                     </div>
+
                     <div class="catalog__aside-accordion catalog__aside-accordion_pb-26 catalog__aside-accordion_mb-34 catalog__aside-accordion_hidden">
                         <div class="catalog__aside-accordion-top catalog__aside-accordion-top_mb-22">
                             <strong class="catalog__aside-accordion-header">Семья ароматов</strong>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 9L12 15L18 9" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
+                            <button class="catalog__mobile-btn-all-fillter" type="button" aria-label="Показать полный фильтр">
+                                Все
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="#4789EB" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                        </div>
+                        <search class="catalog__aside-accordion-search">
+                            <label for="">
+                                <input class="catalog__aside-accordion-search-input" type="text" placeholder="Искать: burberry бёрберри бурберри">
+                                <button class="catalog__aside-accordion-search-btn">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.0918 16.9084L15.0002 13.8417C16.2002 12.3454 16.7814 10.4461 16.6242 8.53446C16.4669 6.62279 15.5832 4.84403 14.1548 3.56391C12.7263 2.2838 10.8617 1.59963 8.94427 1.6521C7.02686 1.70457 5.20243 2.48968 3.84612 3.84599C2.4898 5.20231 1.70469 7.02674 1.65222 8.94415C1.59976 10.8615 2.28392 12.7262 3.56403 14.1546C4.84415 15.5831 6.62292 16.4668 8.53458 16.6241C10.4462 16.7813 12.3455 16.2001 13.8418 15L16.9085 18.0667C16.986 18.1448 17.0781 18.2068 17.1797 18.2491C17.2812 18.2914 17.3902 18.3132 17.5002 18.3132C17.6102 18.3132 17.7191 18.2914 17.8206 18.2491C17.9222 18.2068 18.0144 18.1448 18.0918 18.0667C18.242 17.9113 18.326 17.7037 18.326 17.4875C18.326 17.2714 18.242 17.0638 18.0918 16.9084ZM9.16683 15C8.01311 15 6.88529 14.6579 5.926 14.0169C4.96672 13.376 4.21904 12.4649 3.77753 11.399C3.33602 10.3331 3.2205 9.16024 3.44558 8.02868C3.67066 6.89713 4.22624 5.85773 5.04204 5.04192C5.85785 4.22611 6.89725 3.67054 8.0288 3.44546C9.16036 3.22038 10.3332 3.3359 11.3992 3.77741C12.4651 4.21892 13.3761 4.9666 14.0171 5.92588C14.658 6.88517 15.0002 8.01299 15.0002 9.16671C15.0002 10.7138 14.3856 12.1975 13.2916 13.2915C12.1977 14.3855 10.7139 15 9.16683 15Z" fill="#0E0922"/>
+                                    </svg>                                        
+                                </button>
+                            </label>
+                        </search>
+                        <div class="catalog__aside-accordion-body-mobile">
+                            <label for="o88" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">#BVB_HOME</p>
+                                <input id="o88" type="checkbox" class="catalog__aside-form-checbox" name="name7">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
+                            <label for="o99" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">ACQUA DI PARMA</p>
+                                <input id="o99" type="checkbox" class="catalog__aside-form-checbox" name="name8">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
+                            <label for="o101" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">AL AMBRA PERFUMES</p>
+                                <input id="o101" type="checkbox" class="catalog__aside-form-checbox" name="name9">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
                         </div>
                         <div class="catalog__aside-accordion-body">
+                            <label for="all3" class="catalog__aside-accordion-item catalog__aside-accordion-item_all">
+                                <p class="catalog__aside-form-title">Все</p>
+                                <input id="all3" type="checkbox" class="catalog__aside-form-checbox" name="name1">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
                             <label for="o8" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">#BVB_HOME</p>
-                                <input id="o8" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o8" type="checkbox" class="catalog__aside-form-checbox" name="name7">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                             <label for="o9" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">ACQUA DI PARMA</p>
-                                <input id="o9" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o9" type="checkbox" class="catalog__aside-form-checbox" name="name8">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                             <label for="o10" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">AL AMBRA PERFUMES</p>
-                                <input id="o10" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o10" type="checkbox" class="catalog__aside-form-checbox" name="name9">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                         </label>
                         <label for="o11" class="catalog__aside-accordion-item">
                             <p class="catalog__aside-form-title">ARIDA HOME</p>
-                            <input id="o11" type="checkbox" class="catalog__aside-form-checbox">
+                            <input id="o11" type="checkbox" class="catalog__aside-form-checbox" name="name101">
                             <div class="catalog__aside-form-checbox-decor"></div>
                         </label>
                         </div>
                     </div>
+
                     <div class="catalog__aside-accordion catalog__aside-accordion_pb-26 catalog__aside-accordion_mb-34 catalog__aside-accordion_hidden">
                         <div class="catalog__aside-accordion-top catalog__aside-accordion-top_mb-22">
                             <strong class="catalog__aside-accordion-header">Страна бренда</strong>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 9L12 15L18 9" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
+                            <button class="catalog__mobile-btn-all-fillter" type="button" aria-label="Показать полный фильтр">
+                                Все
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="#4789EB" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                        </div>
+                        <search class="catalog__aside-accordion-search">
+                            <label for="">
+                                <input class="catalog__aside-accordion-search-input" type="text" placeholder="Искать: burberry бёрберри бурберри">
+                                <button class="catalog__aside-accordion-search-btn">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.0918 16.9084L15.0002 13.8417C16.2002 12.3454 16.7814 10.4461 16.6242 8.53446C16.4669 6.62279 15.5832 4.84403 14.1548 3.56391C12.7263 2.2838 10.8617 1.59963 8.94427 1.6521C7.02686 1.70457 5.20243 2.48968 3.84612 3.84599C2.4898 5.20231 1.70469 7.02674 1.65222 8.94415C1.59976 10.8615 2.28392 12.7262 3.56403 14.1546C4.84415 15.5831 6.62292 16.4668 8.53458 16.6241C10.4462 16.7813 12.3455 16.2001 13.8418 15L16.9085 18.0667C16.986 18.1448 17.0781 18.2068 17.1797 18.2491C17.2812 18.2914 17.3902 18.3132 17.5002 18.3132C17.6102 18.3132 17.7191 18.2914 17.8206 18.2491C17.9222 18.2068 18.0144 18.1448 18.0918 18.0667C18.242 17.9113 18.326 17.7037 18.326 17.4875C18.326 17.2714 18.242 17.0638 18.0918 16.9084ZM9.16683 15C8.01311 15 6.88529 14.6579 5.926 14.0169C4.96672 13.376 4.21904 12.4649 3.77753 11.399C3.33602 10.3331 3.2205 9.16024 3.44558 8.02868C3.67066 6.89713 4.22624 5.85773 5.04204 5.04192C5.85785 4.22611 6.89725 3.67054 8.0288 3.44546C9.16036 3.22038 10.3332 3.3359 11.3992 3.77741C12.4651 4.21892 13.3761 4.9666 14.0171 5.92588C14.658 6.88517 15.0002 8.01299 15.0002 9.16671C15.0002 10.7138 14.3856 12.1975 13.2916 13.2915C12.1977 14.3855 10.7139 15 9.16683 15Z" fill="#0E0922"/>
+                                    </svg>                                        
+                                </button>
+                            </label>
+                        </search>
+                        <div class="catalog__aside-accordion-body-mobile">
+                            <label for="o122" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">#BVB_HOME</p>
+                                <input id="o122" type="checkbox" class="catalog__aside-form-checbox" name="name10">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
+                            <label for="o133" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">ACQUA DI PARMA</p>
+                                <input id="o133" type="checkbox" class="catalog__aside-form-checbox" name="name11">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
+                            <label for="o144" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">AL AMBRA PERFUMES</p>
+                                <input id="o144" type="checkbox" class="catalog__aside-form-checbox" name="name12">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
                         </div>
                         <div class="catalog__aside-accordion-body">
+                            <label for="all4" class="catalog__aside-accordion-item catalog__aside-accordion-item_all">
+                                <p class="catalog__aside-form-title">Все</p>
+                                <input id="all4" type="checkbox" class="catalog__aside-form-checbox" name="name1">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
                             <label for="o12" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">#BVB_HOME</p>
-                                <input id="o12" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o12" type="checkbox" class="catalog__aside-form-checbox" name="name10">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                             <label for="o13" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">ACQUA DI PARMA</p>
-                                <input id="o13" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o13" type="checkbox" class="catalog__aside-form-checbox" name="name11">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                             <label for="o14" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">AL AMBRA PERFUMES</p>
-                                <input id="o14" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o14" type="checkbox" class="catalog__aside-form-checbox" name="name12">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                         </label>
                         <label for="o15" class="catalog__aside-accordion-item">
                             <p class="catalog__aside-form-title">ARIDA HOME</p>
-                            <input id="o15" type="checkbox" class="catalog__aside-form-checbox">
+                            <input id="o15" type="checkbox" class="catalog__aside-form-checbox" name="name155">
                             <div class="catalog__aside-form-checbox-decor"></div>
                         </label>
                         </div>
                     </div>
+
                     <div class="catalog__aside-accordion catalog__aside-accordion_pb-26 catalog__aside-accordion_mb-34 catalog__aside-accordion_hidden">
                         <div class="catalog__aside-accordion-top catalog__aside-accordion-top_mb-22">
                             <strong class="catalog__aside-accordion-header">Тип продукта</strong>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 9L12 15L18 9" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
+                            <button class="catalog__mobile-btn-all-fillter" type="button" aria-label="Показать полный фильтр">
+                                Все
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="#4789EB" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                        </div>
+                        <search class="catalog__aside-accordion-search">
+                            <label for="">
+                                <input class="catalog__aside-accordion-search-input" type="text" placeholder="Искать: burberry бёрберри бурберри">
+                                <button class="catalog__aside-accordion-search-btn">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.0918 16.9084L15.0002 13.8417C16.2002 12.3454 16.7814 10.4461 16.6242 8.53446C16.4669 6.62279 15.5832 4.84403 14.1548 3.56391C12.7263 2.2838 10.8617 1.59963 8.94427 1.6521C7.02686 1.70457 5.20243 2.48968 3.84612 3.84599C2.4898 5.20231 1.70469 7.02674 1.65222 8.94415C1.59976 10.8615 2.28392 12.7262 3.56403 14.1546C4.84415 15.5831 6.62292 16.4668 8.53458 16.6241C10.4462 16.7813 12.3455 16.2001 13.8418 15L16.9085 18.0667C16.986 18.1448 17.0781 18.2068 17.1797 18.2491C17.2812 18.2914 17.3902 18.3132 17.5002 18.3132C17.6102 18.3132 17.7191 18.2914 17.8206 18.2491C17.9222 18.2068 18.0144 18.1448 18.0918 18.0667C18.242 17.9113 18.326 17.7037 18.326 17.4875C18.326 17.2714 18.242 17.0638 18.0918 16.9084ZM9.16683 15C8.01311 15 6.88529 14.6579 5.926 14.0169C4.96672 13.376 4.21904 12.4649 3.77753 11.399C3.33602 10.3331 3.2205 9.16024 3.44558 8.02868C3.67066 6.89713 4.22624 5.85773 5.04204 5.04192C5.85785 4.22611 6.89725 3.67054 8.0288 3.44546C9.16036 3.22038 10.3332 3.3359 11.3992 3.77741C12.4651 4.21892 13.3761 4.9666 14.0171 5.92588C14.658 6.88517 15.0002 8.01299 15.0002 9.16671C15.0002 10.7138 14.3856 12.1975 13.2916 13.2915C12.1977 14.3855 10.7139 15 9.16683 15Z" fill="#0E0922"/>
+                                    </svg>                                        
+                                </button>
+                            </label>
+                        </search>
+                        <div class="catalog__aside-accordion-body-mobile">
+                            <label for="o166" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">#BVB_HOME</p>
+                                <input id="o166" type="checkbox" class="catalog__aside-form-checbox" name="name13">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
+                            <label for="o177" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">ACQUA DI PARMA</p>
+                                <input id="o177" type="checkbox" class="catalog__aside-form-checbox" name="name14">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
+                            <label for="o188" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">AL AMBRA PERFUMES</p>
+                                <input id="o188" type="checkbox" class="catalog__aside-form-checbox" name="name15">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
                         </div>
                         <div class="catalog__aside-accordion-body">
+                            <label for="all5" class="catalog__aside-accordion-item catalog__aside-accordion-item_all">
+                                <p class="catalog__aside-form-title">Все</p>
+                                <input id="all5" type="checkbox" class="catalog__aside-form-checbox" name="name1">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
                             <label for="o16" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">#BVB_HOME</p>
-                                <input id="o16" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o16" type="checkbox" class="catalog__aside-form-checbox" name="name13">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                             <label for="o17" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">ACQUA DI PARMA</p>
-                                <input id="o17" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o17" type="checkbox" class="catalog__aside-form-checbox" name="name14">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                             <label for="o18" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">AL AMBRA PERFUMES</p>
-                                <input id="o18" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o18" type="checkbox" class="catalog__aside-form-checbox" name="name15">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                         </label>
                         <label for="o19" class="catalog__aside-accordion-item">
                             <p class="catalog__aside-form-title">ARIDA HOME</p>
-                            <input id="o19" type="checkbox" class="catalog__aside-form-checbox">
+                            <input id="o19" type="checkbox" class="catalog__aside-form-checbox" name="name16">
                             <div class="catalog__aside-form-checbox-decor"></div>
                         </label>
                         </div>
                     </div>
+
                     <div class="catalog__aside-accordion catalog__aside-accordion_pb-26 catalog__aside-accordion_mb-34 catalog__aside-accordion_hidden">
                         <div class="catalog__aside-accordion-top catalog__aside-accordion-top_mb-22">
                             <strong class="catalog__aside-accordion-header">Год создания</strong>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 9L12 15L18 9" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
+                            <button class="catalog__mobile-btn-all-fillter" type="button" aria-label="Показать полный фильтр">
+                                Все
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="#4789EB" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                        </div>
+                        <search class="catalog__aside-accordion-search">
+                            <label for="">
+                                <input class="catalog__aside-accordion-search-input" type="text" placeholder="Искать: burberry бёрберри бурберри">
+                                <button class="catalog__aside-accordion-search-btn">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.0918 16.9084L15.0002 13.8417C16.2002 12.3454 16.7814 10.4461 16.6242 8.53446C16.4669 6.62279 15.5832 4.84403 14.1548 3.56391C12.7263 2.2838 10.8617 1.59963 8.94427 1.6521C7.02686 1.70457 5.20243 2.48968 3.84612 3.84599C2.4898 5.20231 1.70469 7.02674 1.65222 8.94415C1.59976 10.8615 2.28392 12.7262 3.56403 14.1546C4.84415 15.5831 6.62292 16.4668 8.53458 16.6241C10.4462 16.7813 12.3455 16.2001 13.8418 15L16.9085 18.0667C16.986 18.1448 17.0781 18.2068 17.1797 18.2491C17.2812 18.2914 17.3902 18.3132 17.5002 18.3132C17.6102 18.3132 17.7191 18.2914 17.8206 18.2491C17.9222 18.2068 18.0144 18.1448 18.0918 18.0667C18.242 17.9113 18.326 17.7037 18.326 17.4875C18.326 17.2714 18.242 17.0638 18.0918 16.9084ZM9.16683 15C8.01311 15 6.88529 14.6579 5.926 14.0169C4.96672 13.376 4.21904 12.4649 3.77753 11.399C3.33602 10.3331 3.2205 9.16024 3.44558 8.02868C3.67066 6.89713 4.22624 5.85773 5.04204 5.04192C5.85785 4.22611 6.89725 3.67054 8.0288 3.44546C9.16036 3.22038 10.3332 3.3359 11.3992 3.77741C12.4651 4.21892 13.3761 4.9666 14.0171 5.92588C14.658 6.88517 15.0002 8.01299 15.0002 9.16671C15.0002 10.7138 14.3856 12.1975 13.2916 13.2915C12.1977 14.3855 10.7139 15 9.16683 15Z" fill="#0E0922"/>
+                                    </svg>                                        
+                                </button>
+                            </label>
+                        </search>
+                        <div class="catalog__aside-accordion-body-mobile">
+                            <label for="o200" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">#BVB_HOME</p>
+                                <input id="o200" type="checkbox" class="catalog__aside-form-checbox" name="name16">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
+                            <label for="o211" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">ACQUA DI PARMA</p>
+                                <input id="o211" type="checkbox" class="catalog__aside-form-checbox" name="name17">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
+                            <label for="o222" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">AL AMBRA PERFUMES</p>
+                                <input id="o222" type="checkbox" class="catalog__aside-form-checbox" name="name18">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
                         </div>
                         <div class="catalog__aside-accordion-body">
+                            <label for="all6" class="catalog__aside-accordion-item catalog__aside-accordion-item_all">
+                                <p class="catalog__aside-form-title">Все</p>
+                                <input id="all6" type="checkbox" class="catalog__aside-form-checbox" name="name1">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
                             <label for="o20" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">#BVB_HOME</p>
-                                <input id="o20" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o20" type="checkbox" class="catalog__aside-form-checbox" name="name16">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                             <label for="o21" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">ACQUA DI PARMA</p>
-                                <input id="o21" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o21" type="checkbox" class="catalog__aside-form-checbox" name="name17">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                             <label for="o22" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">AL AMBRA PERFUMES</p>
-                                <input id="o22" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o22" type="checkbox" class="catalog__aside-form-checbox" name="name18">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                         </label>
                         <label for="o23" class="catalog__aside-accordion-item">
                             <p class="catalog__aside-form-title">ARIDA HOME</p>
-                            <input id="o23" type="checkbox" class="catalog__aside-form-checbox">
+                            <input id="o23" type="checkbox" class="catalog__aside-form-checbox" name="name199">
                             <div class="catalog__aside-form-checbox-decor"></div>
                         </label>
                         </div>
                     </div>
+
                     <div class="catalog__aside-accordion catalog__aside-accordion_pb-26 catalog__aside-accordion_mb-40 catalog__aside-accordion_hidden">
                         <div class="catalog__aside-accordion-top catalog__aside-accordion-top_mb-22">
                             <strong class="catalog__aside-accordion-header">Парфюмер</strong>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 9L12 15L18 9" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
+                            <button class="catalog__mobile-btn-all-fillter" type="button" aria-label="Показать полный фильтр">
+                                Все
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="#4789EB" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </button>
+                        </div>
+                        <search class="catalog__aside-accordion-search">
+                            <label for="">
+                                <input class="catalog__aside-accordion-search-input" type="text" placeholder="Искать: burberry бёрберри бурберри">
+                                <button class="catalog__aside-accordion-search-btn">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.0918 16.9084L15.0002 13.8417C16.2002 12.3454 16.7814 10.4461 16.6242 8.53446C16.4669 6.62279 15.5832 4.84403 14.1548 3.56391C12.7263 2.2838 10.8617 1.59963 8.94427 1.6521C7.02686 1.70457 5.20243 2.48968 3.84612 3.84599C2.4898 5.20231 1.70469 7.02674 1.65222 8.94415C1.59976 10.8615 2.28392 12.7262 3.56403 14.1546C4.84415 15.5831 6.62292 16.4668 8.53458 16.6241C10.4462 16.7813 12.3455 16.2001 13.8418 15L16.9085 18.0667C16.986 18.1448 17.0781 18.2068 17.1797 18.2491C17.2812 18.2914 17.3902 18.3132 17.5002 18.3132C17.6102 18.3132 17.7191 18.2914 17.8206 18.2491C17.9222 18.2068 18.0144 18.1448 18.0918 18.0667C18.242 17.9113 18.326 17.7037 18.326 17.4875C18.326 17.2714 18.242 17.0638 18.0918 16.9084ZM9.16683 15C8.01311 15 6.88529 14.6579 5.926 14.0169C4.96672 13.376 4.21904 12.4649 3.77753 11.399C3.33602 10.3331 3.2205 9.16024 3.44558 8.02868C3.67066 6.89713 4.22624 5.85773 5.04204 5.04192C5.85785 4.22611 6.89725 3.67054 8.0288 3.44546C9.16036 3.22038 10.3332 3.3359 11.3992 3.77741C12.4651 4.21892 13.3761 4.9666 14.0171 5.92588C14.658 6.88517 15.0002 8.01299 15.0002 9.16671C15.0002 10.7138 14.3856 12.1975 13.2916 13.2915C12.1977 14.3855 10.7139 15 9.16683 15Z" fill="#0E0922"/>
+                                    </svg>                                        
+                                </button>
+                            </label>
+                        </search>
+                        <div class="catalog__aside-accordion-body-mobile">
+                            <label for="o244" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">#BVB_HOME</p>
+                                <input id="o244" type="checkbox" class="catalog__aside-form-checbox" name="name19">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
+                            <label for="o255" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">ACQUA DI PARMA</p>
+                                <input id="o255" type="checkbox" class="catalog__aside-form-checbox" name="name20">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
+                            <label for="o266" class="catalog__aside-accordion-item catalog__aside-accordion-item_mobile">
+                                <p class="catalog__aside-form-title">AL AMBRA PERFUMES</p>
+                                <input id="o266" type="checkbox" class="catalog__aside-form-checbox" name="name21">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
                         </div>
                         <div class="catalog__aside-accordion-body">
+                            <label for="all7" class="catalog__aside-accordion-item catalog__aside-accordion-item_all">
+                                <p class="catalog__aside-form-title">Все</p>
+                                <input id="all7" type="checkbox" class="catalog__aside-form-checbox" name="name1">
+                                <div class="catalog__aside-form-checbox-decor"></div>
+                            </label>
                             <label for="o24" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">#BVB_HOME</p>
-                                <input id="o24" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o24" type="checkbox" class="catalog__aside-form-checbox" name="name19">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                             <label for="o25" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">ACQUA DI PARMA</p>
-                                <input id="o25" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o25" type="checkbox" class="catalog__aside-form-checbox" name="name20">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                             <label for="o26" class="catalog__aside-accordion-item">
                                 <p class="catalog__aside-form-title">AL AMBRA PERFUMES</p>
-                                <input id="o26" type="checkbox" class="catalog__aside-form-checbox">
+                                <input id="o26" type="checkbox" class="catalog__aside-form-checbox" name="name21">
                                 <div class="catalog__aside-form-checbox-decor"></div>
                             </label>
                         </label>
                         <label for="o27" class="catalog__aside-accordion-item">
                             <p class="catalog__aside-form-title">ARIDA HOME</p>
-                            <input id="o27" type="checkbox" class="catalog__aside-form-checbox">
+                            <input id="o27" type="checkbox" class="catalog__aside-form-checbox" name="name22">
                             <div class="catalog__aside-form-checbox-decor"></div>
                         </label>
                         </div>
                     </div>
-                    <button class="catalog__aside-form-btn catalog__aside-form-btn_mb-32" type="submit">Показать 4567 товаров</button>
-                    <button class="catalog__aside-form-btn-reset" type="submit">
+
+                    <button class="catalog__aside-form-btn catalog__aside-form-btn_mb-32" 
+                        type="submit"
+                        data-desctop-text="Показать 4567 товаров" 
+                        data-mobile-text="Применить фильтры"
+                    >
+                        Показать 4567 товаров
+                    </button>
+                    <button class="catalog__aside-form-btn-reset" type="submit"> 
                         Сбросить
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17 17L7 7.00002M17 7L7.00001 17" stroke="#090B18" stroke-width="2" stroke-linecap="round"/>
@@ -705,7 +1027,31 @@
                 </ul>
             </aside>
             <div class="catalog__box">
+                <div class="catalog__mobile-filter">
+                    <ul class="catalog__mobile-filter-list">
+                        <li class="catalog__mobile-filter-item">
+                            <button class="catalog__mobile-filter-item-btn" type="button">Категория</button>
+                        </li>
+                        <li class="catalog__mobile-filter-item">
+                            <button class="catalog__mobile-filter-item-btn" type="button">Бренд</button>
+                        </li>
+                        <li class="catalog__mobile-filter-item">
+                            <button class="catalog__mobile-filter-item-btn" type="button">Тип продукта</button>
+                        </li>
+                        <li class="catalog__mobile-filter-item">
+                            <button class="catalog__mobile-filter-item-btn" type="button">Тип продукта</button>
+                        </li>
+                    </ul>
+                </div>
                 <div class="catalog__filter">
+                    <button class="catalog__mobile-fillter-btn-open" type="button" aria-label="Открыть фильтр" data-da=".catalog__mobile-filter, 480, first">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 5H7M21 5H11M3 12H15M21 12H19M3 19H5M21 19H9" stroke="#090B18" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M9 7C10.1046 7 11 6.10457 11 5C11 3.89543 10.1046 3 9 3C7.89543 3 7 3.89543 7 5C7 6.10457 7.89543 7 9 7Z" stroke="#090B18" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M17 14C18.1046 14 19 13.1046 19 12C19 10.8954 18.1046 10 17 10C15.8954 10 15 10.8954 15 12C15 13.1046 15.8954 14 17 14Z" stroke="#090B18" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M7 21C8.10457 21 9 20.1046 9 19C9 17.8954 8.10457 17 7 17C5.89543 17 5 17.8954 5 19C5 20.1046 5.89543 21 7 21Z" stroke="#090B18" stroke-width="2" stroke-linecap="round"/>
+                        </svg>                            
+                    </button>
                     <div class="catalog__filter-items">
                         <p class="catalog__filter-title">Сортировать по:</p>
                         <a class="catalog__filter-link is-active" href="#!">наличию</a>
@@ -1025,7 +1371,6 @@
                                     <path d="M3.97712 9.8398C4.06062 8.8007 4.92824 8 5.97069 8H18.0293C19.0717 8 19.9393 8.8007 20.0228 9.8398L20.8264 19.8398C20.9199 21.0038 20.0006 22 18.8328 22H5.16712C3.99939 22 3.08001 21.0038 3.17355 19.8398L3.97712 9.8398Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M16 11V6C16 3.79086 14.2091 2 12 2C9.79086 2 8 3.79086 8 6V11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>В корзине</span>
                             </button>
                         </div>
                     </a>
@@ -1074,7 +1419,7 @@
                         <div class="slide__bottom">
                             <div class="slide__price">
                                 <strong>
-                                    <mark>от </mark> 3 570 ₽
+                                    3 570 ₽
                                 </strong>
                             </div>
                             <button class="slide__btn-basket" type="button" aria-label="Добавить в корзину">
@@ -1082,7 +1427,6 @@
                                     <path d="M3.97712 9.8398C4.06062 8.8007 4.92824 8 5.97069 8H18.0293C19.0717 8 19.9393 8.8007 20.0228 9.8398L20.8264 19.8398C20.9199 21.0038 20.0006 22 18.8328 22H5.16712C3.99939 22 3.08001 21.0038 3.17355 19.8398L3.97712 9.8398Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M16 11V6C16 3.79086 14.2091 2 12 2C9.79086 2 8 3.79086 8 6V11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>В корзине</span>
                             </button>
                         </div>
                     </a>
@@ -1131,7 +1475,7 @@
                         <div class="slide__bottom">
                             <div class="slide__price">
                                 <strong>
-                                    <mark>от </mark> 10 561 ₽
+                                    10 561 ₽
                                 </strong>
                                 <span>
                                     4 570 ₽
@@ -1142,7 +1486,6 @@
                                     <path d="M3.97712 9.8398C4.06062 8.8007 4.92824 8 5.97069 8H18.0293C19.0717 8 19.9393 8.8007 20.0228 9.8398L20.8264 19.8398C20.9199 21.0038 20.0006 22 18.8328 22H5.16712C3.99939 22 3.08001 21.0038 3.17355 19.8398L3.97712 9.8398Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M16 11V6C16 3.79086 14.2091 2 12 2C9.79086 2 8 3.79086 8 6V11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>В корзине</span>
                             </button>
                         </div>
                     </a>
@@ -1191,7 +1534,7 @@
                         <div class="slide__bottom">
                             <div class="slide__price">
                                 <strong>
-                                    <mark>от </mark> 10 561 ₽
+                                    <mark>от </mark> 3 570 ₽
                                 </strong>
                                 <span>
                                     4 570 ₽
@@ -1202,7 +1545,6 @@
                                     <path d="M3.97712 9.8398C4.06062 8.8007 4.92824 8 5.97069 8H18.0293C19.0717 8 19.9393 8.8007 20.0228 9.8398L20.8264 19.8398C20.9199 21.0038 20.0006 22 18.8328 22H5.16712C3.99939 22 3.08001 21.0038 3.17355 19.8398L3.97712 9.8398Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M16 11V6C16 3.79086 14.2091 2 12 2C9.79086 2 8 3.79086 8 6V11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>В корзине</span>
                             </button>
                         </div>
                     </a>
@@ -1262,26 +1604,25 @@
                                     <path d="M3.97712 9.8398C4.06062 8.8007 4.92824 8 5.97069 8H18.0293C19.0717 8 19.9393 8.8007 20.0228 9.8398L20.8264 19.8398C20.9199 21.0038 20.0006 22 18.8328 22H5.16712C3.99939 22 3.08001 21.0038 3.17355 19.8398L3.97712 9.8398Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M16 11V6C16 3.79086 14.2091 2 12 2C9.79086 2 8 3.79086 8 6V11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>В корзине</span>
                             </button>
                         </div>
                     </a>
-                </div>
-                <!-- тут банер -->
-                <a href="https://developer.mozilla.org/ru/docs/Web/API/Event/preventDefault" class="catalog-banner catalog-banner_mb-22 banner">
-                        <div class="banner__box catalog-banner__box">
-                            <p class="banner__sub-title catalog-banner__sub-title">
-                                Дарим к каждому заказу
-                            </p>
-                            <h2 class="banner__title catalog-banner__title">
-                                ПОДАРОК
-                            </h2>
-                        </div>
-                        <picture class="banner__picture catalog-banner__picture">
-                            <img src="local/templates/mains/assets/images/banner/2.png" alt="">
-                        </picture>
-                </a>
-                <div class="catalog__list catalog__list_mb-26">
+                
+                    <!-- тут банер -->
+                    <a href="https://developer.mozilla.org/ru/docs/Web/API/Event/preventDefault" class="catalog-banner banner" style="background-image: url(local/templates/mains/assets/images/decor/banner-catalog.png);">
+                            <div class="banner__box catalog-banner__box">
+                                <p class="banner__sub-title catalog-banner__sub-title">
+                                    Дарим к каждому заказу
+                                </p>
+                                <h2 class="banner__title catalog-banner__title">
+                                    ПОДАРОК
+                                </h2>
+                            </div>
+                            <picture class="banner__picture catalog-banner__picture">
+                                <img src="local/templates/mains/assets/images/banner/2.png" alt="">
+                            </picture>
+                    </a>
+                
                     <a href="https://github.com/lilkost/" class="slide" data-stars="5">
                         <div class="slide__info">
                             <div class="elem-sale">-40%</div>
@@ -1580,7 +1921,6 @@
                                     <path d="M3.97712 9.8398C4.06062 8.8007 4.92824 8 5.97069 8H18.0293C19.0717 8 19.9393 8.8007 20.0228 9.8398L20.8264 19.8398C20.9199 21.0038 20.0006 22 18.8328 22H5.16712C3.99939 22 3.08001 21.0038 3.17355 19.8398L3.97712 9.8398Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M16 11V6C16 3.79086 14.2091 2 12 2C9.79086 2 8 3.79086 8 6V11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>В корзине</span>
                             </button>
                         </div>
                     </a>
@@ -1629,7 +1969,7 @@
                         <div class="slide__bottom">
                             <div class="slide__price">
                                 <strong>
-                                    <mark>от </mark> 3 570 ₽
+                                    3 570 ₽
                                 </strong>
                             </div>
                             <button class="slide__btn-basket" type="button" aria-label="Добавить в корзину">
@@ -1637,7 +1977,6 @@
                                     <path d="M3.97712 9.8398C4.06062 8.8007 4.92824 8 5.97069 8H18.0293C19.0717 8 19.9393 8.8007 20.0228 9.8398L20.8264 19.8398C20.9199 21.0038 20.0006 22 18.8328 22H5.16712C3.99939 22 3.08001 21.0038 3.17355 19.8398L3.97712 9.8398Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M16 11V6C16 3.79086 14.2091 2 12 2C9.79086 2 8 3.79086 8 6V11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>В корзине</span>
                             </button>
                         </div>
                     </a>
@@ -1651,7 +1990,7 @@
                         </svg>
                     </button>
                     <ul class="catalog__pagination-list">
-                        <li class="catalog__pagination-item">
+                        <li class="catalog__pagination-item is-active">
                             <a class="catalog__pagination-link" href="#!">1</a>
                         </li>
                         <li class="catalog__pagination-item">
@@ -1675,7 +2014,7 @@
                 </div>
             </div>
         </div>
-        <div class="catalog__info catalog__info_mb-64 container">
+        <section class="catalog__info catalog__info_mb-64 container">
             <h1 class="catalog__info-title">
                 Интернет - магазин парфюмерии
             </h1>
@@ -1692,7 +2031,7 @@
                     </svg>
                 </span>
             </a>
-        </div>
+        </section>
         <div class="contacts bg-gray">
             <div class="contacts__inner catalog-contacts__inner container">
                 <div class="contacts__box">
@@ -1752,8 +2091,6 @@
             </div>
         </div>
     </div>
-
-
 </main>
 
 <script >
@@ -2475,6 +2812,10 @@
 
 <script>
     $('.js-example-basic-single').select2();
+
+    Fancybox.bind('[data-fancybox="gallery"', {
+  // Your custom options
+});
 </script>
 
 </body>
