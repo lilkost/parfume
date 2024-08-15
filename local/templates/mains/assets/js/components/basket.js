@@ -70,11 +70,12 @@ const basketJs = () => {
             if(input.checked) {
                 text.innerHTML = '0 б';
                 price.innerHTML = numberWithSpaces(currentPrice - currentBals) + ' ₽';
-            } else {
+            }
+            else {
                 text.innerHTML = `${currentBals} б`;
                 price.innerHTML = numberWithSpaces(currentPrice) + ' ₽';
             }
-        })
+        });
     }
 }
 export default basketJs;
