@@ -180,6 +180,7 @@ const modal = () => {
         const modalInner = document.querySelector('.modal-card__inner');
         const modalClose = document.querySelector('.modal-card__btn-close');
         const modalFavorites = document.querySelector('.modal-card__btn-favorites');
+        const modalImage = document.querySelector('.modal-card__img');
         const stars = document.querySelectorAll('.modal-card__stars svg');
         const countNode = document.querySelector('.modal-card__controll-count');
         const btnMinus = document.querySelector('.modal-card__controll-btn_minus');
@@ -188,11 +189,15 @@ const modal = () => {
 
         basketBtns.forEach(btn => {
             btn.addEventListener('click', ()=> {
-                toggleOpen()
+                toggleOpen();
+                modalImage.scr = '';
                 const parent = btn.closest('.slide')
                 if(!parent) return;
+                const parentImg = parent.querySelector('.slide__picture img');
+
                 const parentStars = Number(parent.getAttribute('data-stars'));
-                
+                modalImage.src = parentImg.src;
+
                 stars.forEach((item, key) => {
                     if(key < parentStars) {
                         item.classList.add('is-star')

@@ -51,11 +51,12 @@ const dropDown = ()=> {
             const accordionTop = accordion.querySelector('.catalog__aside-accordion-top');
 
             accordionTop.addEventListener('click', ()=> {
-                accordion.classList.toggle('catalog__aside-accordion_hidden');
-                accordionTop.classList.toggle('is-open');
+                if(window.innerWidth > 480){
+                    accordion.classList.toggle('catalog__aside-accordion_hidden');
+                    accordionTop.classList.toggle('is-open');
+                }
             });
         })
     }
 }
-
 export default dropDown;

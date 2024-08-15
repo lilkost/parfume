@@ -70,7 +70,8 @@ const createSlider = () => {
     });
 
     // sale slider
-    resizeSliderSales()
+    resizeSliderSales();
+    
     function resizeSliderSales () {
         if(document.documentElement.clientWidth <=992){
             document.querySelectorAll('.sales__item').forEach(itm=> {
@@ -147,7 +148,6 @@ const createSlider = () => {
     }
 
     // end sale slider
-
     const sliderNew = new Swiper('.new-slider', {
         direction: 'horizontal',
         loop: false,
@@ -397,6 +397,41 @@ const createSlider = () => {
         });
     }
 
+    if(document.querySelector('.detail__slider')) {
+        var detailSliderThumbs = new Swiper(".detail__slider-min", {
+            spaceBetween: 24,
+            slidesPerView: 3,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        
+        var detailBigSlider = new Swiper(".detail__slider-big", {
+            spaceBetween: 0,
+            navigation: {
+                nextEl: ".detail__slider-btn-next",
+                prevEl: ".detail__slider-btn-prev",
+            },
+            thumbs: {
+                swiper: detailSliderThumbs,
+            },
+        });
+    }
+
+    if(document.querySelector('.reviews__slider')) {
+        const swiper = new Swiper('.reviews__slider', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+            slidesPerView: 2,
+            spaceBetween: 20,
+            // Navigation arrows
+            navigation: {
+                nextEl: '.reviews__slider-btn-next',
+                prevEl: '.reviews__slider-btn-prev',
+            },
+
+        });
+    }
 }
 
 export default createSlider;

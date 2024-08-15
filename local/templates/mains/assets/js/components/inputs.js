@@ -5,6 +5,7 @@ const inputsPointer = () => {
 
     inputs.forEach(element => {
         element.onfocus = () => {
+
             element.parentElement.classList.add('is-focus')
         }
 
