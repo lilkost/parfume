@@ -29,6 +29,10 @@ const basketJs = () => {
         });
     }
 
+    function numberWithSpaces(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    }
+
     itemsControll.forEach(item=> {
         const btnMinus = item.querySelector('.basket-order__item-prices-btn_minus');
         const btnPlus = item.querySelector('.basket-order__item-prices-btn_plus');
@@ -51,6 +55,26 @@ const basketJs = () => {
                 btn.classList.toggle('is-active');
             })
         })
-    })
+    });
+
+    if(document.querySelector('.basket-order__aside-item-bals')) {
+        const input = document.querySelector('.basket-order__aside-item-bals input');
+        const price = document.querySelector('.basket-order__aside-result-item-price');
+        const parent = document.querySelector('.basket-order__aside');
+        const text = document.querySelector('.basket-order__aside-item-bals-text');
+
+        const currentPrice = Number(parent.getAttribute('data-price'));
+        const currentBals = Number(parent.getAttribute('data-bals'));
+
+        input.addEventListener('click', ()=> {
+            if(input.checked) {
+                text.innerHTML = '0 б';
+                price.innerHTML = numberWithSpaces(currentPrice - currentBals) + ' ₽';
+            } else {
+                text.innerHTML = `${currentBals} б`;
+                price.innerHTML = numberWithSpaces(currentPrice) + ' ₽';
+            }
+        })
+    }
 }
 export default basketJs;
