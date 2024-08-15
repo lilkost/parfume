@@ -58,5 +58,32 @@ const dropDown = ()=> {
             });
         })
     }
+
+    if(document.querySelector('.detail__dropdown-top-item')) {
+        const links = document.querySelectorAll('.detail__dropdown-top-item a');
+        const bodys = document.querySelectorAll('.detail__dropdown-contents-item');
+
+        links.forEach(link=> {
+            link.addEventListener('click', (e)=> {
+                e.stopPropagation();
+                e.preventDefault();
+                const href = link.getAttribute('data-id');
+
+                links.forEach(lk=> {
+                    const parent = lk.closest('.detail__dropdown-top-item');
+                    parent.classList.remove('is-active')
+                })
+
+                link.closest('.detail__dropdown-top-item').classList.add('is-active');
+                bodys.forEach(bd=> {
+                    bd.classList.remove('is-active');
+
+                    if(bd.id === href) {
+                        bd.classList.add('is-active');
+                    }
+                })
+            });
+        })
+    }
 }
 export default dropDown;
