@@ -85,5 +85,26 @@ const dropDown = ()=> {
             });
         })
     }
+    
+    if(document.querySelector('.personal-account__bonus-conditions-accordion')) {
+        const accordions = document.querySelectorAll('.personal-account__bonus-conditions-accordion');
+
+        accordions.forEach(accordion=> {
+            const btn = accordion.querySelector('.personal-account__bonus-conditions-accordion-btn');
+
+            btn.addEventListener('click', ()=> {
+                accordion.classList.toggle('is-active');
+            });
+        });
+    }
+
+    if(document.querySelector('.personal-account__bonus-accordion')) {
+        const top = document.querySelector('.personal-account__bonus-accordion-top');
+        const accordion = document.querySelector('.personal-account__bonus-accordion');
+
+        top.addEventListener('click', ()=>{
+            accordion.classList.toggle('is-active');
+        });
+    }
 }
 export default dropDown;
