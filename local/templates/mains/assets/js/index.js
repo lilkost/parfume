@@ -9,6 +9,7 @@ import { useDynamicAdapt } from './components/dynamicAdapt.js';
 import scrollPositionMobileButton from "./components/scrollMobileButtons.js";
 import catalog from "./components/catalog.js";
 import basketJs from "./components/basket.js";
+import copyText from "./components/copyText.js";
 
 useDynamicAdapt();
 createSlider();
@@ -21,3 +22,4 @@ stars();
 scrollPositionMobileButton();
 catalog();
 basketJs();
+copyText();
