@@ -106,5 +106,17 @@ const dropDown = ()=> {
             accordion.classList.toggle('is-active');
         });
     }
+
+    if(document.querySelector('.personal-account__help-accordion')) {
+        const accordions = document.querySelectorAll('.personal-account__help-accordion');
+        
+        accordions.forEach(accordion=> {
+            const top = accordion.querySelector('.personal-account__help-accordion-top .personal-account__help-accordion-top-btn');
+
+            top.addEventListener("click", ()=> {
+                accordion.classList.toggle('is-active');
+            });
+        });
+    }
 }
 export default dropDown;
