@@ -22,6 +22,16 @@ const stars = () => {
         isStarsCount(stars, countStars);
     }
 
+    if(document.querySelector('.personal-account__comparison-slide-stars')) {
+        const starsParent = document.querySelectorAll('.personal-account__comparison-slide');
+
+        starsParent.forEach(slide=> {
+            const stars = slide.querySelectorAll('.personal-account__comparison-slide-stars svg');
+            const count = Number(slide.querySelector('.personal-account__comparison-slide-stars').getAttribute('data-stars'));
+            isStarsCount(stars, count);
+        });
+    }
+
     if(document.querySelector('.reviews__slide')) {
         const slidesReview = document.querySelectorAll('.reviews__slide');
         slidesReview.forEach(slide=> {
