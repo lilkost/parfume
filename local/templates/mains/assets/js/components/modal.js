@@ -273,6 +273,7 @@ const modal = () => {
     if(document.querySelector('.order-modal')) {
         const modal = document.querySelector('.order-modal');
         const buttonsOpen = document.querySelectorAll('.order__accordion-button');
+
         const buttonCloseTop = document.querySelector('.order-modal__close');
         const modalCloseBtn = document.querySelector('.order-modal__form-btn');
 
@@ -281,7 +282,7 @@ const modal = () => {
         }
 
         const toggleCloseStateModal = () => {
-            modal.classList.add('is-open');
+            modal.classList.remove('is-open');
         }
 
         buttonsOpen.forEach(btn=> {
