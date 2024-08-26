@@ -118,5 +118,21 @@ const dropDown = ()=> {
             });
         });
     }
+
+    if(document.querySelector('.order__accordion')) {
+        const accordions = document.querySelectorAll('.order__accordion');
+
+        accordions.forEach(accordion=> {
+            const buttonOpen = accordion.querySelector('.order__accordion-top');
+            
+            buttonOpen.addEventListener('click', ()=> {
+                accordions.forEach(acc=> {
+                    acc.classList.remove('is-active');
+                });
+                
+                accordion.classList.toggle('is-active');
+            });
+        });
+    }
 }
 export default dropDown;

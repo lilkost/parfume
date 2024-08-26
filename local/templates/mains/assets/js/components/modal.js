@@ -267,6 +267,47 @@ const modal = () => {
             }
         })
     }
+
+    
+
+    if(document.querySelector('.order-modal')) {
+        const modal = document.querySelector('.order-modal');
+        const buttonsOpen = document.querySelectorAll('.order__accordion-button');
+        const buttonCloseTop = document.querySelector('.order-modal__close');
+        const modalCloseBtn = document.querySelector('.order-modal__form-btn');
+
+        const toggleOpenStateModal = () => {
+            modal.classList.add('is-open');
+        }
+
+        const toggleCloseStateModal = () => {
+            modal.classList.add('is-open');
+        }
+
+        buttonsOpen.forEach(btn=> {
+            btn.addEventListener("click", ()=> {
+                toggleOpenStateModal();
+            });
+        });
+
+
+
+        buttonCloseTop.addEventListener('click', ()=> toggleCloseStateModal());
+        modalCloseBtn.addEventListener('click', ()=> toggleCloseStateModal());
+
+        
+        window.addEventListener('click', (e)=> {
+            if(e.target === modal) {
+                toggleCloseStateModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if( e.keyCode == 27 ){ 
+                toggleCloseStateModal()
+            }
+        });
+    }
 }
 
 export default modal;

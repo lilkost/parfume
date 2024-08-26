@@ -433,17 +433,32 @@ const createSlider = () => {
         });
     }
 
-    const sliderComparision = new Swiper('.personal-account__comparison-slider', {
-        direction: 'horizontal',
-        loop: false,
-
-        slidesPerView: 4,
-        spaceBetween: 20,
-
-        navigation: {
-            nextEl: '.personal-account__comparison-slider-button',
-        },
-    });
+    if(document.querySelector('.personal-account__comparison-slider')) {
+        const sliderComparision = new Swiper('.personal-account__comparison-slider', {
+            direction: 'horizontal',
+            loop: false,
+    
+            slidesPerView: 4,
+            spaceBetween: 20,
+    
+            navigation: {
+                nextEl: '.personal-account__comparison-slider-button',
+            },
+        });
+    }
+    if(document.querySelector('.order__pay-slider')) {
+        const sliderComparision = new Swiper('.order__pay-slider', {
+            direction: 'horizontal',
+            loop: false,
+    
+            slidesPerView: 4,
+            spaceBetween: 20,
+    
+            navigation: {
+                nextEl: '.order__pay-slider-button',
+            },
+        });
+    }
 }
 
 export default createSlider;
