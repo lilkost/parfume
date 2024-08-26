@@ -329,7 +329,630 @@
                 </div>
         </div>
     </header>
-    <main class="main"></main>
+    <style>
+        .bread-crumbs {
+            padding-block: 21px 62px;
+        }
+    </style>
+    <main class="main">
+        <div class="bread-crumbs container">
+            <ul class="bread-crumbs__list">
+                <li class="bread-crumbs__item">
+                    Главная
+                </li>
+                <li class="bread-crumbs__item">
+                    <a href="#!" class="bread-crumbs__item-link">
+                        Корзина
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <a href="#!" class="order-back-link">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 4L7 12L15 20" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Вернуться к корзине
+            </a>
+            <h1 class="order-title title-page">
+                Оформление заказа
+            </h1>
+            <div class="order__inner">
+                <div class="order__content">
+                    <div class="order__content-item">
+                        <h2 class="order__content-title order__content-title_mb-26">Личные данные</h2>
+                        <div class="order__content-body">
+                            <div class="order__content-body-row order__content-body-row-43">
+                                <ul class="order__user-info-list">
+                                    <li class="order__user-info-item">Иванова Анна</li>
+                                    <li class="order__user-info-item">+7 912 345 67 89</li>
+                                    <li class="order__user-info-item">example@gmail.com</li>
+                                </ul>
+                                <button class="order__user-button">Изменить получателя</button>
+                            </div>
+                            <form action="" class="order__content-form">
+                                <label class="order__content-form-label" for="r1">
+                                    <input id="r1" type="radio" name="radd1">
+                                    <div class="order__content-form-decor"></div>
+                                    <p class="order__content-form-text">Оповещения через СМС</p>
+                                </label>
+                                <label class="order__content-form-label" for="r2">
+                                    <input id="r2" type="radio" name="radd1">
+                                    <div class="order__content-form-decor"></div>
+                                    <p class="order__content-form-text">Подтвердить через Whatsapp</p>
+                                </label>
+                                <label class="order__content-form-label" for="r3">
+                                    <input id="r3" type="radio" name="radd1">
+                                    <div class="order__content-form-decor"></div>
+                                    <p class="order__content-form-text">Звонок от менеджера</p>
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="order__content-item">
+                        <h2 class="order__content-title order__content-title_mb-31">Способ доставки</h2>
+                        <div class="order__content-body">
+                            <div class="order__accordions">
+                                <div class="order__accordion is-active">
+                                    <div class="order__accordion-top">
+                                        <div class="order__accordion-top-decor"></div>
+                                        <h3 class="order__accordion-top-title">
+                                            Курьером по Москве и внутри МКАД <strong>(бесплатно от 1 000 р)</strong>
+                                        </h3>
+                                    </div>
+                                    <div class="order__accordion-body">
+                                        <form action="" class="order__accordion-form">
+                                            <input type="text" class="order__accordion-input" placeholder="Адрес не выбран">
+                                            <button class="order__accordion-button" type="button">Добавить адрес</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="order__accordion">
+                                    <div class="order__accordion-top">
+                                        <div class="order__accordion-top-decor"></div>
+                                        <h3 class="order__accordion-top-title">Курьером за пределы МКАД</h3>
+                                    </div>
+                                    <div class="order__accordion-body">
+                                        <form action="" class="order__accordion-form order__accordion-form_mb-46">
+                                            <input type="text" class="order__accordion-input" placeholder="Адрес не выбран">
+                                            <button class="order__accordion-button" type="submit">Добавить адрес</button>
+                                        </form>
+                                        <ul class="order__accordion-products">
+                                            <li class="order__accordion-products-item">
+                                                <a href="">
+                                                    <img src="local/templates/mains/assets/images/order/t1.png" alt="">
+                                                </a>
+                                            </li>
+                                            <li class="order__accordion-products-item">
+                                                <a href="">
+                                                    <img src="local/templates/mains/assets/images/order/t2.png" alt="">
+                                                </a>
+                                            </li>
+                                            <li class="order__accordion-products-item">
+                                                <a href="">
+                                                    <img src="local/templates/mains/assets/images/order/t3.png" alt="">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <form action="" class="order__accordion-form-day">
+                                            <label for="" class="order__accordion-form-day-label">
+                                                <p>пт</p>
+                                                <strong>28</strong>
+                                            </label>
+                                            <label for="" class="order__accordion-form-day-label">
+                                                <p>сб</p>
+                                                <strong>29</strong>
+                                            </label>
+                                            <label for="" class="order__accordion-form-day-label">
+                                                <p>вс</p>
+                                                <strong>30</strong>
+                                            </label>
+                                            <label for="" class="order__accordion-form-day-label">
+                                                <p>пн</p>
+                                                <strong>31</strong>
+                                            </label>
+                                            <label for="" class="order__accordion-form-day-label">
+                                                <p>вт</p>
+                                                <strong>1</strong>
+                                            </label>
+                                            <label for="" class="order__accordion-form-day-label">
+                                                <p>ср</p>
+                                                <strong>2</strong>
+                                            </label>
+                                            <label for="" class="order__accordion-form-day-label">
+                                                <p>чт</p>
+                                                <strong>3</strong>
+                                            </label>
+                                            <button class="order__accordion-form-day-button">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M18 4H6C3.79086 4 2 5.79086 2 8V18C2 20.2091 3.79086 22 6 22H18C20.2091 22 22 20.2091 22 18V8C22 5.79086 20.2091 4 18 4Z" stroke="#4789EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M8 2V6" stroke="#4789EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M16 2V6" stroke="#4789EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M2 10H22" stroke="#4789EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                        </form>
+                                        <form action="" class="order__accordion-form-time">
+                                            <label for="" class="order__accordion-form-time-label">
+                                                <p>10:00 - 13:00</p>
+                                            </label>
+                                            <label for="" class="order__accordion-form-time-label">
+                                                <p>13:00 - 15:00</p>
+                                            </label>
+                                            <label for="" class="order__accordion-form-time-label">
+                                                <p>15:00 - 18:00</p>
+                                            </label>
+                                            <label for="" class="order__accordion-form-time-label">
+                                                <p>18:00 - 21:00</p>
+                                            </label>
+                                        </form>
+                                        <div class="order__accordion-info">
+                                            <p class="order__accordion-info-title">
+                                                Указанные даты доставки являются ориентировочными. Точную дату доставки можно отследить на сайте курьерской службы
+                                            </p>
+                                            <ul class="order__accordion-info-list">
+                                                <li class="order__accordion-info-item">при доставке "Москва внутри МКАД" вы можете выбрать 3-х часовой интервал</li>
+                                                <li class="order__accordion-info-item">в выходные и праздничные дни доставка без 3-х часовых интервалов</li>
+                                                <li class="order__accordion-info-item">
+                                                    Заказы оформленные и подтвержденные оператором до 17:00 ( в будни ) доставляются на следующий или другой удобный для<br> Вас день
+                                                </li>
+                                                <li class="order__accordion-info-item">Заказы, оформленные на сайте в пятницу после 17:00 , субботу и воскресенье, доставляются во вторник</li>
+                                                <li class="order__accordion-info-item">Сроки доставки могут изменяться в зависимости от текущих обстоятельств</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__accordion">
+                                    <div class="order__accordion-top">
+                                        <div class="order__accordion-top-decor"></div>
+                                        <h3 class="order__accordion-top-title">Транспортными компаниями в регионы РФ</h3>
+                                    </div>
+                                    <div class="order__accordion-body">
+                                        <p class="order__accordion-top-sub-title">
+                                            Отправка региональных заказов осуществляется после 100% оплаты.
+                                        </p>
+                                        <form class="order__accordion-delivery-form">
+                                            <label for="rr1" class="order__accordion-delivery-label">
+                                                <input class="order__accordion-delivery-input" type="radio" name="" id="rr1">
+                                                <img src="local/templates/mains/assets/images/order/o1.png" alt="">
+                                                <p>
+                                                    Boxberry<br>
+                                                    от 200 до 800 р
+                                                </p>
+                                            </label>
+                                            <label for="rr2" class="order__accordion-delivery-label">
+                                                <input class="order__accordion-delivery-input" type="radio" name="" id="rr2">
+                                                <img src="local/templates/mains/assets/images/order/o2.png" alt="">
+                                                <p>
+                                                    СДЕК<br>
+                                                    от 200 до 800 р
+                                                </p>
+                                            </label>
+                                            <label for="rr3" class="order__accordion-delivery-label">
+                                                <input class="order__accordion-delivery-input" type="radio" name="" id="rr3">
+                                                <img src="local/templates/mains/assets/images/order/o3.png" alt="">
+                                                <p>
+                                                    Почта России<br> 
+                                                    от 200 до 800 р
+                                                </p>
+                                            </label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order__content-item">
+                        <h2 class="order__content-title order__content-title_mb-52">Способ оплаты</h2>
+                        <div class="order__content-body">
+                            <div class="order__pay-slider-parent">
+                                <div class="order__pay-slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="order__pay-slide order__pay-slide_center swiper-slide">
+                                            <img src="local/templates/mains/assets/images/decor/order/card.svg" alt="">
+                                            <p>Новой картой</p>
+                                        </div>
+                                        <div class="order__pay-slide order__pay-slide_row swiper-slide">
+                                            <img src="local/templates/mains/assets/images/decor/order/sber.svg" alt="">
+                                            <p>*9995</p>
+                                        </div>
+                                        <div class="order__pay-slide order__pay-slide_center swiper-slide">
+                                            <img src="local/templates/mains/assets/images/decor/order/sbp.svg" alt="">
+                                            <p>СБП</p>
+                                        </div>
+                                        <div class="order__pay-slide order__pay-slide_center swiper-slide">
+                                            <img src="local/templates/mains/assets/images/decor/order/dol.svg" alt="">
+                                            <p>Долями 4х</p>
+                                        </div>
+                                        <div class="order__pay-slide order__pay-slide_row swiper-slide">
+                                            <img src="local/templates/mains/assets/images/decor/order/sber.svg" alt="">
+                                            <p>*9995</p>
+                                        </div>
+                                        <div class="order__pay-slide order__pay-slide_center swiper-slide">
+                                            <img src="local/templates/mains/assets/images/decor/order/sbp.svg" alt="">
+                                            <p>СБП</p>
+                                        </div>
+                                        <div class="order__pay-slide order__pay-slide_center swiper-slide">
+                                            <img src="local/templates/mains/assets/images/decor/order/dol.svg" alt="">
+                                            <p>Долями 4х</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="order__pay-slider-button">
+                                    <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.41399 6.65671C0.41399 6.42348 0.506637 6.19981 0.671551 6.0349C0.836465 5.86998 1.06014 5.77734 1.29336 5.77734L14.4728 5.77734L10.6968 2.00308C10.5317 1.83795 10.4389 1.614 10.4389 1.38048C10.4389 1.14696 10.5317 0.92301 10.6968 0.757887C10.8619 0.592765 11.0859 0.5 11.3194 0.5C11.5529 0.5 11.7769 0.592765 11.942 0.757887L17.2182 6.03411C17.3001 6.1158 17.3651 6.21284 17.4094 6.31967C17.4537 6.42651 17.4766 6.54104 17.4766 6.65671C17.4766 6.77237 17.4537 6.88691 17.4094 6.99374C17.3651 7.10058 17.3001 7.19762 17.2182 7.2793L11.942 12.5555C11.7769 12.7206 11.5529 12.8134 11.3194 12.8134C11.0859 12.8134 10.8619 12.7206 10.6968 12.5555C10.5317 12.3904 10.4389 12.1665 10.4389 11.9329C10.4389 11.6994 10.5317 11.4755 10.6968 11.3103L14.4728 7.53608L1.29336 7.53608C1.06014 7.53608 0.836465 7.44343 0.671551 7.27852C0.506637 7.1136 0.41399 6.88993 0.41399 6.65671Z" fill="#090B18"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <aside class="basket-order__aside order__aside" data-price="74725" data-bals="375">
+                    <div class="basket-order__aside-top">
+                        <h3 class="basket-order__aside-title">Ваш заказ</h3>
+                        <span class="basket-order__aside-count">2 товара</span>
+                    </div>
+                    <ul class="basket-order__aside-list">
+                        <li class="basket-order__aside-item">
+                            <p>Товары, 2 шт</p>
+                            <strong>85 140 ₽ </strong>
+                        </li>
+                        <li class="basket-order__aside-item">
+                            <p>Скидка</p>
+                            <strong>- 10 040 ₽ </strong>
+                        </li>
+                        <li class="basket-order__aside-item">
+                            <p>Подарок</p>
+                            <strong>бесплатно</strong>
+                        </li>
+                        <li class="basket-order__aside-item">
+                            <p>Доставка</p>
+                            <strong>200 р</strong>
+                        </li>
+                        <li class="basket-order__aside-item basket-order__aside-item-bals">
+                            <div class="">
+                                Списать
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_176_4240)">
+                                    <path d="M9.25033 18.3333C4.87807 18.3333 1.33366 14.6023 1.33366 9.99996C1.33366 5.39759 4.87807 1.66663 9.25033 1.66663C13.6226 1.66663 17.167 5.39759 17.167 9.99996C17.167 14.6023 13.6226 18.3333 9.25033 18.3333Z" stroke="#090B18" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.83301 1.66663C12.4441 1.66663 19.6663 2.49996 19.6663 9.99996C19.6663 17.5 12.4441 18.3333 8.83301 18.3333" stroke="#090B18" stroke-width="1.66667"/>
+                                    <path d="M7.40391 14V6.86H9.68391C10.6039 6.86 11.2739 7.04667 11.6939 7.42C12.1206 7.79333 12.3339 8.30667 12.3339 8.96C12.3339 9.34667 12.2472 9.71 12.0739 10.05C11.9006 10.39 11.6106 10.6633 11.2039 10.87C10.8039 11.0767 10.2572 11.18 9.56391 11.18H8.91391V14H7.40391ZM6.60391 12.93V11.96H10.4539V12.93H6.60391ZM6.60391 11.18V9.94H9.53391V11.18H6.60391ZM9.41391 9.94C9.70057 9.94 9.94724 9.91 10.1539 9.85C10.3606 9.78333 10.5206 9.68 10.6339 9.54C10.7472 9.4 10.8039 9.22333 10.8039 9.01C10.8039 8.70333 10.7072 8.47667 10.5139 8.33C10.3206 8.17667 10.0172 8.1 9.60391 8.1H8.91391V9.94H9.41391Z" fill="#090B18"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_176_4240">
+                                    <rect width="20" height="20" fill="white" transform="translate(0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <strong class="basket-order__aside-item-bals-text">
+                                    375 б
+                                </strong>
+                            </div>
+                            <label for="rad1">
+                                <input type="checkbox" id="rad1">
+                                <div class="basket-order__aside-input-decor"></div>
+                            </label>
+                        </li>
+                    </ul>
+                    <ul class="basket-order__aside-result">
+                        <li class="basket-order__aside-result-item">
+                            <strong class="basket-order__aside-result-item-title">Итого</strong>
+                            <strong class="basket-order__aside-result-item-price">74 725 ₽ </strong>
+                        </li>
+                        <li class="basket-order__aside-result-item">
+                            <p>Начислим</p>
+                            <div class="basket-order__aside-result-item-bals">
+                                +
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_176_4256)">
+                                    <path d="M9.25033 18.3333C4.87807 18.3333 1.33366 14.6023 1.33366 9.99996C1.33366 5.39759 4.87807 1.66663 9.25033 1.66663C13.6226 1.66663 17.167 5.39759 17.167 9.99996C17.167 14.6023 13.6226 18.3333 9.25033 18.3333Z" stroke="#4789EB" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.83301 1.66663C12.4441 1.66663 19.6663 2.49996 19.6663 9.99996C19.6663 17.5 12.4441 18.3333 8.83301 18.3333" stroke="#4789EB" stroke-width="1.66667"/>
+                                    <path d="M7.40391 14V6.86H9.68391C10.6039 6.86 11.2739 7.04667 11.6939 7.42C12.1206 7.79333 12.3339 8.30667 12.3339 8.96C12.3339 9.34667 12.2472 9.71 12.0739 10.05C11.9006 10.39 11.6106 10.6633 11.2039 10.87C10.8039 11.0767 10.2572 11.18 9.56391 11.18H8.91391V14H7.40391ZM6.60391 12.93V11.96H10.4539V12.93H6.60391ZM6.60391 11.18V9.94H9.53391V11.18H6.60391ZM9.41391 9.94C9.70057 9.94 9.94724 9.91 10.1539 9.85C10.3606 9.78333 10.5206 9.68 10.6339 9.54C10.7472 9.4 10.8039 9.22333 10.8039 9.01C10.8039 8.70333 10.7072 8.47667 10.5139 8.33C10.3206 8.17667 10.0172 8.1 9.60391 8.1H8.91391V9.94H9.41391Z" fill="#4789EB"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_176_4256">
+                                    <rect width="20" height="20" fill="white" transform="translate(0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                1025 б                                
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="basket-order__aside-button">
+                        К оформлению заказа
+                    </button>
+                    <p class="basket-order__aside-text">
+                        Размещая заказ, я соглашаюсьс <a href="#!">правилами Интернет-магазина Парфюм-Парадайз</a>
+                    </p>
+                </aside>
+            </div>
+        </div>
+        <div class="order-modal">
+            <div class="order-modal__inner">
+                <button class="order-modal__close" type="button" aria-label="Закрыть модальное окно">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM15.7071 9.70711C16.0976 9.31658 16.0976 8.68342 15.7071 8.29289C15.3166 7.90237 14.6834 7.90237 14.2929 8.29289L12 10.5858L9.70711 8.29291C9.31658 7.90238 8.68342 7.90238 8.29289 8.29291C7.90237 8.68343 7.90237 9.3166 8.29289 9.70712L10.5858 12L8.2929 14.2929C7.90238 14.6834 7.90238 15.3166 8.2929 15.7071C8.68342 16.0976 9.31659 16.0976 9.70711 15.7071L12 13.4142L14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L13.4142 12L15.7071 9.70711Z" fill="#090B18"/>
+                    </svg>
+                </button>
+                <h2 class="order-modal__title">Адрес доставки</h2>
+                <form action="#!" class="order-modal__form">
+                    <label class="order-modal__form-label" for="">
+                        <span>Населенный пункт</span>
+                        <select name="" id="">
+                            <option>Абаза</option>
+                            <option>Абакан</option>
+                            <option>Абдулино</option>
+                            <option>Абинск</option>
+                            <option>Агидель</option>
+                            <option>Агрыз</option>
+                            <option>Адыгейск</option>
+                            <option>Азнакаево</option>
+                            <option>Азов</option>
+                            <option>Ак-Довурак</option>
+                            <option>Аксай</option>
+                            <option>Алагир</option>
+                            <option>Алапаевск</option>
+                            <option>Алатырь</option>
+                            <option>Алдан</option>
+                            <option>Алейск</option>
+                            <option>Александров</option>
+                            <option>Александровск</option>
+                            <option>Александровск-Сахалинский</option>
+                            <option>Алексеевка</option>
+                            <option>Алексин</option>
+                            <option>Алзамай</option>
+                            <option>Алупка</option>
+                            <option>Алушта</option>
+                            <option>Альметьевск</option>
+                            <option>Амурск</option>
+                            <option>Анадырь</option>
+                            <option>Анапа</option>
+                            <option>Ангарск</option>
+                            <option>Андреаполь</option>
+                            <option>Анжеро-Судженск</option>
+                            <option>Анива</option>
+                            <option>Апатиты</option>
+                            <option>Апрелевка</option>
+                            <option>Апшеронск</option>
+                            <option>Арамиль</option>
+                            <option>Аргун</option>
+                            <option>Ардатов</option>
+                            <option>Ардон</option>
+                            <option>Арзамас</option>
+                            <option>Аркадак</option>
+                            <option>Армавир</option>
+                            <option>Армянск</option>
+                            <option>Арсеньев</option>
+                            <option>Арск</option>
+                            <option>Артём</option>
+                            <option>Артёмовск</option>
+                            <option>Артёмовский</option>
+                            <option>Архангельск</option>
+                            <option>Асбест</option>
+                            <option>Асино</option>
+                            <option>Астрахань</option>
+                            <option>Аткарск</option>
+                            <option>Ахтубинск</option>
+                            <option>Ачинск</option>
+                            <option>Аша</option>
+                            <option>Бабаево</option>
+                            <option>Бабушкин</option>
+                            <option>Бавлы</option>
+                            <option>Багратионовск</option>
+                            <option>Байкальск</option>
+                            <option>Баймак</option>
+                            <option>Бакал</option>
+                            <option>Баксан</option>
+                            <option>Балабаново</option>
+                            <option>Балаково</option>
+                            <option>Балахна</option>
+                            <option>Балашиха</option>
+                            <option>Балашов</option>
+                            <option>Балей</option>
+                            <option>Балтийск</option>
+                            <option>Барабинск</option>
+                            <option>Барнаул</option>
+                            <option>Барыш</option>
+                            <option>Батайск</option>
+                            <option>Бахчисарай</option>
+                            <option>Бежецк</option>
+                            <option>Белая Калитва</option>
+                            <option>Белая Холуница</option>
+                            <option>Белгород</option>
+                            <option>Белебей</option>
+                            <option>Белёв</option>
+                            <option>Белинский</option>
+                            <option>Белово</option>
+                            <option>Белогорск</option>
+                            <option>Белозерск</option>
+                            <option>Белокуриха</option>
+                            <option>Беломорск</option>
+                            <option>Белорецк</option>
+                            <option>Белореченск</option>
+                            <option>Белоусово</option>
+                            <option>Белоярский</option>
+                            <option>Белый</option>
+                            <option>Бердск</option>
+                            <option>Березники</option>
+                            <option>Берёзовский</option>
+                            <option>Беслан</option>
+                            <option>Бийск</option>
+                            <option>Бикин</option>
+                            <option>Билибино</option>
+                            <option>Биробиджан</option>
+                            <option>Бирск</option>
+                            <option>Бирюсинск</option>
+                            <option>Бирюч</option>
+                            <option>Благовещенск (Амурская область)</option>
+                            <option>Благовещенск (Башкортостан)</option>
+                            <option>Благодарный</option>
+                            <option>Бобров</option>
+                            <option>Богданович</option>
+                            <option>Богородицк</option>
+                            <option>Богородск</option>
+                            <option>Боготол</option>
+                            <option>Богучар</option>
+                            <option>Бодайбо</option>
+                            <option>Бокситогорск</option>
+                            <option>Болгар</option>
+                            <option>Бологое</option>
+                            <option>Болотное</option>
+                            <option>Болохово</option>
+                            <option>Болхов</option>
+                            <option>Большой Камень</option>
+                            <option>Бор</option>
+                            <option>Борзя</option>
+                            <option>Борисоглебск</option>
+                            <option>Боровичи</option>
+                            <option>Боровск</option>
+                            <option>Бородино</option>
+                            <option>Братск</option>
+                            <option>Бронницы</option>
+                            <option>Брянск</option>
+                            <option>Бугульма</option>
+                            <option>Бугуруслан</option>
+                            <option>Будённовск</option>
+                            <option>Бузулук</option>
+                            <option>Буинск</option>
+                            <option>Буй</option>
+                            <option>Буйнакск</option>
+                            <option>Bутурлиновка</option >
+                            <option >Валдай</option >
+                            <option >Валуйки</option >
+                            <option >Велиж</option >
+                            <option >Великие Луки</option >
+                            <option >Великий Новгород</option >
+                            <option >Великий Устюг</option >
+                            <option >Вельск</option >
+                            <option >Венёв</option >
+                            <option >Верещагино</option >
+                            <option >Верея</option >
+                            <option >Верхнеуральск</option >
+                            <option >Верхний Тагил</option >
+                            <option >Верхний Уфалей</option >
+                            <option >Верхняя Пышма</option >
+                            <option >Верхняя Салда</option >
+                            <option >Верхняя Тура</option >
+                            <option >Верхотурье</option >
+                            <option >Верхоянск</option >
+                            <option >Весьегонск</option >
+                            <option >Ветлуга</option >
+                            <option >Видное</option >
+                            <option >Вилюйск</option >
+                            <option >Вилючинск</option >
+                            <option >Вихоревка</option >
+                            <option >Вичуга</option >
+                            <option >Владивосток</option >
+                            <option >Владикавказ</option >
+                            <option >Владимир</option >
+                            <option >Волгоград</option >
+                            <option >Волгодонск</option >
+                            <option >Волгореченск</option >
+                            <option >Волжск</option >
+                            <option >Волжский</option >
+                            <option >Вологда</option >
+                            <option >Володарск</option >
+                            <option >Волоколамск</option >
+                            <option >Волосово</option >
+                            <option >Волхов</option >
+                            <option >Волчанск</option >
+                            <option >Вольск</option >
+                            <option >Воркута</option >
+                            <option >Воронеж</option >
+                            <option >Ворсма</option >
+                            <option >Воскресенск</option >
+                            <option >Воткинск</option >
+                            <option >Всеволожск</option >
+                            <option >Вуктыл</option >
+                            <option >Выборг</option >
+                            <option >Выкса</option >
+                            <option >Высоковск</option >
+                            <option >Высоцк</option >
+                            <option >Вытегра</option >
+                            <option >Вышний Волочёк</option >
+                            <option >Вяземский</option >
+                            <option >Вязники</option >
+                            <option >Вязьма</option >
+                            <option >Вятские Поляны</option >
+                            <option >Гаврилов Посад</option >
+                            <option >Гаврилов-Ям</option >
+                            <option >Гагарин</option >
+                            <option >Гаджиево</option >
+                            <option >Гай</option >
+                            <option >Галич</option >
+                            <option >Гатчина</option >
+                            <option >Гвардейск</option >
+                            <option >Гдов</option >
+                            <option >Геленджик</option >
+                            <option >Георгиевск</option >
+                            <option >Глазов</option >
+                            <option >Голицыно</option >
+                            <option >Горбатов</option >
+                            <option >Горно-Алтайск</option >
+                            <option >Горнозаводск</option >
+                            <option >Горняк</option >
+                            <option >Городец</option >
+                            <option >Городище</option >
+                            <option >Городовиковск</option >
+                            <option >Гороховец</option >
+                            <option >Горячий Ключ</option >
+                            <option >Грайворон</option >
+                            <option >Гремячинск</option >
+                            <option >Грозный</option >
+                            <option >Грязи</option >
+                            <option >Грязовец</option >
+                            <option >Губаха</option >
+                            <option >Губкин</option >
+                            <option >Губкинский</option >
+                            <option >Гудермес</option >
+                            <option >Гуково</option >
+                            <option >Гулькевичи</option >
+                            <option >Гурьевск</option >
+                            <option >Гусев</option >
+                            <option >Гусиноозёрск</option >
+                            <option >Гусь-Хрустальный</option >
+                            <option >Давлеканово</option >
+                            <option >Дагестанские Огни </option>
+                        </select>
+                    </label>
+                    <label class="order-modal__form-label" for="">
+                        <span>Населенный пункт<sup>*</sup></span>
+                        <input type="text" placeholder="Улица, дом">
+                    </label>
+                    <fieldset class="order-modal__form-two-col">
+                        <legend>
+                            Информация о доме клиента
+                        </legend>
+                        <label class="order-modal__form-label" for="">
+                            <span>Кв, офис<sup>*</sup></span>
+                            <input type="text" placeholder="Квартира, офис">
+                        </label>
+                        <label class="order-modal__form-label" for="">
+                            <span>Подъезд<sup>*</sup></span>
+                            <input type="text" placeholder="№ подъезда">
+                        </label>
+                        <label class="order-modal__form-label" for="">
+                            <span>Этаж</span>
+                            <input type="text" placeholder="этаж">
+                        </label>
+                        <label class="order-modal__form-label" for="">
+                            <span>Домофон</span>
+                            <input type="text" placeholder="домофон">
+                        </label>
+                    </fieldset>
+                    <label class="order-modal__form-label" for="">
+                        <span>Комментарий курьеру</span>
+                        <textarea placeholder="Впишите текст"></textarea>
+                    </label>
+                    <fieldset class="order-modal__form-buttons-row">
+                        <button class="order-modal__form-btn" type="button">Отменить</button>
+                        <button class="order-modal__form-btn order-modal__form-btn_send" type="submit">Сохранить адрес</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </main>
 <footer class="footer">
     <div class="footer__inner container">
         <div class="footer__box">
