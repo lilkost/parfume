@@ -273,7 +273,7 @@ const modal = () => {
     if(document.querySelector('.order-modal')) {
         const modal = document.querySelector('.order-modal');
         const buttonsOpen = document.querySelectorAll('.order__accordion-button');
-
+        
         const buttonCloseTop = document.querySelector('.order-modal__close');
         const modalCloseBtn = document.querySelector('.order-modal__form-btn');
 
