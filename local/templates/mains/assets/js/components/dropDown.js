@@ -62,6 +62,7 @@ const dropDown = ()=> {
     if(document.querySelector('.detail__dropdown-top-item')) {
         const links = document.querySelectorAll('.detail__dropdown-top-item a');
         const bodys = document.querySelectorAll('.detail__dropdown-contents-item');
+        const dropDownItem = document.querySelectorAll('.detail__dropdown-contents-item');
 
         links.forEach(link=> {
             link.addEventListener('click', (e)=> {
@@ -83,7 +84,17 @@ const dropDown = ()=> {
                     }
                 })
             });
-        })
+        });
+
+        dropDownItem.forEach((item)=> {
+            const top = item.querySelector('.detail__dropdown-top-mobile');
+
+            if(top) {
+                top.addEventListener("click", ()=> {
+                    item.classList.toggle('is-active');
+                });
+            }
+        });
     }
     
     if(document.querySelector('.personal-account__bonus-conditions-accordion')) {

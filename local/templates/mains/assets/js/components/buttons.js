@@ -6,6 +6,7 @@ const buttonsPointer = () => {
     const addToBasketDetail = document.querySelector('.detail__price-btn-add-basket');
     const countsDetail = document.querySelector('.detail__price-count-box');
     const detailFilter = document.querySelectorAll('.detail__information-el-label');
+    const openDescription = document.querySelector('.detail__dropdown-body-text-btn');
 
     const addClass = (e, element, stl,className) => {
         e.preventDefault();
@@ -54,15 +55,34 @@ const buttonsPointer = () => {
     }
 
     if(addToBasketDetail){
+        const controlssParent = document.querySelector('.detail__price-controlls');
         addToBasketDetail.addEventListener('click', ()=> {
-            if(addToBasketDetail.classList.contains('is-active')) {
-                addToBasketDetail.innerHTML = 'В корзину';
+            if(window.innerWidth > 480) {
+                if(addToBasketDetail.classList.contains('is-active')) {
+                    addToBasketDetail.innerHTML = 'В корзину';
+                }
+                else {
+                    addToBasketDetail.innerHTML = 'В корзине';
+                }
+    
+                addToBasketDetail.classList.toggle('is-active');
+            } else {
+                if(addToBasketDetail.classList.contains('is-active')) {
+                    addToBasketDetail.innerHTML = 'В корзину';
+                    controlssParent.classList.remove('is-basket');
+                }
+                else {
+                    addToBasketDetail.innerHTML = `
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.97321 9.8398C4.05671 8.8007 4.92433 8 5.96678 8H18.0254C19.0678 8 19.9354 8.8007 20.0189 9.8398L20.8225 19.8398C20.916 21.0038 19.9967 22 18.8289 22H5.16321C3.99548 22 3.0761 21.0038 3.16964 19.8398L3.97321 9.8398Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.9961 11V6C15.9961 3.79086 14.2052 2 11.9961 2C9.78695 2 7.99609 3.79086 7.99609 6V11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>В корзине</span>
+                    `;
+                    controlssParent.classList.add('is-basket');
+                }
+                addToBasketDetail.classList.toggle('is-active');
             }
-            else {
-                addToBasketDetail.innerHTML = 'В корзине';
-            }
-
-            addToBasketDetail.classList.toggle('is-active');
 
         });
         
@@ -113,6 +133,26 @@ const buttonsPointer = () => {
 
                 label.classList.toggle('is-active');
             });
+        });
+    }
+
+    if(openDescription) {
+        const textDescription = document.querySelector('.detail__dropdown-body-text');
+
+        const text = {
+            old: 'Читать все описание',
+            newText: 'Скрыть описание'
+        }
+
+        openDescription.addEventListener("click", ()=> {
+            if(textDescription.classList.contains('is-open')) {
+                openDescription.innerHTML = text.old;
+                textDescription.classList.remove('is-open');
+            }
+            else {
+                openDescription.innerHTML = text.newText;
+                textDescription.classList.add('is-open');
+            }
         });
     }
 }

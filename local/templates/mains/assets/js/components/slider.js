@@ -414,6 +414,10 @@ const createSlider = () => {
             thumbs: {
                 swiper: detailSliderThumbs,
             },
+            pagination: {
+                el: ".detail__slider-big-pagination"
+            },
+
         });
     }
 
@@ -429,7 +433,15 @@ const createSlider = () => {
                 nextEl: '.reviews__slider-btn-next',
                 prevEl: '.reviews__slider-btn-prev',
             },
-
+            breakpoints: {
+                651: {
+                    slidesPerView: 2,
+                },
+                280: {
+                    slidesPerView: 1.38,
+                    spaceBetween: 10,
+                }
+            }
         });
     }
 
