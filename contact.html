@@ -333,6 +333,12 @@
     .bread-crumbs {
         padding-block: 25px 50px;
     }
+
+    @media (max-width: 480px) {
+        .bread-crumbs{
+            padding-bottom: 12px !important;
+        }
+    }
 </style>
 <main class="main">
     <div class="bread-crumbs container">
@@ -409,7 +415,14 @@
                     </defs>
                 </svg>
                 <p class="contact-page__item-text">
-                    Call center - Будние дни с 10:00<br> до 18:00, заказы через сайт -<br> круглосуточно.
+                    <span class="contact-page__item-text_desctop">Call center - Будние дни с 10:00<br> до 18:00, заказы через сайт -<br> круглосуточно.</span>
+                    <span class="contact-page__item-text_mobile">
+                        Call center<br>
+                        Будние дни <br>
+                        с 10:00 до 18:00, <br>
+                        заказы через сайт - <br>
+                        круглосуточно.
+                    </span>
                 </p>
             </li>
         </ul>
@@ -437,7 +450,7 @@
                         <textarea class="contact-page__callback-textarea" placeholder="Введите сообщение"></textarea>
                     </label>
                 </div>
-                <div class="contact-page__callback-box">
+                <div class="contact-page__callback-box" data-da=".contact-page__callback-innner, 480, last">
                     <p class="contact-page__callback-text">
                         Услуги предоставлены: ИП Солдатенков<br> П.А. огрн: 310504720200037<br><br>
                         Прежде чем задать свой вопрос, обратите<br> внимание на раздел <a href="#!">Помощь покупателю</a>.<br> Возможно, там уже есть исчерпывающая<br> информация по решению вашей<br> проблемы.
@@ -459,7 +472,7 @@
         </div>
     </div>
     <div class="contacts bg-gray">
-        <div class="contacts__inner contacts__inner_pb-64 container">
+        <div class="contacts__inner contact-page__contact-inner contacts__inner_pb-64 container">
             <div class="contacts__box">
                 <strong class="contacts__title">Лучшие новости для Вас</strong>
                 <p class="contacts__description">Не пропустите наши акции, новинки, и персональные предложения</p>
