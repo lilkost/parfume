@@ -348,7 +348,14 @@
         </ul>
     </div>
     <div class="basket-top basket-top_mb-64 container">
-        <h2 class="basket-top__title title">Корзина</h2>
+        <h2 class="basket-top__title title">
+            <a href="#!">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            Корзина
+        </h2>
         <h3 class="basket-top__sub-title">Выбрать подарок</h3>
         <form class="basket-top__form" action="">
             <label for="f122" class="basket-top__form-label">
@@ -399,8 +406,13 @@
                     <button class="basket-order__btn-delete" type="button" aria-label="Очистить корзину">Очистить корзину</button>
                 </form>
                 <ul class="basket-order__list">
-                    <li class="basket-order__item">
-                        <label for="ff1" class="basket-order__item-label">
+                    <li class="basket-order__item basket-order__item_1">
+                        <div class="basket-order__item-top-mobile">
+                            <div class="basket-order__item-top-mobile-titels"></div>
+                        </div>
+                        <div class="basket-order__item-center-mobile"></div>
+                        <div class="basket-order__item-bottom-mobile"></div>
+                        <label for="ff1" class="basket-order__item-label" data-da=".basket-order__item_1 .basket-order__item-top-mobile, 480, first">
                             <input id="ff1" type="checkbox">
                             <div class="basket-top__form-label-decor"></div>
                             <picture class="basket-order__item-picture">
@@ -408,20 +420,20 @@
                             </picture>
                         </label>
                         <div class="basket-order__item-box">
-                            <span class="basket-order__item-sub-title">Женская туалетная вода</span>
-                            <h3 class="basket-order__item-title">Abercrombie & Fitch Perfume No1 Bare</h3>
-                            <div class="basket-order__item-controll">
+                            <span class="basket-order__item-sub-title" data-da=".basket-order__item_1 .basket-order__item-top-mobile-titels, 480, first">Женская туалетная вода</span>
+                            <h3 class="basket-order__item-title" data-da=".basket-order__item_1 .basket-order__item-top-mobile-titels, 480, last">Abercrombie & Fitch Perfume No1 Bare</h3>
+                            <div class="basket-order__item-controll" data-da=".basket-order__item_1 .basket-order__item-bottom-mobile, 480, first">
                                 <div class="basket-order__item-bals">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_164_5820)">
-                                        <path d="M8.75033 18.3333C4.37807 18.3333 0.833659 14.6023 0.833659 9.99996C0.833659 5.39759 4.37807 1.66663 8.75033 1.66663C13.1226 1.66663 16.667 5.39759 16.667 9.99996C16.667 14.6023 13.1226 18.3333 8.75033 18.3333Z" stroke="#090B18" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M8.33301 1.66663C11.9441 1.66663 19.1663 2.49996 19.1663 9.99996C19.1663 17.5 11.9441 18.3333 8.33301 18.3333" stroke="#090B18" stroke-width="1.66667"/>
-                                        <path d="M6.90391 14V6.86H9.18391C10.1039 6.86 10.7739 7.04667 11.1939 7.42C11.6206 7.79333 11.8339 8.30667 11.8339 8.96C11.8339 9.34667 11.7472 9.71 11.5739 10.05C11.4006 10.39 11.1106 10.6633 10.7039 10.87C10.3039 11.0767 9.75724 11.18 9.06391 11.18H8.41391V14H6.90391ZM6.10391 12.93V11.96H9.95391V12.93H6.10391ZM6.10391 11.18V9.94H9.03391V11.18H6.10391ZM8.91391 9.94C9.20057 9.94 9.44724 9.91 9.65391 9.85C9.86057 9.78333 10.0206 9.68 10.1339 9.54C10.2472 9.4 10.3039 9.22333 10.3039 9.01C10.3039 8.70333 10.2072 8.47667 10.0139 8.33C9.82057 8.17667 9.51724 8.1 9.10391 8.1H8.41391V9.94H8.91391Z" fill="#090B18"/>
+                                            <path d="M8.75033 18.3333C4.37807 18.3333 0.833659 14.6023 0.833659 9.99996C0.833659 5.39759 4.37807 1.66663 8.75033 1.66663C13.1226 1.66663 16.667 5.39759 16.667 9.99996C16.667 14.6023 13.1226 18.3333 8.75033 18.3333Z" stroke="#090B18" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.33301 1.66663C11.9441 1.66663 19.1663 2.49996 19.1663 9.99996C19.1663 17.5 11.9441 18.3333 8.33301 18.3333" stroke="#090B18" stroke-width="1.66667"/>
+                                            <path d="M6.90391 14V6.86H9.18391C10.1039 6.86 10.7739 7.04667 11.1939 7.42C11.6206 7.79333 11.8339 8.30667 11.8339 8.96C11.8339 9.34667 11.7472 9.71 11.5739 10.05C11.4006 10.39 11.1106 10.6633 10.7039 10.87C10.3039 11.0767 9.75724 11.18 9.06391 11.18H8.41391V14H6.90391ZM6.10391 12.93V11.96H9.95391V12.93H6.10391ZM6.10391 11.18V9.94H9.03391V11.18H6.10391ZM8.91391 9.94C9.20057 9.94 9.44724 9.91 9.65391 9.85C9.86057 9.78333 10.0206 9.68 10.1339 9.54C10.2472 9.4 10.3039 9.22333 10.3039 9.01C10.3039 8.70333 10.2072 8.47667 10.0139 8.33C9.82057 8.17667 9.51724 8.1 9.10391 8.1H8.41391V9.94H8.91391Z" fill="#090B18"/>
                                         </g>
                                         <defs>
-                                        <clipPath id="clip0_164_5820">
-                                        <rect width="20" height="20" fill="white"/>
-                                        </clipPath>
+                                            <clipPath id="clip0_164_5820">
+                                                <rect width="20" height="20" fill="white"/>
+                                            </clipPath>
                                         </defs>
                                     </svg>
                                     <span>105 б</span>                                        
@@ -447,8 +459,8 @@
                                 </button>
                             </div>
                             </div>
-                            <div class="basket-order__item-prices">
-                                <div class="basket-order__item-prices-box">
+                            <div class="basket-order__item-prices" data-da=".basket-order__item_1 .basket-order__item-center-mobile, 480, first">
+                                <div class="basket-order__item-prices-box" >
                                     <strong>37 550 ₽</strong>
                                     <span>42 570 ₽</span>
                                 </div>
@@ -464,7 +476,7 @@
                                             <path d="M8.00009 0.909058V7.99997M8.00009 7.99997V15.0909M8.00009 7.99997H15.091M8.00009 7.99997H0.90918" stroke="#090B18" stroke-width="1.69697" stroke-linecap="round"/>
                                         </svg>                                        
                                     </button>
-                                    <button class="basket-order__item-prices-delete">
+                                    <button class="basket-order__item-prices-delete" data-da=".basket-order__item_1 .basket-order__item-bottom-mobile, 480, last">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.99902 6H19.999L18.4189 20.2209C18.3064 21.2337 17.4502 22 16.4311 22H7.56688C6.54778 22 5.69166 21.2337 5.57912 20.2209L3.99902 6Z" stroke="#FF3A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M7.34491 3.14716C7.67506 2.44685 8.37973 2 9.15396 2H14.846C15.6203 2 16.3249 2.44685 16.6551 3.14716L18 6H6L7.34491 3.14716Z" stroke="#FF3A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -476,8 +488,13 @@
                                 </div>
                         </div>
                     </li>
-                    <li class="basket-order__item">
-                        <label for="ff2" class="basket-order__item-label">
+                    <li class="basket-order__item basket-order__item_2">
+                        <div class="basket-order__item-top-mobile">
+                            <div class="basket-order__item-top-mobile-titels"></div>
+                        </div>
+                        <div class="basket-order__item-center-mobile"></div>
+                        <div class="basket-order__item-bottom-mobile"></div>
+                        <label for="ff2" class="basket-order__item-label" data-da=".basket-order__item_2 .basket-order__item-top-mobile, 480, first">
                             <input id="ff2" type="checkbox">
                             <div class="basket-top__form-label-decor"></div>
                             <picture class="basket-order__item-picture">
@@ -485,9 +502,9 @@
                             </picture>
                         </label>
                         <div class="basket-order__item-box">
-                            <span class="basket-order__item-sub-title">Женская туалетная вода</span>
-                            <h3 class="basket-order__item-title">Abercrombie & Fitch Perfume No1 Bare</h3>
-                            <div class="basket-order__item-controll">
+                            <span class="basket-order__item-sub-title" data-da=".basket-order__item_2 .basket-order__item-top-mobile-titels, 480, first">Женская туалетная вода</span>
+                            <h3 class="basket-order__item-title" data-da=".basket-order__item_2 .basket-order__item-top-mobile-titels, 480, last">Abercrombie & Fitch Perfume No1 Bare</h3>
+                            <div class="basket-order__item-controll" data-da=".basket-order__item_2 .basket-order__item-bottom-mobile, 480, first">
                                 <div class="basket-order__item-bals">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_164_5820)">
@@ -524,7 +541,7 @@
                                 </button>
                             </div>
                             </div>
-                            <div class="basket-order__item-prices">
+                            <div class="basket-order__item-prices" data-da=".basket-order__item_2 .basket-order__item-center-mobile, 480, first">
                                 <div class="basket-order__item-prices-box">
                                     <strong>37 550 ₽</strong>
                                     <span>42 570 ₽</span>
@@ -541,7 +558,7 @@
                                             <path d="M8.00009 0.909058V7.99997M8.00009 7.99997V15.0909M8.00009 7.99997H15.091M8.00009 7.99997H0.90918" stroke="#090B18" stroke-width="1.69697" stroke-linecap="round"/>
                                         </svg>                                        
                                     </button>
-                                    <button class="basket-order__item-prices-delete">
+                                    <button class="basket-order__item-prices-delete" data-da=".basket-order__item_2 .basket-order__item-bottom-mobile, 480, last">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.99902 6H19.999L18.4189 20.2209C18.3064 21.2337 17.4502 22 16.4311 22H7.56688C6.54778 22 5.69166 21.2337 5.57912 20.2209L3.99902 6Z" stroke="#FF3A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M7.34491 3.14716C7.67506 2.44685 8.37973 2 9.15396 2H14.846C15.6203 2 16.3249 2.44685 16.6551 3.14716L18 6H6L7.34491 3.14716Z" stroke="#FF3A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -700,7 +717,36 @@
             </aside>
         </div>
     </div>
-    <section class="main-slider container">
+    <div class="basket-mobile-price">
+        <div class="basket-mobile-price__box">
+            <div class="basket-mobile-price__box-top">
+                <strong>74 725 ₽</strong>
+                <span>
+                    - 10 040 ₽ 
+                </span>
+            </div>
+            <div class="basket-mobile-price__bals">
+                +
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_212_5749)">
+                    <path d="M9.25033 18.3332C4.87807 18.3332 1.33366 14.6022 1.33366 9.99984C1.33366 5.39746 4.87807 1.6665 9.25033 1.6665C13.6226 1.6665 17.167 5.39746 17.167 9.99984C17.167 14.6022 13.6226 18.3332 9.25033 18.3332Z" stroke="#4789EB" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.83301 1.6665C12.4441 1.6665 19.6663 2.49984 19.6663 9.99984C19.6663 17.4998 12.4441 18.3332 8.83301 18.3332" stroke="#4789EB" stroke-width="1.66667"/>
+                    <path d="M7.40391 14V6.86H9.68391C10.6039 6.86 11.2739 7.04667 11.6939 7.42C12.1206 7.79333 12.3339 8.30667 12.3339 8.96C12.3339 9.34667 12.2472 9.71 12.0739 10.05C11.9006 10.39 11.6106 10.6633 11.2039 10.87C10.8039 11.0767 10.2572 11.18 9.56391 11.18H8.91391V14H7.40391ZM6.60391 12.93V11.96H10.4539V12.93H6.60391ZM6.60391 11.18V9.94H9.53391V11.18H6.60391ZM9.41391 9.94C9.70057 9.94 9.94724 9.91 10.1539 9.85C10.3606 9.78333 10.5206 9.68 10.6339 9.54C10.7472 9.4 10.8039 9.22333 10.8039 9.01C10.8039 8.70333 10.7072 8.47667 10.5139 8.33C10.3206 8.17667 10.0172 8.1 9.60391 8.1H8.91391V9.94H9.41391Z" fill="#4789EB"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_212_5749">
+                    <rect width="20" height="20" fill="white" transform="translate(0.5)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                1025 б
+            </div>
+        </div>
+        <button class="basket-mobile-price__arrange">
+            Оформить
+        </button>
+    </div>
+    <section class="main-slider basket-main-slider container">
         <div class="main-slider__top recommend-slider__top recommend-slider__top_mb-39">
             <h2 class="main-slider__title">
                 Сопутствующие товары
@@ -1221,7 +1267,7 @@
             </div>
         </div>
     </section>
-    <section class="main-slider container">
+    <section class="main-slider basket-main-slider container">
         <div class="main-slider__top recommend-slider__top recommend-slider__top_mb-39">
             <h2 class="main-slider__title">
                 Вы смотрели
@@ -1743,7 +1789,7 @@
             </div>
         </div>
     </section>
-    <div class="contacts bg-gray">
+    <div class="contacts basket-contacts bg-gray">
         <div class="contacts__inner contacts__inner_pb-55 container">
             <div class="contacts__box">
                 <strong class="contacts__title">Лучшие новости для Вас</strong>
