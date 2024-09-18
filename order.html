@@ -347,7 +347,7 @@
                 </li>
             </ul>
         </div>
-        <div class="container">
+        <div class="oreder-page container">
             <a href="#!" class="order-back-link">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15 4L7 12L15 20" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -359,8 +359,8 @@
             </h1>
             <div class="order__inner">
                 <div class="order__content">
-                    <div class="order__content-item">
-                        <h2 class="order__content-title order__content-title_mb-26">Личные данные</h2>
+                    <div class="order__content-item order__content-item_perssonal-data">
+                        <h2 class="order__content-title order__content-title_personal-data order__content-title_mb-26">Личные данные</h2>
                         <div class="order__content-body">
                             <div class="order__content-body-row order__content-body-row-43">
                                 <ul class="order__user-info-list">
@@ -368,7 +368,7 @@
                                     <li class="order__user-info-item">+7 912 345 67 89</li>
                                     <li class="order__user-info-item">example@gmail.com</li>
                                 </ul>
-                                <button class="order__user-button">Изменить получателя</button>
+                                <button class="order__user-button" data-da=".order__content-title_personal-data, 480, last">Изменить получателя</button>
                             </div>
                             <form action="" class="order__content-form">
                                 <label class="order__content-form-label" for="r1">
@@ -389,7 +389,7 @@
                             </form>
                         </div>
                     </div>
-                    <div class="order__content-item">
+                    <div class="order__content-item order__content-item_delivery">
                         <h2 class="order__content-title order__content-title_mb-31">Способ доставки</h2>
                         <div class="order__content-body">
                             <div class="order__accordions">
@@ -542,13 +542,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="order__content-item">
+                    <div class="order__content-item order__content-item_paypal">
                         <h2 class="order__content-title order__content-title_mb-52">Способ оплаты</h2>
                         <div class="order__content-body">
                             <div class="order__pay-slider-parent">
                                 <div class="order__pay-slider">
                                     <div class="swiper-wrapper">
-                                        <div class="order__pay-slide order__pay-slide_center swiper-slide">
+                                        <div class="order__pay-slide order__pay-slide_card order__pay-slide_center swiper-slide">
                                             <img src="local/templates/mains/assets/images/decor/order/card.svg" alt="">
                                             <p>Новой картой</p>
                                         </div>
@@ -951,6 +951,33 @@
                     </fieldset>
                 </form>
             </div>
+        </div>
+        <div class="basket-mobile-price">
+            <div class="basket-mobile-price__box">
+                <div class="basket-mobile-price__box-top">
+                    <strong>74 725 ₽</strong>
+                    <span>- 10 040 ₽</span>
+                </div>
+                <div class="basket-mobile-price__bals">
+                    +
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_176_4256)">
+                        <path d="M9.25033 18.3333C4.87807 18.3333 1.33366 14.6023 1.33366 9.99996C1.33366 5.39759 4.87807 1.66663 9.25033 1.66663C13.6226 1.66663 17.167 5.39759 17.167 9.99996C17.167 14.6023 13.6226 18.3333 9.25033 18.3333Z" stroke="#4789EB" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.83301 1.66663C12.4441 1.66663 19.6663 2.49996 19.6663 9.99996C19.6663 17.5 12.4441 18.3333 8.83301 18.3333" stroke="#4789EB" stroke-width="1.66667"/>
+                        <path d="M7.40391 14V6.86H9.68391C10.6039 6.86 11.2739 7.04667 11.6939 7.42C12.1206 7.79333 12.3339 8.30667 12.3339 8.96C12.3339 9.34667 12.2472 9.71 12.0739 10.05C11.9006 10.39 11.6106 10.6633 11.2039 10.87C10.8039 11.0767 10.2572 11.18 9.56391 11.18H8.91391V14H7.40391ZM6.60391 12.93V11.96H10.4539V12.93H6.60391ZM6.60391 11.18V9.94H9.53391V11.18H6.60391ZM9.41391 9.94C9.70057 9.94 9.94724 9.91 10.1539 9.85C10.3606 9.78333 10.5206 9.68 10.6339 9.54C10.7472 9.4 10.8039 9.22333 10.8039 9.01C10.8039 8.70333 10.7072 8.47667 10.5139 8.33C10.3206 8.17667 10.0172 8.1 9.60391 8.1H8.91391V9.94H9.41391Z" fill="#4789EB"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_176_4256">
+                        <rect width="20" height="20" fill="white" transform="translate(0.5)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    1025 б                                
+                </div>
+            </div>
+            <button class="basket-mobile-price__arrange">
+                Оформить
+            </button>
         </div>
     </main>
 <footer class="footer">
