@@ -469,6 +469,29 @@ const createSlider = () => {
             navigation: {
                 nextEl: '.order__pay-slider-button',
             },
+
+            breakpoints: {
+                769: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                }, 
+                768:{
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                569: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                481: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                280:{
+                    slidesPerView: "auto",
+                    spaceBetween: 5,
+                }
+            }
         });
     }
 }
