@@ -335,6 +335,13 @@
                 </div>
         </div>
     </header>
+<style>
+    @media (max-width: 480px) {
+        .header__row.header__row_center{
+            display: flex !important;
+        }
+    }
+</style>
 <main class="main">
 
   <div class="sliders sliders_mt sliders_mb container">
@@ -612,6 +619,7 @@
                     </svg>
                 </div>
                 <picture class="img-position-top-left" > <!-- Класс для выравнивания по верхнему левому краю картинки -->
+                    <source srcset="local/templates/mains/assets/images/sales/m3360.png" media="(max-width: 360px)">
                     <source srcset="local/templates/mains/assets/images/sales/m3.png" media="(max-width: 480px)">
                     <img src="local/templates/mains/assets/images/sales/3.png" alt="">
                 </picture>
@@ -1965,7 +1973,7 @@
                 </div>
             </div>
         </section>
-        <section class="news container">
+        <section class="news news_pr-mob container">
             <h2 class="news__title">Новости</h2>
             <div class="news__inner">
                 <div class="news__box news__slide-js news__slide-js_width swiper-slide" data-da=".news-slider .swiper-wrapper, 992, first">
