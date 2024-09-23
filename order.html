@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="local/templates/mains/assets/js/main.min.js" defer></script>
     <script src="local/templates/mains/assets/js/main.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/color-calendar/dist/bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" ></script>
     <script src="local/templates/mains/assets/js/index.js" type="module"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-basic.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-glass.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="local/templates/mains/assets/css/style.min.css">
     <link rel="stylesheet" href="local/templates/mains/assets/css/media.min.css">
@@ -469,7 +475,7 @@
                                                 <p>чт</p>
                                                 <strong>3</strong>
                                             </label>
-                                            <button class="order__accordion-form-day-button">
+                                            <button class="order__accordion-form-day-button" id="openCalendarBtn" type="button">
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M18 4H6C3.79086 4 2 5.79086 2 8V18C2 20.2091 3.79086 22 6 22H18C20.2091 22 22 20.2091 22 18V8C22 5.79086 20.2091 4 18 4Z" stroke="#4789EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                                     <path d="M8 2V6" stroke="#4789EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -477,6 +483,7 @@
                                                     <path d="M2 10H22" stroke="#4789EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                             </button>
+                                            <div id="color-calendar"></div>
                                         </form>
                                         <form action="" class="order__accordion-form-time">
                                             <label for="" class="order__accordion-form-time-label">
