@@ -64,7 +64,7 @@ const createSlider = () => {
             },
             280:{
                 spaceBetween: 10,
-                slidesPerView: 1.4
+                slidesPerView: 1.4031
             }
         }
     });
