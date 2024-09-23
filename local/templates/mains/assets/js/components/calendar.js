@@ -8,7 +8,7 @@ const CalendarFnCreate = () => {
             calendarSize: "small",
             dropShadow: "",
             customWeekdayValues: ["Пн", "Вт", "Cр", "Чт", "Пт", "Сб", "Вс"],
-            customMonthValues: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябырь", "Октябырь", "Ноябырь", "Декабырь"],
+            customMonthValues: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
             fontFamilyHeader: "Evolventa",
             fontFamilyWeekdays: "Evolventa",
             fontFamilyBody: "Evolventa"
