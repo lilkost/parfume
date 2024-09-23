@@ -145,5 +145,57 @@ const dropDown = ()=> {
             });
         });
     }
+
+    // if(document.querySelector('.personal-account__aside-item-link')) {
+        
+    //     const inner = document.querySelector('.personal-account__inner');
+    //     const aside = document.querySelector('.personal-account__aside');
+    //     const titlePage = document.querySelector('.personal-account__title');
+
+    //     const items = document.querySelectorAll('.personal-account__aside-item-link');
+    //     const dropItems = document.querySelectorAll('.elem-sl');
+    //     const parentItems = document.querySelectorAll('.personal-account__aside-item');
+
+    //     items.forEach(item=> {
+    //         item.addEventListener("click", (e)=> {
+    //             e.preventDefault();
+
+    //             parentItems.forEach(parent=> {
+    //                 parent.classList.remove('is-active');
+    //             });
+
+    //             const parentCurrentItem = item.closest('.personal-account__aside-item');
+    //             const attrId = item.getAttribute('data-id');
+    //             const titleText = item.getAttribute('data-title');
+
+    //             parentCurrentItem.classList.add('is-active');
+    //             titlePage.innerHTML = titleText;
+
+    //             dropItems.forEach(dropItem => {
+    //                 dropItem.classList.remove('is-open');
+                    
+    //                 const itemId = dropItem.id;
+                    
+    //                 if(attrId === itemId) {
+    //                     dropItem.classList.add('is-open');
+    //                 }
+    //             });
+
+    //             if(window.innerWidth <= 768) {
+    //                 aside.classList.add('is-hidden');
+    //             }
+    //         });
+    //     });
+
+    //     if(window.innerWidth <= 768) {
+    //         dropItems.forEach(dropItem=> {
+    //             dropItem.classList.remove('is-open');
+    //         });
+
+    //         parentItems.forEach(item=> {
+    //             item.classList.remove('is-active');
+    //         });
+    //     }
+    // }
 }
 export default dropDown;

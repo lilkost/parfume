@@ -10,6 +10,7 @@ import scrollPositionMobileButton from "./components/scrollMobileButtons.js";
 import catalog from "./components/catalog.js";
 import basketJs from "./components/basket.js";
 import copyText from "./components/copyText.js";
+import textResize from "./components/textResize.js";
 
 useDynamicAdapt();
 createSlider();
@@ -23,3 +24,4 @@ scrollPositionMobileButton();
 catalog();
 basketJs();
 copyText();
+textResize();
