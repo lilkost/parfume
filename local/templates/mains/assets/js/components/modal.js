@@ -196,6 +196,14 @@ const modal = () => {
                 const parentImg = parent.querySelector('.slide__picture img');
 
                 const parentStars = Number(parent.getAttribute('data-stars'));
+                
+                // const parentPrice = parent.querySelector('.slide__price strong').innerText.replaceAll('от', '');
+                // const parentSale = parent.querySelector('.slide__price span').innerText;
+
+                // parent.querySelector('.modal-card__price-item_price strong').innerHTML = parentPrice;
+                // parent.querySelector('.modal-card__price-item_sale strong').innerHTML = String(parentSale);
+                // console.log(parentPrice, parentSale)
+
                 modalImage.src = parentImg.src;
 
                 stars.forEach((item, key) => {
@@ -204,7 +212,6 @@ const modal = () => {
                     }
                 });
             });
-            
         });
 
         const toggleOpen = () => {
@@ -290,8 +297,6 @@ const modal = () => {
                 toggleOpenStateModal();
             });
         });
-
-
 
         buttonCloseTop.addEventListener('click', ()=> toggleCloseStateModal());
         modalCloseBtn.addEventListener('click', ()=> toggleCloseStateModal());

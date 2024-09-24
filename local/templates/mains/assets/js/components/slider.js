@@ -449,13 +449,17 @@ const createSlider = () => {
         const sliderComparision = new Swiper('.personal-account__comparison-slider', {
             direction: 'horizontal',
             loop: false,
-    
-            slidesPerView: 4,
+
+            slidesPerView: "auto",
             spaceBetween: 20,
-    
+
             navigation: {
                 nextEl: '.personal-account__comparison-slider-button',
             },
+
+            breakpoints: {
+                
+            }
         });
     }
     if(document.querySelector('.order__pay-slider')) {

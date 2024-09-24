@@ -31,6 +31,28 @@ const textResize = () => {
 
         window.addEventListener('resize', ()=> changeResize(button));
     }
+
+    if(document.querySelector('.personal-account__order-item-current-order-btn')){
+        const btnOrder = document.querySelector('.personal-account__order-item-current-order-btn');
+
+        changeResize(btnOrder);
+
+        window.addEventListener("resize", ()=> changeResize(btnOrder));
+    }
+
+    if(document.querySelector('.personal-account__help-accordion')) {
+        const numbers = document.querySelectorAll('.personal-account__help-accordion-number');
+
+        const forItems = () => {
+            numbers.forEach(num=> {
+                changeResize(num);
+            });
+        }
+
+        forItems();
+
+        window.addEventListener("resize", ()=> forItems());
+    }
 }
 
 export default textResize;
