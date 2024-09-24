@@ -351,6 +351,11 @@
     .bread-crumbs {
         padding-block: 25px 48px;
     }
+    @media (max-width: 480px) {
+        .bread-crumbs {
+            padding-top: 15px !important;
+        }
+    }
 </style>
 
 <main class="main">
@@ -366,10 +371,16 @@
             </li>
         </ul>
     </div>
+    <a href="#!" class="personal-account__back-link personal-account__back-link_mb">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Мои заказы 
+    </a>
     <h1 class="personal-account__title title-page container">
         Личный кабинет
     </h1>
-    <div class="personal-account__inner personal-account__inner_mb-35 container">
+    <div class="personal-account__inner personal-account__inner_gap-mob-63 personal-account__inner_mb-35 personal-account__inner_mb-mob-113 container">
         <aside class="personal-account__aside">
             <ul class="personal-account__aside-list">
                 <li class="personal-account__aside-item">
@@ -461,7 +472,7 @@
         </aside>
         <div class="personal-account__order">
             <ul class="personal-account__order-list">
-                <li class="personal-account__order-item">
+                <li class="personal-account__order-item personal-account__order-item_1">
                     <div class="personal-account__order-item-top">
                         <p class="personal-account__order-item-number copy-text" data-copy-text="234567890-098">
                             № 234567890-098
@@ -471,7 +482,7 @@
                             </svg>                                
                         </p>
                         <p class="personal-account__order-item-status succes">Статус: в доставке</p>
-                        <div class="personal-account__order-item-track">
+                        <div class="personal-account__order-item-track mb">
                             <strong>Трек отслеживания:</strong>
                             <p class="copy-text" data-copy-text="657845987545">
                                 657845987545
@@ -481,7 +492,7 @@
                                 </svg>
                             </p>
                         </div>
-                        <strong class="personal-account__order-item-price">
+                        <strong class="personal-account__order-item-price" data-da=".personal-account__order-item_1 .personal-account__price-mob, 480, first">
                             2 товара: 38 200 ₽
                         </strong>
                     </div>
@@ -495,6 +506,7 @@
                                 </a>
                             </li>
                         </ul>
+                        <div class="personal-account__price-mob"></div>
                         <div class="personal-account__order-item-photos">
                             <a href="#!">
                                 <img src="local/templates/mains/assets/images/order/1.png" alt="">
@@ -505,7 +517,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="personal-account__order-item">
+                <li class="personal-account__order-item personal-account__order-item_2">
                     <div class="personal-account__order-item-top">
                         <p class="personal-account__order-item-number copy-text" data-copy-text="234567890-098">
                             № 234567890-098
@@ -514,8 +526,8 @@
                                 <path d="M5 15.8332C3.61929 15.8332 2.5 14.7139 2.5 13.3332V8.33317C2.5 5.19047 2.5 3.61913 3.47631 2.64281C4.45262 1.6665 6.02397 1.6665 9.16667 1.6665H12.5C13.8807 1.6665 15 2.78579 15 4.1665" stroke="#090B18" stroke-width="1.25"/>
                             </svg>                                
                         </p>
-                        <p class="personal-account__order-item-status succes">Статус: доставлен 19.12.2023</p>
-                        <strong class="personal-account__order-item-price">
+                        <p class="personal-account__order-item-status succes mb">Статус: доставлен 19.12.2023</p>
+                        <strong class="personal-account__order-item-price" data-da=".personal-account__order-item_2 .personal-account__price-mob">
                             2 товара: 38 200 ₽
                         </strong>
                     </div>
@@ -529,6 +541,7 @@
                                 </a>
                             </li>
                         </ul>
+                        <div class="personal-account__price-mob"></div>
                         <div class="personal-account__order-item-photos">
                             <a href="#!">
                                 <img src="local/templates/mains/assets/images/order/1.png" alt="">
@@ -539,7 +552,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="personal-account__order-item">
+                <li class="personal-account__order-item personal-account__order-item_3">
                     <div class="personal-account__order-item-top">
                         <p class="personal-account__order-item-number copy-text"  data-copy-text="234567890-098">
                             № 234567890-098
@@ -548,8 +561,8 @@
                                 <path d="M5 15.8332C3.61929 15.8332 2.5 14.7139 2.5 13.3332V8.33317C2.5 5.19047 2.5 3.61913 3.47631 2.64281C4.45262 1.6665 6.02397 1.6665 9.16667 1.6665H12.5C13.8807 1.6665 15 2.78579 15 4.1665" stroke="#090B18" stroke-width="1.25"/>
                             </svg>                                
                         </p>
-                        <p class="personal-account__order-item-status error">Статус: отменен</p>
-                        <strong class="personal-account__order-item-price">
+                        <p class="personal-account__order-item-status error mb">Статус: отменен</p>
+                        <strong class="personal-account__order-item-price" data-da=".personal-account__order-item_3 .personal-account__price-mob, 480, first">
                             1 товара: 18 200 ₽
                         </strong>
                     </div>
@@ -563,6 +576,7 @@
                                 </a>
                             </li>
                         </ul>
+                        <div class="personal-account__price-mob"></div>
                         <div class="personal-account__order-item-photos">
                             <a href="#!">
                                 <img src="local/templates/mains/assets/images/order/3.png" alt="">
@@ -675,7 +689,11 @@
                                     43 600 ₽
                                 </strong>
                             </div>
-                            <button class="personal-account__order-item-current-order-btn" type="button">
+                            <button class="personal-account__order-item-current-order-btn" 
+                                type="button" 
+                                data-text-des="Задать вопрос по заказу" 
+                                data-text-mob="Создать обращение"
+                            >
                                 Задать вопрос по заказу
                             </button>
                             <a href="#!" class="personal-account__order-item-current-order-link">

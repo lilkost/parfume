@@ -351,6 +351,12 @@
     .bread-crumbs {
         padding-block: 25px 48px;
     }
+
+    @media (max-width: 480px) {
+        .bread-crumbs {
+            padding-top: 25px !important;
+        }
+    }
 </style>
 
 <main class="main">
@@ -366,6 +372,12 @@
             </li>
         </ul>
     </div>
+    <a href="#!" class="personal-account__back-link personal-account__back-link_mb-24">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Избранное
+    </a>
     <h1 class="personal-account__title title-page container">
         Избранное
     </h1>
@@ -468,7 +480,10 @@
                         </picture>
                         <div class="personal-account__favourites-item-info">
                             <span>Женская туалетная вода</span>
-                            <p>Diesel Plus Plus Feminine</p>
+                            <!-- <p>Diesel Plus Plus Feminine</p> -->
+                            <p>
+                                Abercrombie & Fitch Perfume No1 Bare
+                            </p>
                         </div>
                         <button class="personal-account__favourites-item-deleted" type="button">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -488,7 +503,10 @@
                         </button>
                     </div>
                     <div class="personal-account__favourites-item-body">
-                        <strong class="personal-account__favourites-item-price">от 3 570 ₽</strong>
+                        <div class="personal-account__favourites-item-body-price">
+                            <strong class="personal-account__favourites-item-price">от 3 570 ₽</strong>
+                            <span class="personal-account__favourites-item-sale">4 570 ₽</span>
+                        </div>
                         <button class="personal-account__favourites-item-btn" type="button">
                             <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.31378 8.70016C3.38336 7.83424 4.10638 7.16699 4.97508 7.16699H15.0239C15.8926 7.16699 16.6156 7.83424 16.6851 8.70016L17.3548 17.0335C17.4327 18.0035 16.6666 18.8337 15.6935 18.8337H4.30544C3.33234 18.8337 2.56619 18.0035 2.64414 17.0335L3.31378 8.70016Z" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -525,7 +543,10 @@
                         </button>
                     </div>
                     <div class="personal-account__favourites-item-body">
-                        <strong class="personal-account__favourites-item-price">от 3 570 ₽</strong>
+                        <div class="personal-account__favourites-item-body-price">
+                            <strong class="personal-account__favourites-item-price">от 3 570 ₽</strong>
+                            <span class="personal-account__favourites-item-sale"></span>
+                        </div>
                         <button class="personal-account__favourites-item-btn" type="button">
                             <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.31378 8.70016C3.38336 7.83424 4.10638 7.16699 4.97508 7.16699H15.0239C15.8926 7.16699 16.6156 7.83424 16.6851 8.70016L17.3548 17.0335C17.4327 18.0035 16.6666 18.8337 15.6935 18.8337H4.30544C3.33234 18.8337 2.56619 18.0035 2.64414 17.0335L3.31378 8.70016Z" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -562,7 +583,10 @@
                         </button>
                     </div>
                     <div class="personal-account__favourites-item-body">
-                        <strong class="personal-account__favourites-item-price">от 3 570 ₽</strong>
+                        <div class="personal-account__favourites-item-body-price">
+                            <strong class="personal-account__favourites-item-price">от 3 570 ₽</strong>
+                            <span class="personal-account__favourites-item-sale"></span>
+                        </div>
                         <button class="personal-account__favourites-item-btn" type="button">
                             <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.31378 8.70016C3.38336 7.83424 4.10638 7.16699 4.97508 7.16699H15.0239C15.8926 7.16699 16.6156 7.83424 16.6851 8.70016L17.3548 17.0335C17.4327 18.0035 16.6666 18.8337 15.6935 18.8337H4.30544C3.33234 18.8337 2.56619 18.0035 2.64414 17.0335L3.31378 8.70016Z" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -599,7 +623,10 @@
                         </button>
                     </div>
                     <div class="personal-account__favourites-item-body">
-                        <strong class="personal-account__favourites-item-price">от 3 570 ₽</strong>
+                        <div class="personal-account__favourites-item-body-price">
+                            <strong class="personal-account__favourites-item-price">от 3 570 ₽</strong>
+                            <span class="personal-account__favourites-item-sale"></span>
+                        </div>
                         <button class="personal-account__favourites-item-btn" type="button">
                             <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.31378 8.70016C3.38336 7.83424 4.10638 7.16699 4.97508 7.16699H15.0239C15.8926 7.16699 16.6156 7.83424 16.6851 8.70016L17.3548 17.0335C17.4327 18.0035 16.6666 18.8337 15.6935 18.8337H4.30544C3.33234 18.8337 2.56619 18.0035 2.64414 17.0335L3.31378 8.70016Z" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -636,7 +663,10 @@
                         </button>
                     </div>
                     <div class="personal-account__favourites-item-body">
-                        <strong class="personal-account__favourites-item-price">от 3 570 ₽</strong>
+                        <div class="personal-account__favourites-item-body-price">
+                            <strong class="personal-account__favourites-item-price">от 3 570 ₽</strong>
+                            <span class="personal-account__favourites-item-sale"></span>
+                        </div>
                         <button class="personal-account__favourites-item-btn" type="button">
                             <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.31378 8.70016C3.38336 7.83424 4.10638 7.16699 4.97508 7.16699H15.0239C15.8926 7.16699 16.6156 7.83424 16.6851 8.70016L17.3548 17.0335C17.4327 18.0035 16.6666 18.8337 15.6935 18.8337H4.30544C3.33234 18.8337 2.56619 18.0035 2.64414 17.0335L3.31378 8.70016Z" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -673,7 +703,10 @@
                         </button>
                     </div>
                     <div class="personal-account__favourites-item-body">
-                        <strong class="personal-account__favourites-item-price">от 3 570 ₽</strong>
+                        <div class="personal-account__favourites-item-body-price">
+                            <strong class="personal-account__favourites-item-price">от 3 570 ₽</strong>
+                            <span class="personal-account__favourites-item-sale"></span>
+                        </div>
                         <button class="personal-account__favourites-item-btn" type="button">
                             <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3.31378 8.70016C3.38336 7.83424 4.10638 7.16699 4.97508 7.16699H15.0239C15.8926 7.16699 16.6156 7.83424 16.6851 8.70016L17.3548 17.0335C17.4327 18.0035 16.6666 18.8337 15.6935 18.8337H4.30544C3.33234 18.8337 2.56619 18.0035 2.64414 17.0335L3.31378 8.70016Z" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -686,7 +719,7 @@
             </div>
         </div>
     </div>
-    <div class="contacts bg-gray">
+    <div class="contacts contacts_d-none bg-gray">
         <div class="contacts__inner container">
             <div class="contacts__box">
                 <strong class="contacts__title">Лучшие новости для Вас</strong>
