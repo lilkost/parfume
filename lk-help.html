@@ -351,6 +351,11 @@
     .bread-crumbs {
         padding-block: 25px 48px;
     }
+    @media (max-width: 480px) {
+        .bread-crumbs {
+            padding-top: 25px !important;
+        }
+    }
 </style>
 
 <main class="main">
@@ -360,8 +365,11 @@
                 Главная
             </li>
             <li class="bread-crumbs__item">
+                Личный кабинет
+            </li>
+            <li class="bread-crumbs__item">
                 <a href="#!" class="bread-crumbs__item-link">
-                    Личный кабинет
+                    Помощь покупателю
                 </a>
             </li>
         </ul>
@@ -376,7 +384,7 @@
         Личный кабинет
     </h1>
     <div class="personal-account__inner personal-account__inner_gap-mob-0 personal-account__inner_pi-mob personal-account__inner_mb-380 container">
-        <aside class="personal-account__aside">
+        <aside class="personal-account__aside personal-account__aside-padd-inline-mob">
             <ul class="personal-account__aside-list">
                 <li class="personal-account__aside-item">
                     <a href="#!" class="personal-account__aside-item-link">
