@@ -205,7 +205,10 @@ const catalog = () => {
         document.querySelectorAll('.catalog__aside-accordion').forEach(accordion => {
             accordion.classList.remove('is-hidden');
             accordion.classList.remove('is-open-all-filter');
-            mobileTop.querySelector('.catalog-mobile-top__title span').innerHTML = mobileTop.querySelector('.catalog-mobile-top__title span').getAttribute('data-text');
+
+            mobileTop.querySelector('.catalog-mobile-top__title span').innerHTML = 
+                mobileTop.querySelector('.catalog-mobile-top__title span').getAttribute('data-text');
+
             btnBack.style.display = 'none';
             btnBackFilter.style.display = 'none';
             btnCloseFilter.style.display = 'flex';
@@ -236,7 +239,6 @@ const catalog = () => {
                     input.checked = true;
                 });
             }
-
         });
     });
 }
