@@ -307,45 +307,50 @@ const createSlider = () => {
             }
         }
     });
-
-    const recomendSlider = new Swiper('.recommend-slider', {
-        direction: 'horizontal',
-        loop: false,
-
-        slidesPerView: 4,
-        spaceBetween: 20,
-
-        navigation: {
-            nextEl: '.recommend-slider-next',
-            prevEl: '.recommend-slider-prev',
-        },
-        breakpoints: {
-            1301: {
-                slidesPerView: 4,
-                spaceBetween: 20,
+    document.querySelectorAll('.recommend-slider').forEach((slider, key) => {
+        const arrowNext = slider.closest('.main-slider').querySelector('.recommend-slider-next');
+        const arrowPrev = slider.closest('.main-slider').querySelector('.recommend-slider-prev');
+        console.log(arrowNext, arrowPrev)
+        new Swiper(slider, {
+            direction: 'horizontal',
+            loop: false,
+    
+            slidesPerView: 4,
+            spaceBetween: 20,
+    
+            navigation: {
+                nextEl: arrowNext,
+                prevEl: arrowPrev,
             },
-            1150: {
-                slidesPerView: 3.5,
-                spaceBetween: 20,
-            },
-            992: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-            },
-            768:{
-                slidesPerView: 2.5,
-                spaceBetween: 20,
-            },
-            625:{
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            280:{
-                spaceBetween: 10,
-                slidesPerView: 1.4
+            breakpoints: {
+                1301: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+                1150: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                768:{
+                    slidesPerView: 2.5,
+                    spaceBetween: 20,
+                },
+                625:{
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                280:{
+                    spaceBetween: 10,
+                    slidesPerView: 1.4
+                }
             }
-        }
+        });
     });
+
 
     const advantagesSlider = new Swiper('.advantages__list', {
         direction: 'horizontal',
@@ -456,12 +461,9 @@ const createSlider = () => {
             navigation: {
                 nextEl: '.personal-account__comparison-slider-button',
             },
-
-            breakpoints: {
-                
-            }
         });
     }
+
     if(document.querySelector('.order__pay-slider')) {
         const sliderComparision = new Swiper('.order__pay-slider', {
             direction: 'horizontal',
