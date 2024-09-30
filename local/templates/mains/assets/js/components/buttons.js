@@ -163,8 +163,6 @@ const buttonsPointer = () => {
         changeUserDataBtn.addEventListener("click", ()=> {
             inputs.forEach((inp, key)=> {
                 inp.disabled = false;
-
-       
             });
         });
     }
