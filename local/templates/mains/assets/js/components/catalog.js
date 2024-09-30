@@ -75,7 +75,8 @@ const catalog = () => {
 
     categoryItems.forEach(categoryItem=> {
         categoryItem.addEventListener("click", (e)=> {
-            e.preventDefault();
+            if(window.innerWidth <= 480) {
+                e.preventDefault();
             e.stopPropagation();
             // скрыть категории
             categoryNode.style.display = 'none';
@@ -90,6 +91,7 @@ const catalog = () => {
             mobileTop.querySelector('.catalog-mobile-top__title span').setAttribute('data-text', categoryItem.querySelector('.catalog-category__name').innerText);
             // показать каталог
             catalog.style.display = 'block';
+            }
         });
     });
 
