@@ -161,8 +161,11 @@ const buttonsPointer = () => {
         const inputs = document.querySelectorAll('.order__user-info-item input');
 
         changeUserDataBtn.addEventListener("click", ()=> {
-            inputs.forEach((inp, key)=> {
+            inputs.forEach(inp=> {
                 inp.disabled = false;
+                const parent = inp.parentElement;
+                console.log(parent)
+                parent.classList.add('is-active');
             });
         });
     }
