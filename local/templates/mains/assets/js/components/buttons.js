@@ -7,6 +7,7 @@ const buttonsPointer = () => {
     const countsDetail = document.querySelector('.detail__price-count-box');
     const detailFilter = document.querySelectorAll('.detail__information-el-label');
     const openDescription = document.querySelector('.detail__dropdown-body-text-btn');
+    const changeUserDataBtn = document.querySelector('.order__content-item')
 
     const addClass = (e, element, stl,className) => {
         e.preventDefault();
@@ -153,6 +154,18 @@ const buttonsPointer = () => {
                 openDescription.innerHTML = text.newText;
                 textDescription.classList.add('is-open');
             }
+        });
+    }
+
+    if(changeUserDataBtn) {
+        const inputs = document.querySelectorAll('.order__user-info-item input');
+
+        changeUserDataBtn.addEventListener("click", ()=> {
+            inputs.forEach((inp, key)=> {
+                inp.disabled = false;
+
+       
+            });
         });
     }
 }

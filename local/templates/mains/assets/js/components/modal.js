@@ -285,11 +285,18 @@ const modal = () => {
         const modalCloseBtn = document.querySelector('.order-modal__form-btn');
 
         const toggleOpenStateModal = () => {
+            if(window.innerWidth <= 480) {
+                document.querySelector('body').style.overflow = 'hidden';
+                document.querySelector('.header').classList.add('is-fixed-to-modal');
+            }
+
             modal.classList.add('is-open');
         }
 
         const toggleCloseStateModal = () => {
             modal.classList.remove('is-open');
+            document.querySelector('body').style.overflow = '';
+            document.querySelector('.header').classList.remove('is-fixed-to-modal');
         }
 
         buttonsOpen.forEach(btn=> {
