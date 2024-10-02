@@ -172,6 +172,23 @@ const modal = () => {
                 itm.classList.remove('is-active');
             })
         });
+
+        document.addEventListener( 'click', (e) => {
+            if(e.composedPath().includes(modalBth)) return;
+            const withinBoundaries = e.composedPath().includes(modal);
+
+            console.log(e.composedPath().includes(modal))
+            if ( ! withinBoundaries) {
+                modal.classList.remove('is-open');
+                modalBth.classList.remove('is-active'); 
+                if(modalBth.classList.contains('is-active')) {
+                    modalBth.innerHTML = isCloseHTML;
+                }else {
+                    modalBth.innerHTML = isActiveHTML;
+                }
+    // скрываем элемент т к клик был за его пределами
+            }
+        });
     } 
 
     if(document.querySelector('.modal-card') && document.querySelector('.slide__btn-basket')) {
