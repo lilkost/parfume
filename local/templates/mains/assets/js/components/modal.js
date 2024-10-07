@@ -361,6 +361,7 @@ const modal = () => {
         });
 
         if(!modalOpen) return;
+        
         modalOpen.addEventListener('click', ()=> {
             modal.classList.add('is-open');
             setTimeout(()=>{
