@@ -500,24 +500,24 @@ const createSlider = () => {
         });
     }
 
-    if(document.querySelector('.about-page__slider')) {
-        const bigSlider = document.querySelector('.about-page__slider');
-        const thumbs = document.querySelector('.about-page__parent-slider .about-page-thumbs');
+    // if(document.querySelector('.about-page__slider')) {
+    //     const bigSlider = document.querySelector('.about-page__slider');
+    //     const thumbs = document.querySelector('.about-page__parent-slider .about-page-thumbs');
 
-        var swiper = new Swiper(thumbs, {
-            spaceBetween: 10,
-            slidesPerView: 26,
-            freeMode: true,
-            watchSlidesProgress: true,
-        });
-        var swiper2 = new Swiper(bigSlider, {
-            spaceBetween: 10,
+    //     var swiper = new Swiper(thumbs, {
+    //         spaceBetween: 10,
+    //         slidesPerView: 26,
+    //         freeMode: true,
+    //         watchSlidesProgress: true,
+    //     });
+    //     var swiper2 = new Swiper(bigSlider, {
+    //         spaceBetween: 10,
             
-            thumbs: {
-                swiper: swiper,
-            },
-        });
-    }
+    //         thumbs: {
+    //             swiper: swiper,
+    //         },
+    //     });
+    // }
 }
 
 export default createSlider;
