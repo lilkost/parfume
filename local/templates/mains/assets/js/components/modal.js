@@ -186,7 +186,7 @@ const modal = () => {
                 }else {
                     modalBth.innerHTML = isActiveHTML;
                 }
-    // скрываем элемент т к клик был за его пределами
+            // скрываем элемент т к клик был за его пределами
             }
         });
     } 
@@ -292,8 +292,6 @@ const modal = () => {
         })
     }
 
-    
-
     if(document.querySelector('.order-modal')) {
         const modal = document.querySelector('.order-modal');
         const buttonsOpen = document.querySelectorAll('.order__accordion-button');
@@ -335,6 +333,62 @@ const modal = () => {
         document.addEventListener('keydown', function(e) {
             if( e.keyCode == 27 ){ 
                 toggleCloseStateModal()
+            }
+        });
+    }
+
+    if(document.querySelector('.modal-feedback')) {
+        const modal = document.querySelector('.modal-feedback');
+        const modalOpen = document.querySelector('.feedback-btn-open');
+        const modalCloseBtn = document.querySelector('.modal-feedback__close-btn');
+        const modalInner = modal.querySelector('.modal-feedback__inner');
+
+        const starsParent = document.querySelector('.modal-feedback__stars');
+        const stars = starsParent.querySelectorAll('svg');
+        
+        stars.forEach(star=> {
+            star.addEventListener("click", ()=> {
+                const dataCount = Number(star.getAttribute('data-count'));
+
+                stars.forEach(st=> st.classList.remove('is-star'));
+                star.classList.add('is-star');
+
+                for(let i = 0; i<= dataCount; i++) {
+                    stars[i].classList.add('is-star');
+                    console.log(i, stars[i]);
+                }
+            });
+        });
+
+        modalOpen.addEventListener('click', ()=> {
+            modal.classList.add('is-open');
+            setTimeout(()=>{
+                modalInner.classList.add('is-open')
+            },100);
+        });
+
+        modalCloseBtn.addEventListener('click', ()=> {
+            modal.classList.remove('is-open');
+            setTimeout(()=>{
+                modalInner.classList.remove('is-open')
+            },100);
+        })
+
+        window.addEventListener('click', (e)=> {
+            if(e.target === modal) {
+                modal.classList.remove('is-open')
+                setTimeout(()=> {
+                    modalInner.classList.remove('is-open')
+                },100)
+            }
+        })
+
+        document.addEventListener('keydown', function(e) {
+            if( e.keyCode == 27 ){ 
+                modal.classList.remove('is-open')
+                setTimeout(()=> {
+                    modalInner.classList.remove('is-open')
+                },100)
             }
         });
     }
