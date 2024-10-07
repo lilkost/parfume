@@ -357,151 +357,246 @@
     }
     @media(max-width: 480px) {
         .bread-crumbs__list{
-            /* display: none; */
             padding-top: 25px !important;
-            padding-bottom: 0 !important;
-        }
-        .bread-crumbs{
-            padding-bottom: 11px !important;
         }
     }
 </style>
-    <main class="main">
-        <div class="bread-crumbs container">
-            <ul class="bread-crumbs__list">
-                <li class="bread-crumbs__item">
-                    Главная
-                </li>
-                <li class="bread-crumbs__item">
-                    <a href="#!" class="bread-crumbs__item-link">
-                        Личный кабинет
-                    </a>
-                </li>
-            </ul>
+<main class="main">
+    <div class="bread-crumbs container">
+        <ul class="bread-crumbs__list">
+            <li class="bread-crumbs__item">
+                Главная
+            </li>
+            <li class="bread-crumbs__item">
+                <a href="#!" class="bread-crumbs__item-link">
+                    О компании
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="about-page">
+        <div class="about-page__top container">
+            <h2 class="about-page__title title">
+                О компании
+            </h2>
         </div>
-
-        <div class="personal-page">
-            <h1 class="personal-account__title title-page container">
-                Личный кабинет
-            </h1>
-            <div class="personal-account__inner personal-account__inner_gap-mon-47 personal-account__inner_mb-247 container">
-                <aside class="personal-account__aside">
-                    <ul class="personal-account__aside-list">
-                        <li class="personal-account__aside-item">
-                            <a href="#!" class="personal-account__aside-item-link">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.16601 3.33335C8.83771 3.33335 8.51262 3.39802 8.20931 3.52365C7.90599 3.64929 7.63039 3.83344 7.39825 4.06559C7.1661 4.29773 6.98195 4.57333 6.85632 4.87665C6.73068 5.17996 6.66602 5.50505 6.66602 5.83335C6.66602 6.16166 6.73068 6.48675 6.85632 6.79006C6.98195 7.09338 7.1661 7.36897 7.39825 7.60112C7.63039 7.83327 7.90599 8.01742 8.20931 8.14305C8.51262 8.26869 8.83771 8.33335 9.16601 8.33335C9.82906 8.33335 10.4649 8.06996 10.9338 7.60112C11.4026 7.13228 11.666 6.49639 11.666 5.83335C11.666 5.17031 11.4026 4.53443 10.9338 4.06559C10.4649 3.59675 9.82906 3.33335 9.16601 3.33335ZM4.99935 5.83335C4.99935 4.72828 5.43834 3.66848 6.21974 2.88708C7.00114 2.10567 8.06095 1.66669 9.16601 1.66669C10.2711 1.66669 11.3309 2.10567 12.1123 2.88708C12.8937 3.66848 13.3327 4.72828 13.3327 5.83335C13.3327 6.93842 12.8937 7.99823 12.1123 8.77963C11.3309 9.56103 10.2711 10 9.16601 10C8.06095 10 7.00114 9.56103 6.21974 8.77963C5.43834 7.99823 4.99935 6.93842 4.99935 5.83335ZM3.67685 14.6675C3.40768 15.0092 3.33268 15.2675 3.33268 15.4167C3.33268 15.5184 3.36352 15.6259 3.54518 15.7717C3.75268 15.9384 4.11352 16.1109 4.66518 16.2567C5.76351 16.5484 7.34185 16.6667 9.16601 16.6667C9.35102 16.6667 9.53351 16.665 9.71435 16.6625C9.93536 16.6595 10.1485 16.7445 10.3069 16.8986C10.4653 17.0528 10.5559 17.2636 10.5589 17.4846C10.5619 17.7056 10.477 17.9188 10.3228 18.0772C10.1686 18.2355 9.95786 18.3262 9.73685 18.3292C9.54852 18.3317 9.35768 18.3334 9.16601 18.3334C7.30852 18.3334 5.55352 18.2167 4.23852 17.8684C3.58435 17.695 2.96852 17.4467 2.50185 17.0717C2.00768 16.675 1.66602 16.1209 1.66602 15.4167C1.66602 14.7609 1.96435 14.1475 2.36935 13.6342C2.78102 13.1134 3.35018 12.6342 4.01768 12.2259C5.35352 11.4125 7.17018 10.8334 9.16601 10.8334C9.53852 10.8334 9.90518 10.8534 10.2627 10.8917C10.4825 10.915 10.684 11.0247 10.8229 11.1966C10.9619 11.3685 11.0268 11.5886 11.0035 11.8084C10.9802 12.0282 10.8705 12.2297 10.6986 12.3686C10.5267 12.5076 10.3066 12.5725 10.0868 12.5492C9.78685 12.5167 9.47851 12.5 9.16601 12.5C7.48018 12.5 5.96352 12.9917 4.88602 13.6492C4.34685 13.9775 3.93935 14.3342 3.67685 14.6675ZM18.0893 13.39C18.2411 13.2329 18.3251 13.0224 18.3232 12.8039C18.3213 12.5854 18.2337 12.3763 18.0792 12.2218C17.9247 12.0673 17.7157 11.9797 17.4972 11.9778C17.2787 11.9759 17.0682 12.0599 16.911 12.2117L14.2593 14.8634L13.081 13.685C12.9238 13.5332 12.7133 13.4492 12.4948 13.4511C12.2763 13.453 12.0673 13.5407 11.9128 13.6952C11.7583 13.8497 11.6707 14.0587 11.6688 14.2772C11.6669 14.4957 11.7509 14.7062 11.9027 14.8634L13.611 16.5717C13.6961 16.6569 13.7972 16.7244 13.9085 16.7705C14.0197 16.8166 14.1389 16.8403 14.2593 16.8403C14.3798 16.8403 14.499 16.8166 14.6102 16.7705C14.7215 16.7244 14.8226 16.6569 14.9077 16.5717L18.0893 13.39Z" fill="#090B18"/>
-                                </svg>       
-                                Профиль                     
-                            </a>
-                        </li>
-                        <li class="personal-account__aside-item">
-                            <a href="#!" class="personal-account__aside-item-link">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.83268 2.5C3.5315 2.5 1.66602 4.34682 1.66602 6.625C1.66602 8.46417 2.3949 12.8289 9.57227 17.2419C9.83218 17.4017 10.1665 17.4017 10.4264 17.2419C17.6038 12.8289 18.3327 8.46417 18.3327 6.625C18.3327 4.34682 16.4672 2.5 14.166 2.5C11.8648 2.5 9.99935 5 9.99935 5C9.99935 5 8.13387 2.5 5.83268 2.5Z" stroke="#090B18" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Избранное
-                            </a>
-                        </li>
-                        <li class="personal-account__aside-item">
-                            <a href="#!" class="personal-account__aside-item-link">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17.5 18.3334H2.5" stroke="#090B18" stroke-width="1.66667" stroke-miterlimit="5.75877" stroke-linecap="round"/>
-                                    <path d="M2.5 15V1.66663H5.83333V15H2.5Z" stroke="#090B18" stroke-width="1.66667" stroke-miterlimit="5.75877" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.33398 15.0001V6.66675H11.6673V15.0001H8.33398Z" stroke="#090B18" stroke-width="1.66667" stroke-miterlimit="5.75877" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M14 15.3334V3.33337H17.3333V15.3334H14Z" stroke="#090B18" stroke-width="1.66667" stroke-miterlimit="5.75877" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Списки сравнения
-                            </a>
-                        </li>
-                        <li class="personal-account__aside-item">
-                            <a href="#!" class="personal-account__aside-item-link">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_259_7691)">
-                                    <path d="M8.74935 18.3333C4.3771 18.3333 0.832683 14.6023 0.832683 9.99996C0.832683 5.39759 4.3771 1.66663 8.74935 1.66663C13.1216 1.66663 16.666 5.39759 16.666 9.99996C16.666 14.6023 13.1216 18.3333 8.74935 18.3333Z" stroke="#090B18" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.33398 1.66663C11.9451 1.66663 19.1673 2.49996 19.1673 9.99996C19.1673 17.5 11.9451 18.3333 8.33398 18.3333" stroke="#090B18" stroke-width="1.66667"/>
-                                    <path d="M6.90391 14V6.86H9.18391C10.1039 6.86 10.7739 7.04667 11.1939 7.42C11.6206 7.79333 11.8339 8.30667 11.8339 8.96C11.8339 9.34667 11.7472 9.71 11.5739 10.05C11.4006 10.39 11.1106 10.6633 10.7039 10.87C10.3039 11.0767 9.75724 11.18 9.06391 11.18H8.41391V14H6.90391ZM6.10391 12.93V11.96H9.95391V12.93H6.10391ZM6.10391 11.18V9.94H9.03391V11.18H6.10391ZM8.91391 9.94C9.20057 9.94 9.44724 9.91 9.65391 9.85C9.86057 9.78333 10.0206 9.68 10.1339 9.54C10.2472 9.4 10.3039 9.22333 10.3039 9.01C10.3039 8.70333 10.2072 8.47667 10.0139 8.33C9.82057 8.17667 9.51724 8.1 9.10391 8.1H8.41391V9.94H8.91391Z" fill="#090B18"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_259_7691">
-                                    <rect width="20" height="20" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                Бонусная программа
-                            </a>
-                        </li>
-                        <li class="personal-account__aside-item">
-                            <a href="#!" class="personal-account__aside-item-link">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 1.99998C11.604 1.67172 12.3959 1.67172 13 1.99998L20 5.99998C20.3175 6.1725 21 6.64475 21 6.99998V15C21 15.7104 20.6349 16.655 20 17L13 21C12.3959 21.3282 11.604 21.3282 11 21L4 17C3.36507 16.655 3 15.7104 3 15V6.99998C3 6.64475 3.68253 6.1725 4 5.99998L11 1.99998Z" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M3 7L12 12M12 12L21 7M12 12V22" stroke="#090B18" stroke-width="2" stroke-linejoin="round"/>
-                                    <path d="M8 10L17 5" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M6 12L9 14" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Мои заказы 
-                            </a>
-                        </li>
-                        <li class="personal-account__aside-item">
-                            <a href="#!" class="personal-account__aside-item-link">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.8333 17.5H5.83333C3.99238 17.5 2.5 16.0076 2.5 14.1667V4.16667C2.5 3.24619 3.24619 2.5 4.16667 2.5H12.5C13.4205 2.5 14.1667 3.24619 14.1667 4.16667V15C14.1667 16.3807 14.4526 17.5 15.8333 17.5Z" stroke="#090B18" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M17.4993 8.33329C17.4993 7.41282 16.7532 6.66663 15.8327 6.66663H14.166V15.8333C14.166 16.9839 14.6821 17.5 15.8327 17.5C16.9833 17.5 17.4993 16.9839 17.4993 15.8333V8.33329Z" stroke="#090B18" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M10.834 9.16663H5.83398" stroke="#090B18" stroke-width="1.66667" stroke-linecap="round"/>
-                                    <path d="M10.834 5.83337H5.83398" stroke="#090B18" stroke-width="1.66667" stroke-linecap="round"/>
-                                    <path d="M8.33398 12.5H5.83398" stroke="#090B18" stroke-width="1.66667" stroke-linecap="round"/>
-                                </svg>
-                                Лист ожидания
-                            </a>
-                        </li>
-                        <li class="personal-account__aside-item">
-                            <a href="#!" class="personal-account__aside-item-link">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_259_7713)">
-                                    <path d="M9.99935 18.3333C14.6017 18.3333 18.3327 14.6023 18.3327 9.99996C18.3327 5.39759 14.6017 1.66663 9.99935 1.66663C5.39698 1.66663 1.66602 5.39759 1.66602 9.99996C1.66602 14.6023 5.39698 18.3333 9.99935 18.3333Z" stroke="#090B18" stroke-width="1.66667"/>
-                                    <path d="M10 5.83337H10.0083" stroke="#090B18" stroke-width="1.66667" stroke-linecap="round"/>
-                                    <path d="M8.33398 9.16663H10.0007V13.3333" stroke="#090B18" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.33398 13.3334H11.6673" stroke="#090B18" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_259_7713">
-                                    <rect width="20" height="20" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                Помощь покупателю
-                            </a>
-                        </li>
-                    </ul>
-                </aside>
-                <div class="personal-account__bonus">
-                    <div class="personal-account__bonus-top">
-                        <h2 class="personal-account__bonus-title">
-                            Ваш бонусный баланс
-                        </h2>
-                        <p class="personal-account__bonus-text">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_259_8198)">
-                                <path d="M8.74935 18.3334C4.3771 18.3334 0.832683 14.6025 0.832683 10.0001C0.832683 5.39771 4.3771 1.66675 8.74935 1.66675C13.1216 1.66675 16.666 5.39771 16.666 10.0001C16.666 14.6025 13.1216 18.3334 8.74935 18.3334Z" stroke="#4789EB" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8.33398 1.66675C11.9451 1.66675 19.1673 2.50008 19.1673 10.0001C19.1673 17.5001 11.9451 18.3334 8.33398 18.3334" stroke="#4789EB" stroke-width="1.66667"/>
-                                <path d="M6.90391 14V6.86H9.18391C10.1039 6.86 10.7739 7.04667 11.1939 7.42C11.6206 7.79333 11.8339 8.30667 11.8339 8.96C11.8339 9.34667 11.7472 9.71 11.5739 10.05C11.4006 10.39 11.1106 10.6633 10.7039 10.87C10.3039 11.0767 9.75724 11.18 9.06391 11.18H8.41391V14H6.90391ZM6.10391 12.93V11.96H9.95391V12.93H6.10391ZM6.10391 11.18V9.94H9.03391V11.18H6.10391ZM8.91391 9.94C9.20057 9.94 9.44724 9.91 9.65391 9.85C9.86057 9.78333 10.0206 9.68 10.1339 9.54C10.2472 9.4 10.3039 9.22333 10.3039 9.01C10.3039 8.70333 10.2072 8.47667 10.0139 8.33C9.82057 8.17667 9.51724 8.1 9.10391 8.1H8.41391V9.94H8.91391Z" fill="#4789EB"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_259_8198">
-                                <rect width="20" height="20" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                            150 бонусных баллов
+        <div class="about-page__parent-slider container">
+            <div class="about-page__slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide about-page__slide">
+                        <p class="about-page__text">
+                            <a href="/">Parfum-Paradise.ru</a> выделяется как один из ведущих ритейлеров парфюмерной продукции в России, начиная свою деятельность с 2003 года. За годы работы мы выработали уникальную стратегию, которая олицетворяется формулой: "Десятилетие упорного труда, умноженное на 1500 премиальных брендов, равно тысячам удовлетворенных клиентов".
                         </p>
-                        <p class="personal-account__bonus-info">
-                            Успей потратить до 07.11.2024
-                        </p>
+                        <ul class="about-page__list">
+                            <li class="about-page__item">
+                                <strong>> 20лет</strong>
+                                <p>
+                                    На рынке парфюмерной<br> продукции
+                                </p>
+                            </li>
+                            <li class="about-page__item">
+                                <strong>> 1500</strong>
+                                <p>
+                                    Премиальных брендов мы<br> предлагаем нашим покупателям
+                                </p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <div class="slider-bottom slider-bottom_mb">
+                <div class="slider-bottom__slide is-active">
+                    <a href="#!">А</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">B</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">C</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">D</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">E</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">F</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">G</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">H</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">I</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">G</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">K</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">L</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">M</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">N</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">O</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">P</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">Q</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">R</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">S</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">T</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">V</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">U</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">W</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">X</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">Y</a>
+                </div>
+                <div class="slider-bottom__slide">
+                    <a href="#!">Z</a>
+                </div>
+            </div>
+            <div class="brands">
+              <div class="brands__inner">
+                <button class="slider-brands-prev" type="button" aria-label="предыдущий слайд">
+                  <svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6L4 12L10 18" stroke="#919191" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <div class="slider-brands">
+                  <div class="swiper-wrapper">
+                    <div class="slider-brands__slide swiper-slide">
+                        <a href="#!">
+                            <picture>
+                                <source srcset="local/templates/mains/assets/images/slider/brands/1mobile.png" media="(max-width: 460px)">
+                                <img src="local/templates/mains/assets/images/slider/brands/1.png" alt="">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="slider-brands__slide swiper-slide">
+                      <a href="">
+                        <picture>
+                            <source srcset="local/templates/mains/assets/images/slider/brands/2mobile.png" media="(max-width: 460px)">
+                            <img src="local/templates/mains/assets/images/slider/brands/2.png" alt="">
+                        </picture>
+                      </a>
+                    </div>
+                    <div class="slider-brands__slide swiper-slide">
+                      <a href="">
+                        <picture>
+                            <source srcset="local/templates/mains/assets/images/slider/brands/3mobile.png" media="(max-width: 460px)">
+                            <img src="local/templates/mains/assets/images/slider/brands/3.png" alt="">
+                        </picture>
+                      </a>
+                    </div>
+                    <div class="slider-brands__slide swiper-slide">
+                      <a href="">
+                        <picture>
+                            <source srcset="local/templates/mains/assets/images/slider/brands/4mobile.png" media="(max-width: 460px)">
+                            <img src="local/templates/mains/assets/images/slider/brands/4.png" alt="">
+                        </picture>
+                      </a>
+                    </div>
+                    <div class="slider-brands__slide swiper-slide">
+                        <a href="">
+                            <picture>
+                                <source srcset="local/templates/mains/assets/images/slider/brands/5mobile.png" media="(max-width: 460px)">
+                                <img src="local/templates/mains/assets/images/slider/brands/5.png" alt="">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="slider-brands__slide swiper-slide">
+                        <a href="#!">
+                            <picture>
+                                <source srcset="local/templates/mains/assets/images/slider/brands/1mobile.png" media="(max-width: 460px)">
+                                <img src="local/templates/mains/assets/images/slider/brands/1.png" alt="">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="slider-brands__slide swiper-slide">
+                      <a href="">
+                        <picture>
+                            <source srcset="local/templates/mains/assets/images/slider/brands/2mobile.png" media="(max-width: 460px)">
+                            <img src="local/templates/mains/assets/images/slider/brands/2.png" alt="">
+                        </picture>
+                      </a>
+                    </div>
+                    <div class="slider-brands__slide swiper-slide">
+                      <a href="">
+                        <picture>
+                            <source srcset="local/templates/mains/assets/images/slider/brands/3mobile.png" media="(max-width: 460px)">
+                            <img src="local/templates/mains/assets/images/slider/brands/3.png" alt="">
+                        </picture>
+                      </a>
+                    </div>
+                    <div class="slider-brands__slide swiper-slide">
+                      <a href="">
+                        <picture>
+                            <source srcset="local/templates/mains/assets/images/slider/brands/4mobile.png" media="(max-width: 460px)">
+                            <img src="local/templates/mains/assets/images/slider/brands/4.png" alt="">
+                        </picture>
+                      </a>
+                    </div>
+                    <div class="slider-brands__slide swiper-slide">
+                        <a href="">
+                            <picture>
+                                <source srcset="local/templates/mains/assets/images/slider/brands/5mobile.png" media="(max-width: 460px)">
+                                <img src="local/templates/mains/assets/images/slider/brands/5.png" alt="">
+                            </picture>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <button class="slider-brands-next" type="button" aria-label="следующий слайд">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 6L15 12L9 18" stroke="#919191" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+              <a href="#!" class="brands__link">
+                Все бренды
+                <span>
+                  <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.669817 4.17713C0.669817 4.03672 0.725594 3.90207 0.824878 3.80278C0.924162 3.7035 1.05882 3.64772 1.19923 3.64772H9.13372L6.86043 1.37549C6.76102 1.27608 6.70517 1.14125 6.70517 1.00066C6.70517 0.860076 6.76102 0.725248 6.86043 0.625838C6.95984 0.526429 7.09466 0.470581 7.23525 0.470581C7.37584 0.470581 7.51066 0.526429 7.61007 0.625838L10.7865 3.80231C10.8358 3.85149 10.875 3.90991 10.9017 3.97423C10.9283 4.03854 10.9421 4.1075 10.9421 4.17713C10.9421 4.24677 10.9283 4.31572 10.9017 4.38004C10.875 4.44436 10.8358 4.50278 10.7865 4.55196L7.61007 7.72843C7.51066 7.82784 7.37584 7.88368 7.23525 7.88368C7.09466 7.88368 6.95984 7.82784 6.86043 7.72843C6.76102 7.62902 6.70517 7.49419 6.70517 7.3536C6.70517 7.21302 6.76102 7.07819 6.86043 6.97878L9.13372 4.70654H1.19923C1.05882 4.70654 0.924162 4.65077 0.824878 4.55148C0.725594 4.4522 0.669817 4.31754 0.669817 4.17713Z"
+                      fill="#090B18" />
+                  </svg>
+                </span>
+              </a>
+            </div>
         </div>
-    </main>
+    </section>
+</main>
 <footer class="footer">
     <div class="footer__inner container">
         <div class="footer__box">
