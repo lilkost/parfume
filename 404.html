@@ -1153,9 +1153,22 @@
 <script>
     $('.js-example-basic-single').select2();
 
-    Fancybox.bind('[data-fancybox="gallery"', {
-  // Your custom options
-});
+    Fancybox.bind('[data-fancybox="gallery"');
+
+
+    // покаазать сообщение об успешной отрпавке 
+    const currentUrl = window.location.href;
+    const elMessageC = document.querySelector('.contacts__form-message');
+    if(elMessageC){
+        // Создаем объект URL
+        const url = new URL(currentUrl);
+    
+        // Получаем параметры из строки запроса
+        const send = url.searchParams.get('send'); // Получаем параметр 'query'
+        if(send) {
+            elMessageC.style.display = 'flex';
+        }
+    };
 </script>
 
 </body>
