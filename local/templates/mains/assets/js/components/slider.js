@@ -351,7 +351,6 @@ const createSlider = () => {
         });
     });
 
-
     const advantagesSlider = new Swiper('.advantages__list', {
         direction: 'horizontal',
         loop: false,
@@ -498,6 +497,25 @@ const createSlider = () => {
                     spaceBetween: 5,
                 }
             }
+        });
+    }
+
+    if(document.querySelector('.about-page__slider')) {
+        const bigSlider = document.querySelector('.about-page__slider');
+        const thumbs = document.querySelector('.about-page__parent-slider .about-page-thumbs');
+
+        var swiper = new Swiper(thumbs, {
+            spaceBetween: 10,
+            slidesPerView: 26,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper(bigSlider, {
+            spaceBetween: 10,
+            
+            thumbs: {
+                swiper: swiper,
+            },
         });
     }
 }
