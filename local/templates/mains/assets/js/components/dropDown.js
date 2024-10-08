@@ -205,14 +205,22 @@ const dropDown = ()=> {
         links.forEach(link=> {
             link.addEventListener("click", ()=> {
                 const currentID = link.getAttribute('data-id');
-                links.forEach(lk=>lk.classList.remove('is-active'));
-                link.classList.add('is-active');
+                // 
+                links.forEach(lk=>{
+                    const lkID = String(lk.getAttribute('data-id'));
 
+                    if(lkID !== currentID) {
+                        lk.classList.remove('is-active');
+                    }else {
+                        lk.classList.toggle('is-active')
+                    }
+                });
+                
                 bodys.forEach(body=> {
                     const bodyID = body.getAttribute('data-id');
 
                     if(bodyID === currentID) {
-                        body.classList.add('is-open');
+                        body.classList.toggle('is-open');
                     }
                     else {
                         body.classList.remove('is-open');
@@ -220,6 +228,16 @@ const dropDown = ()=> {
                 });
             });
         });
+
+        window.addEventListener('click', (e)=> {
+            const withinBoundaries = e.composedPath().includes(document.querySelector('.links-dropdown-parent'));
+        
+            if ( ! withinBoundaries ) {
+                console.log(true, 123)
+                links.forEach(lk=>lk.classList.remove('is-active'));
+                bodys.forEach(bd=>bd.classList.remove('is-open'));
+            }
+        })
     }
 }
 export default dropDown;
