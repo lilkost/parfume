@@ -352,135 +352,82 @@
         </div>
     </header>
 <style>
-    .ggg{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
-        margin: 50px 0px;
+    .bread-crumbs {
+        padding-block: 25px 48px;
     }
-    .ggg li {
-        list-style: none;
-    }
-    .ggg li img {
-        border-radius: 10px;
-        object-fit: cover;
-        object-position: center;
+    @media (max-width: 480px) {
+        .bread-crumbs {
+            padding-top: 25px !important;
+        }
     }
 </style>
 <main class="main">
-    <div class="container">
-        <ul class="ggg">
-            <li>
-                <a href="https://lilkost.github.io/parfume/">
-                    <img src="img-deleted/1.png" alt="">
-                </a>
+    <div class="bread-crumbs container">
+        <ul class="bread-crumbs__list">
+            <li class="bread-crumbs__item">
+                Главная
             </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/catalog.html">
-                    <img src="img-deleted/2.png" alt="">
-                    
-                </a>
+            <li class="bread-crumbs__item">
+                Новости
             </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/detail.html">
-                    <img src="img-deleted/3.png" alt="">
-                    
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/basket.html">
-                    <img src="img-deleted/4.png" alt="">
-                    
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/news.html">
-                    <img src="img-deleted/5.png" alt="">
-                    
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/blog.html">
-                    <img src="img-deleted/6.png" alt="">
-                    
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/contact.html">
-                    <img src="img-deleted/7.png" alt="">
-                    
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/lk.html">
-                    <img src="img-deleted/8.png" alt="">
-                    
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/lk-bonus.html">
-                    <img src="img-deleted/9.png" alt="">
-                    
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/lk-order.html">
-                    <img src="img-deleted/10.png" alt="">
-                    
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/lk-expectations.html">
-                    <img src="img-deleted/11.png" alt="">
-                    
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/lk-help.html">
-                    <img src="img-deleted/12.png" alt="">
-                    
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/lk-favourites.html">
-                    <img src="img-deleted/13.png" alt="">
-                    
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/lk-comparison.html">
-                    <img src="img-deleted/14.png" alt="">
-                    
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/404.html">
-                    <img src="img-deleted/15.png" alt="">
-                    
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/personalOrder.html">
-                    <img src="img-deleted/16.png" alt="">
-                    
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/order.html">
-                    <img src="img-deleted/17.png" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/about.html">
-                    <img src="img-deleted/18.png" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="https://lilkost.github.io/parfume/news-detail.html">
-                    <img src="img-deleted/19.png" alt="">
+            <li class="bread-crumbs__item">
+                <a href="#!" class="bread-crumbs__item-link">
+                    Детальная новость
                 </a>
             </li>
         </ul>
+    </div>
+    <div class="news-detail container">
+        <div class="news-detail__box">
+            <h1 class="news-detail__title-main">
+                Международная выставка-форум Россия
+            </h1>
+            <p class="news-detail__text">
+                На мероприятии компания представила свой ассортимент металлической продукции, а также рассказала о последних тенденциях на рынке металлургии. Представители компании провели консультации с посетителями выставки, делились опытом и знаниями в области торговли металлом.
+            </p>
+            <img src="../local/templates/mains/assets/images/slider/bg.png" alt="" class="news-detail__img">
+        </div>
+        <div class="news-detail__box">
+            <h2 class="news-detail__title">
+                Наша компания приняла участие в Международной выставке-форуме "Россия". H2
+            </h2>
+            <p class="news-detail__text">
+                Именно этот вопрос следует задать самому себе любому человеку, который задумал жить «на земле» и решил начать строительство дома. Причём, понятие «дом» у каждого своё. Кто-то мечтает о большом особняке, кто-то хочет возвести коттедж «не как у всех», например, в стиле хай-тек. Третьи решают извечную для России проблему жилищного вопроса. Ну, а кто-то хотел бы сбежать из города и просто отдохнуть от бешеного ритма мегаполиса на природе, «на дачке».
+            </p>
+            <img src="../local/templates/mains/assets/images/slider/bg.png" alt="" class="news-detail__img">
+        </div>
+        <div class="news-detail__box">
+            <h3 class="news-detail__title">Компания уже готовится к следующему участию в Международной выставке-форуме "Россия" h3</h3>
+            <p class="news-detail__text">
+                Наш портал уже неоднократно писал, что любое строительство должно начинаться с проекта и расчёта сметы. Без этих прописных истин к возведению дома приступать нельзя, если, конечно, нужен качественный результат. Также напомним, что «коробка» дома — куда входит фундамент, стены, крыша, кровля (временная или финишная), а также окна и двери – это еще не дом, т.к. жить там нельзя.
+            </p>
+            <img src="../local/templates/mains/assets/images/slider/bg.png" alt="" class="news-detail__img">
+        </div>
+        <div class="news-detail__box">
+            <h4 class="news-detail__title">
+                H4  Onest bold 44
+            </h4>
+            <p class="news-detail__text">
+                Наш портал уже неоднократно писал, что любое строительство должно начинаться с проекта и расчёта сметы. Без этих прописных истин к возведению дома приступать нельзя, если, конечно, нужен качественный результат. Также напомним, что «коробка» дома — куда входит фундамент, стены, крыша, кровля (временная или финишная), а также окна и двери – это еще не дом, т.к. жить там нельзя.
+            </p>
+            <img src="../local/templates/mains/assets/images/slider/bg.png" alt="" class="news-detail__img">
+        </div>
+        <div class="news-detail__box">
+            <h5 class="news-detail__title">H5  Onest bold 42</h5>
+            <ul class="news-detail__list news-detail__list-ul">
+                <li class="news-detail__item">Для чего нужен проект дома и смета.</li>
+                <li class="news-detail__item">Как правильно рассчитать стройку.</li>
+                <li class="news-detail__item">Выгодно ли возводить одноэтажный и каркасный дом.</li>
+            </ul>
+        </div>
+        <div class="news-detail__box">
+            <h5 class="news-detail__title">H6  Onest bold 40</h5>
+            <ol class="news-detail__list news-detail__list-ol">
+                <li class="news-detail__item">Обновите свой интерьер с лучшими решениями от нас!</li>
+                <li class="news-detail__item">Обновите свой интерьер с лучшими решениями от нас!</li>
+                <li class="news-detail__item">Обновите свой интерьер с лучшими решениями от нас!</li>
+            </ol>
+        </div>
     </div>
 </main>
 <footer class="footer">
