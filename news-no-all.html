@@ -356,9 +356,8 @@
         padding-block: 24px 49px;
     }
 
-
     @media (max-width: 480px) {
-        .bread-crumbs{
+        .bread-crumbs {
             padding-bottom: 12px !important;
         }
         .header__row.header__row_top {
@@ -374,23 +373,33 @@
             </li>
             <li class="bread-crumbs__item">
                 <a href="#!" class="bread-crumbs__item-link">
-                    Новости
+                    Блог
                 </a>
             </li>
         </ul>
     </div>
     <div class="news container">
-        <h1 class="news-page__title title">Новости</h1>
-        <a href="#!" class="news-card">
+        <h1 class="news-page__title news-page__title_pb-22">Блог о парфюмерии</h1>
+        <ul class="news__filter news__filter_mb-44">
+            <li class="news__filter-item">
+                <button class="news__filter-item-btn">Обзоры товаров</button>
+            </li>
+            <li class="news__filter-item">
+                <button class="news__filter-item-btn">Советы покупателям</button>
+            </li>
+            <li class="news__filter-item">
+                <button class="news__filter-item-btn">Все</button>
+            </li>
+        </ul>
+        <a href="#!" class="news-card news-card_mb-90">
             <time class="news-card__time-decor" datetime="06-11-2024">21.05.24</time>
             <picture class="news-card__picture">
-                <img src="local/templates/mains/assets/images/news/1.png" alt="Новинка: роскошный аромат для настоящих ценителей парфюмерии!">
+                <img src="local/templates/mains/assets/images/news/news/big.png" alt="Новинка: роскошный аромат для настоящих ценителей парфюмерии!">
             </picture>
             <div class="news-card__box">
-                <h2 class="news-card__title">
+                <h2 class="news-card__title news-card__title_pb-60">
                     Новинка: роскошный аромат для настоящих<br> ценителей парфюмерии!
                 </h2>
-                <time class="news-card__time" datetime="06-11-2024">11.06.2024</time>
                 <p class="news-card__text">
                     Escentric Molecules или Molecule Escentric ???<br>Этим вопросом ежедневно задаются покупатели,<br> решившие приобрести этот заветный аромат с<br> магическим составом.<br> В чем же магия аромата и где подводные камни, которые<br> вынудят Вас расстроиться ???...
                 </p>
@@ -401,118 +410,196 @@
                 </div>
             </div>
         </a>
-        <ul class="news-card-list">
-            <li class="news-card-list__item news-card-list__item_1">
-                <a href="#!">
-                    <picture class="news-card-list__item-picture">
-                        <img src="local/templates/mains/assets/images/news/blog/1.png" alt="Успей купить оригинальные парфюмерные наборы по выгодной цене!">
-                    </picture>
-                    <div class="news-card-list__item-top">
-                        <h3 class="news-card-list__item-title">
-                            Успей купить оригинальные<br> парфюмерные наборы по выгодной<br> цене!
-                        </h3>
-                        <div class="news-card-list__item-decor" data-da=".news-card-list__item_1, 568, last">
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.764889 15.4686C0.558047 15.2618 0.441845 14.9813 0.441845 14.6887C0.441845 14.3962 0.558047 14.1157 0.764889 13.9088L12.4535 2.22023L5.7573 2.22179C5.46441 2.22179 5.18352 2.10544 4.97642 1.89833C4.76932 1.69123 4.65297 1.41034 4.65297 1.11745C4.65297 0.824564 4.76932 0.543672 4.97642 0.336569C5.18352 0.129466 5.46441 0.0131167 5.7573 0.0131167L15.1161 0.0131165C15.2611 0.0129334 15.4048 0.0413724 15.5389 0.0968053C15.673 0.152238 15.7948 0.233577 15.8974 0.33616C15.9999 0.438744 16.0813 0.560556 16.1367 0.694623C16.1921 0.82869 16.2206 0.972377 16.2204 1.11745L16.2204 10.4762C16.2204 10.7691 16.1041 11.05 15.897 11.2571C15.6898 11.4642 15.409 11.5806 15.1161 11.5806C14.8232 11.5806 14.5423 11.4642 14.3352 11.2571C14.1281 11.05 14.0117 10.7691 14.0117 10.4762L14.0133 3.78002L2.32468 15.4686C2.11784 15.6755 1.83731 15.7917 1.54479 15.7917C1.25227 15.7917 0.97173 15.6755 0.764889 15.4686Z" fill="white"/>
-                            </svg>
-                        </div>
+        <ul class="news-card-list news-card-list_mb-92 news-card-list_col-4">
+            <li class="news-card-list__item">
+                <a href="#!" class="slide-blog">
+                    <div class="slide-blog__info">
+                        <time class="element-data" datetime="21-05-2024">
+                            21.05.24
+                        </time>
                     </div>
-                    <time class="news-card-list__item-time" datetime="06-11-2024">11.06.2024</time>
+                    <picture class="slide-blog__picture">
+                        <img src="local/templates/mains/assets/images/news/news/1.png" alt="">
+                    </picture>
+                    <p class="slide-blog__title">
+                        Сравнение Escentric Molecules<br>
+                        и Molecule Escentric
+                    </p>
+                    <p class="slide-blog__link">
+                        <span>Читать далее</span>
+                        <span class="slide-blog__link-decor">
+                            <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.86818 7.6317C0.768896 7.53242 0.713119 7.39776 0.713119 7.25735C0.713119 7.11694 0.768896 6.98228 0.86818 6.883L6.47871 1.27247L3.26454 1.27322C3.12395 1.27322 2.98912 1.21737 2.88971 1.11796C2.7903 1.01855 2.73446 0.883721 2.73446 0.743135C2.73446 0.602549 2.79031 0.467721 2.88971 0.368312C2.98912 0.268902 3.12395 0.213055 3.26454 0.213055L7.75675 0.213055C7.82638 0.212967 7.89535 0.226618 7.9597 0.253225C8.02405 0.279833 8.08253 0.318875 8.13177 0.368115C8.18101 0.417355 8.22005 0.475825 8.24665 0.540178C8.27326 0.60453 8.28691 0.673499 8.28683 0.743135V5.23534C8.28683 5.37593 8.23098 5.51076 8.13157 5.61017C8.03216 5.70957 7.89733 5.76542 7.75675 5.76542C7.61616 5.76542 7.48133 5.70958 7.38192 5.61017C7.28251 5.51076 7.22666 5.37593 7.22666 5.23534L7.22741 2.02117L1.61688 7.6317C1.5176 7.73098 1.38294 7.78676 1.24253 7.78676C1.10212 7.78676 0.967464 7.73098 0.86818 7.6317Z" fill="white"/>
+                                </svg>
+                                
+                        </span>
+                    </p>
                 </a>
             </li>
-            <li class="news-card-list__item news-card-list__item_2">
-                <a href="#!">
-                    <picture class="news-card-list__item-picture">
-                        <img src="local/templates/mains/assets/images/news/blog/2.png" alt="Успей купить оригинальные парфюмерные наборы по выгодной цене!">
-                    </picture>
-                    <div class="news-card-list__item-top">
-                        <h3 class="news-card-list__item-title">
-                            Успей купить оригинальные<br> парфюмерные наборы по выгодной<br> цене!
-                        </h3>
-                        <div class="news-card-list__item-decor" data-da=".news-card-list__item_2, 568, last">
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.764889 15.4686C0.558047 15.2618 0.441845 14.9813 0.441845 14.6887C0.441845 14.3962 0.558047 14.1157 0.764889 13.9088L12.4535 2.22023L5.7573 2.22179C5.46441 2.22179 5.18352 2.10544 4.97642 1.89833C4.76932 1.69123 4.65297 1.41034 4.65297 1.11745C4.65297 0.824564 4.76932 0.543672 4.97642 0.336569C5.18352 0.129466 5.46441 0.0131167 5.7573 0.0131167L15.1161 0.0131165C15.2611 0.0129334 15.4048 0.0413724 15.5389 0.0968053C15.673 0.152238 15.7948 0.233577 15.8974 0.33616C15.9999 0.438744 16.0813 0.560556 16.1367 0.694623C16.1921 0.82869 16.2206 0.972377 16.2204 1.11745L16.2204 10.4762C16.2204 10.7691 16.1041 11.05 15.897 11.2571C15.6898 11.4642 15.409 11.5806 15.1161 11.5806C14.8232 11.5806 14.5423 11.4642 14.3352 11.2571C14.1281 11.05 14.0117 10.7691 14.0117 10.4762L14.0133 3.78002L2.32468 15.4686C2.11784 15.6755 1.83731 15.7917 1.54479 15.7917C1.25227 15.7917 0.97173 15.6755 0.764889 15.4686Z" fill="white"/>
-                            </svg>
-                        </div>
+            <li class="news-card-list__item">
+                <a href="#!" class="slide-blog swiper-slide">
+                    <div class="slide-blog__info">
+                        <time class="element-data" datetime="21-05-2024">
+                            21.05.24
+                        </time>
                     </div>
-                    <time class="news-card-list__item-time" datetime="06-11-2024">11.06.2024</time>
+                    <picture class="slide-blog__picture">
+                        <img src="local/templates/mains/assets/images/slider/blog/2.png" alt="">
+                    </picture>
+                    <p class="slide-blog__title">
+                        Вся правда о тестерах
+                    </p>
+                    <p class="slide-blog__link">
+                        <span>Читать далее</span>
+                        <span class="slide-blog__link-decor">
+                            <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.86818 7.6317C0.768896 7.53242 0.713119 7.39776 0.713119 7.25735C0.713119 7.11694 0.768896 6.98228 0.86818 6.883L6.47871 1.27247L3.26454 1.27322C3.12395 1.27322 2.98912 1.21737 2.88971 1.11796C2.7903 1.01855 2.73446 0.883721 2.73446 0.743135C2.73446 0.602549 2.79031 0.467721 2.88971 0.368312C2.98912 0.268902 3.12395 0.213055 3.26454 0.213055L7.75675 0.213055C7.82638 0.212967 7.89535 0.226618 7.9597 0.253225C8.02405 0.279833 8.08253 0.318875 8.13177 0.368115C8.18101 0.417355 8.22005 0.475825 8.24665 0.540178C8.27326 0.60453 8.28691 0.673499 8.28683 0.743135V5.23534C8.28683 5.37593 8.23098 5.51076 8.13157 5.61017C8.03216 5.70957 7.89733 5.76542 7.75675 5.76542C7.61616 5.76542 7.48133 5.70958 7.38192 5.61017C7.28251 5.51076 7.22666 5.37593 7.22666 5.23534L7.22741 2.02117L1.61688 7.6317C1.5176 7.73098 1.38294 7.78676 1.24253 7.78676C1.10212 7.78676 0.967464 7.73098 0.86818 7.6317Z" fill="white"/>
+                            </svg>                                
+                        </span>
+                    </p>
                 </a>
             </li>
-            <li class="news-card-list__item news-card-list__item_3">
-                <a href="#!">
-                    <picture class="news-card-list__item-picture">
-                        <img src="local/templates/mains/assets/images/news/blog/3.png" alt="Успей купить оригинальные парфюмерные наборы по выгодной цене!">
-                    </picture>
-                    <div class="news-card-list__item-top">
-                        <h3 class="news-card-list__item-title">
-                            Только у нас - эксклюзивные<br> ароматы от ведущих мировых<br> брендов!
-                        </h3>
-                        <div class="news-card-list__item-decor" data-da=".news-card-list__item_3, 568, last">
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.764889 15.4686C0.558047 15.2618 0.441845 14.9813 0.441845 14.6887C0.441845 14.3962 0.558047 14.1157 0.764889 13.9088L12.4535 2.22023L5.7573 2.22179C5.46441 2.22179 5.18352 2.10544 4.97642 1.89833C4.76932 1.69123 4.65297 1.41034 4.65297 1.11745C4.65297 0.824564 4.76932 0.543672 4.97642 0.336569C5.18352 0.129466 5.46441 0.0131167 5.7573 0.0131167L15.1161 0.0131165C15.2611 0.0129334 15.4048 0.0413724 15.5389 0.0968053C15.673 0.152238 15.7948 0.233577 15.8974 0.33616C15.9999 0.438744 16.0813 0.560556 16.1367 0.694623C16.1921 0.82869 16.2206 0.972377 16.2204 1.11745L16.2204 10.4762C16.2204 10.7691 16.1041 11.05 15.897 11.2571C15.6898 11.4642 15.409 11.5806 15.1161 11.5806C14.8232 11.5806 14.5423 11.4642 14.3352 11.2571C14.1281 11.05 14.0117 10.7691 14.0117 10.4762L14.0133 3.78002L2.32468 15.4686C2.11784 15.6755 1.83731 15.7917 1.54479 15.7917C1.25227 15.7917 0.97173 15.6755 0.764889 15.4686Z" fill="white"/>
-                            </svg>
-                        </div>
+            <li class="news-card-list__item">
+                <a href="#!" class="slide-blog swiper-slide">
+                    <div class="slide-blog__info">
+                        <time class="element-data" datetime="21-05-2024">
+                            21.05.24
+                        </time>
                     </div>
-                    <time class="news-card-list__item-time" datetime="06-11-2024">11.06.2024</time>
+                    <picture class="slide-blog__picture">
+                        <img src="local/templates/mains/assets/images/slider/blog/3.png" alt="">
+                    </picture>
+                    <p class="slide-blog__title">
+                        Ароматы Томаса Космалы:<br> лучшая пятерка
+                    </p>
+                    <p class="slide-blog__link">
+                        <span>Читать далее</span>
+                        <span class="slide-blog__link-decor">
+                            <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.86818 7.6317C0.768896 7.53242 0.713119 7.39776 0.713119 7.25735C0.713119 7.11694 0.768896 6.98228 0.86818 6.883L6.47871 1.27247L3.26454 1.27322C3.12395 1.27322 2.98912 1.21737 2.88971 1.11796C2.7903 1.01855 2.73446 0.883721 2.73446 0.743135C2.73446 0.602549 2.79031 0.467721 2.88971 0.368312C2.98912 0.268902 3.12395 0.213055 3.26454 0.213055L7.75675 0.213055C7.82638 0.212967 7.89535 0.226618 7.9597 0.253225C8.02405 0.279833 8.08253 0.318875 8.13177 0.368115C8.18101 0.417355 8.22005 0.475825 8.24665 0.540178C8.27326 0.60453 8.28691 0.673499 8.28683 0.743135V5.23534C8.28683 5.37593 8.23098 5.51076 8.13157 5.61017C8.03216 5.70957 7.89733 5.76542 7.75675 5.76542C7.61616 5.76542 7.48133 5.70958 7.38192 5.61017C7.28251 5.51076 7.22666 5.37593 7.22666 5.23534L7.22741 2.02117L1.61688 7.6317C1.5176 7.73098 1.38294 7.78676 1.24253 7.78676C1.10212 7.78676 0.967464 7.73098 0.86818 7.6317Z" fill="white"/>
+                            </svg>                                
+                        </span>
+                    </p>
                 </a>
             </li>
-            <li class="news-card-list__item news-card-list__item_4">
-                <a href="#!">
-                    <picture class="news-card-list__item-picture">
-                        <img src="local/templates/mains/assets/images/news/blog/1.png" alt="Успей купить оригинальные парфюмерные наборы по выгодной цене!">
-                    </picture>
-                    <div class="news-card-list__item-top">
-                        <h3 class="news-card-list__item-title">
-                            Только у нас - эксклюзивные<br> ароматы от ведущих мировых<br> брендов!
-                        </h3>
-                        <div class="news-card-list__item-decor" data-da=".news-card-list__item_4, 568, last">
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.764889 15.4686C0.558047 15.2618 0.441845 14.9813 0.441845 14.6887C0.441845 14.3962 0.558047 14.1157 0.764889 13.9088L12.4535 2.22023L5.7573 2.22179C5.46441 2.22179 5.18352 2.10544 4.97642 1.89833C4.76932 1.69123 4.65297 1.41034 4.65297 1.11745C4.65297 0.824564 4.76932 0.543672 4.97642 0.336569C5.18352 0.129466 5.46441 0.0131167 5.7573 0.0131167L15.1161 0.0131165C15.2611 0.0129334 15.4048 0.0413724 15.5389 0.0968053C15.673 0.152238 15.7948 0.233577 15.8974 0.33616C15.9999 0.438744 16.0813 0.560556 16.1367 0.694623C16.1921 0.82869 16.2206 0.972377 16.2204 1.11745L16.2204 10.4762C16.2204 10.7691 16.1041 11.05 15.897 11.2571C15.6898 11.4642 15.409 11.5806 15.1161 11.5806C14.8232 11.5806 14.5423 11.4642 14.3352 11.2571C14.1281 11.05 14.0117 10.7691 14.0117 10.4762L14.0133 3.78002L2.32468 15.4686C2.11784 15.6755 1.83731 15.7917 1.54479 15.7917C1.25227 15.7917 0.97173 15.6755 0.764889 15.4686Z" fill="white"/>
-                            </svg>
-                        </div>
+            <li class="news-card-list__item">
+                <a href="#!" class="slide-blog swiper-slide">
+                    <div class="slide-blog__info">
+                        <time class="element-data" datetime="21-05-2024">
+                            21.05.24
+                        </time>
                     </div>
-                    <time class="news-card-list__item-time" datetime="06-11-2024">11.06.2024</time>
+                    <picture class="slide-blog__picture">
+                        <img src="local/templates/mains/assets/images/slider/blog/4.png" alt="">
+                    </picture>
+                    <p class="slide-blog__title">
+                        Бодрящая свежесть и<br> чувственная теплота: топ Бодрящая свежесть и чувственная теплота: топ
+                    </p>
+                    <p class="slide-blog__link">
+                        <span>Читать далее</span>
+                        <span class="slide-blog__link-decor">
+                            <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.86818 7.6317C0.768896 7.53242 0.713119 7.39776 0.713119 7.25735C0.713119 7.11694 0.768896 6.98228 0.86818 6.883L6.47871 1.27247L3.26454 1.27322C3.12395 1.27322 2.98912 1.21737 2.88971 1.11796C2.7903 1.01855 2.73446 0.883721 2.73446 0.743135C2.73446 0.602549 2.79031 0.467721 2.88971 0.368312C2.98912 0.268902 3.12395 0.213055 3.26454 0.213055L7.75675 0.213055C7.82638 0.212967 7.89535 0.226618 7.9597 0.253225C8.02405 0.279833 8.08253 0.318875 8.13177 0.368115C8.18101 0.417355 8.22005 0.475825 8.24665 0.540178C8.27326 0.60453 8.28691 0.673499 8.28683 0.743135V5.23534C8.28683 5.37593 8.23098 5.51076 8.13157 5.61017C8.03216 5.70957 7.89733 5.76542 7.75675 5.76542C7.61616 5.76542 7.48133 5.70958 7.38192 5.61017C7.28251 5.51076 7.22666 5.37593 7.22666 5.23534L7.22741 2.02117L1.61688 7.6317C1.5176 7.73098 1.38294 7.78676 1.24253 7.78676C1.10212 7.78676 0.967464 7.73098 0.86818 7.6317Z" fill="white"/>
+                            </svg>                                
+                        </span>
+                    </p>
                 </a>
             </li>
-            <li class="news-card-list__item news-card-list__item_5">
-                <a href="#!">
-                    <picture class="news-card-list__item-picture">
-                        <img src="local/templates/mains/assets/images/news/blog/2.png" alt="Успей купить оригинальные парфюмерные наборы по выгодной цене!">
-                    </picture>
-                    <div class="news-card-list__item-top">
-                        <h3 class="news-card-list__item-title">
-                            Скидки и акции на самые<br> популярные духи этого сезона!
-                        </h3>
-                        <div class="news-card-list__item-decor" data-da=".news-card-list__item_5, 568, last">
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.764889 15.4686C0.558047 15.2618 0.441845 14.9813 0.441845 14.6887C0.441845 14.3962 0.558047 14.1157 0.764889 13.9088L12.4535 2.22023L5.7573 2.22179C5.46441 2.22179 5.18352 2.10544 4.97642 1.89833C4.76932 1.69123 4.65297 1.41034 4.65297 1.11745C4.65297 0.824564 4.76932 0.543672 4.97642 0.336569C5.18352 0.129466 5.46441 0.0131167 5.7573 0.0131167L15.1161 0.0131165C15.2611 0.0129334 15.4048 0.0413724 15.5389 0.0968053C15.673 0.152238 15.7948 0.233577 15.8974 0.33616C15.9999 0.438744 16.0813 0.560556 16.1367 0.694623C16.1921 0.82869 16.2206 0.972377 16.2204 1.11745L16.2204 10.4762C16.2204 10.7691 16.1041 11.05 15.897 11.2571C15.6898 11.4642 15.409 11.5806 15.1161 11.5806C14.8232 11.5806 14.5423 11.4642 14.3352 11.2571C14.1281 11.05 14.0117 10.7691 14.0117 10.4762L14.0133 3.78002L2.32468 15.4686C2.11784 15.6755 1.83731 15.7917 1.54479 15.7917C1.25227 15.7917 0.97173 15.6755 0.764889 15.4686Z" fill="white"/>
-                            </svg>
-                        </div>
+            <li class="news-card-list__item">
+                <a href="#!" class="slide-blog">
+                    <div class="slide-blog__info">
+                        <time class="element-data" datetime="21-05-2024">
+                            21.05.24
+                        </time>
                     </div>
-                    <time class="news-card-list__item-time" datetime="06-11-2024">11.06.2024</time>
+                    <picture class="slide-blog__picture">
+                        <img src="local/templates/mains/assets/images/news/news/1.png" alt="">
+                    </picture>
+                    <p class="slide-blog__title">
+                        Сравнение Escentric Molecules<br>
+                        и Molecule Escentric
+                    </p>
+                    <p class="slide-blog__link">
+                        <span>Читать далее</span>
+                        <span class="slide-blog__link-decor">
+                            <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.86818 7.6317C0.768896 7.53242 0.713119 7.39776 0.713119 7.25735C0.713119 7.11694 0.768896 6.98228 0.86818 6.883L6.47871 1.27247L3.26454 1.27322C3.12395 1.27322 2.98912 1.21737 2.88971 1.11796C2.7903 1.01855 2.73446 0.883721 2.73446 0.743135C2.73446 0.602549 2.79031 0.467721 2.88971 0.368312C2.98912 0.268902 3.12395 0.213055 3.26454 0.213055L7.75675 0.213055C7.82638 0.212967 7.89535 0.226618 7.9597 0.253225C8.02405 0.279833 8.08253 0.318875 8.13177 0.368115C8.18101 0.417355 8.22005 0.475825 8.24665 0.540178C8.27326 0.60453 8.28691 0.673499 8.28683 0.743135V5.23534C8.28683 5.37593 8.23098 5.51076 8.13157 5.61017C8.03216 5.70957 7.89733 5.76542 7.75675 5.76542C7.61616 5.76542 7.48133 5.70958 7.38192 5.61017C7.28251 5.51076 7.22666 5.37593 7.22666 5.23534L7.22741 2.02117L1.61688 7.6317C1.5176 7.73098 1.38294 7.78676 1.24253 7.78676C1.10212 7.78676 0.967464 7.73098 0.86818 7.6317Z" fill="white"/>
+                            </svg>                                
+                        </span>
+                    </p>
                 </a>
             </li>
-            <li class="news-card-list__item news-card-list__item_6">
-                <a href="#!">
-                    <picture class="news-card-list__item-picture">
-                        <img src="local/templates/mains/assets/images/news/blog/3.png" alt="Успей купить оригинальные парфюмерные наборы по выгодной цене!">
-                    </picture>
-                    <div class="news-card-list__item-top">
-                        <h3 class="news-card-list__item-title">
-                            Успей купить оригинальные<br> парфюмерные наборы по выгодной<br> цене!
-                        </h3>
-                        <div class="news-card-list__item-decor" data-da=".news-card-list__item_6, 568, last">
-                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.764889 15.4686C0.558047 15.2618 0.441845 14.9813 0.441845 14.6887C0.441845 14.3962 0.558047 14.1157 0.764889 13.9088L12.4535 2.22023L5.7573 2.22179C5.46441 2.22179 5.18352 2.10544 4.97642 1.89833C4.76932 1.69123 4.65297 1.41034 4.65297 1.11745C4.65297 0.824564 4.76932 0.543672 4.97642 0.336569C5.18352 0.129466 5.46441 0.0131167 5.7573 0.0131167L15.1161 0.0131165C15.2611 0.0129334 15.4048 0.0413724 15.5389 0.0968053C15.673 0.152238 15.7948 0.233577 15.8974 0.33616C15.9999 0.438744 16.0813 0.560556 16.1367 0.694623C16.1921 0.82869 16.2206 0.972377 16.2204 1.11745L16.2204 10.4762C16.2204 10.7691 16.1041 11.05 15.897 11.2571C15.6898 11.4642 15.409 11.5806 15.1161 11.5806C14.8232 11.5806 14.5423 11.4642 14.3352 11.2571C14.1281 11.05 14.0117 10.7691 14.0117 10.4762L14.0133 3.78002L2.32468 15.4686C2.11784 15.6755 1.83731 15.7917 1.54479 15.7917C1.25227 15.7917 0.97173 15.6755 0.764889 15.4686Z" fill="white"/>
-                            </svg>
-                        </div>
+            <li class="news-card-list__item">
+                <a href="#!" class="slide-blog swiper-slide">
+                    <div class="slide-blog__info">
+                        <time class="element-data" datetime="21-05-2024">
+                            21.05.24
+                        </time>
                     </div>
-                    <time class="news-card-list__item-time" datetime="06-11-2024">11.06.2024</time>
+                    <picture class="slide-blog__picture">
+                        <img src="local/templates/mains/assets/images/slider/blog/2.png" alt="">
+                    </picture>
+                    <p class="slide-blog__title">
+                        Вся правда о тестерах
+                    </p>
+                    <p class="slide-blog__link">
+                        <span>Читать далее</span>
+                        <span class="slide-blog__link-decor">
+                            <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.86818 7.6317C0.768896 7.53242 0.713119 7.39776 0.713119 7.25735C0.713119 7.11694 0.768896 6.98228 0.86818 6.883L6.47871 1.27247L3.26454 1.27322C3.12395 1.27322 2.98912 1.21737 2.88971 1.11796C2.7903 1.01855 2.73446 0.883721 2.73446 0.743135C2.73446 0.602549 2.79031 0.467721 2.88971 0.368312C2.98912 0.268902 3.12395 0.213055 3.26454 0.213055L7.75675 0.213055C7.82638 0.212967 7.89535 0.226618 7.9597 0.253225C8.02405 0.279833 8.08253 0.318875 8.13177 0.368115C8.18101 0.417355 8.22005 0.475825 8.24665 0.540178C8.27326 0.60453 8.28691 0.673499 8.28683 0.743135V5.23534C8.28683 5.37593 8.23098 5.51076 8.13157 5.61017C8.03216 5.70957 7.89733 5.76542 7.75675 5.76542C7.61616 5.76542 7.48133 5.70958 7.38192 5.61017C7.28251 5.51076 7.22666 5.37593 7.22666 5.23534L7.22741 2.02117L1.61688 7.6317C1.5176 7.73098 1.38294 7.78676 1.24253 7.78676C1.10212 7.78676 0.967464 7.73098 0.86818 7.6317Z" fill="white"/>
+                            </svg>                                
+                        </span>
+                    </p>
+                </a>
+            </li>
+            <li class="news-card-list__item">
+                <a href="#!" class="slide-blog swiper-slide">
+                    <div class="slide-blog__info">
+                        <time class="element-data" datetime="21-05-2024">
+                            21.05.24
+                        </time>
+                    </div>
+                    <picture class="slide-blog__picture">
+                        <img src="local/templates/mains/assets/images/slider/blog/3.png" alt="">
+                    </picture>
+                    <p class="slide-blog__title">
+                        Ароматы Томаса Космалы:<br> лучшая пятерка
+                    </p>
+                    <p class="slide-blog__link">
+                        <span>Читать далее</span>
+                        <span class="slide-blog__link-decor">
+                            <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.86818 7.6317C0.768896 7.53242 0.713119 7.39776 0.713119 7.25735C0.713119 7.11694 0.768896 6.98228 0.86818 6.883L6.47871 1.27247L3.26454 1.27322C3.12395 1.27322 2.98912 1.21737 2.88971 1.11796C2.7903 1.01855 2.73446 0.883721 2.73446 0.743135C2.73446 0.602549 2.79031 0.467721 2.88971 0.368312C2.98912 0.268902 3.12395 0.213055 3.26454 0.213055L7.75675 0.213055C7.82638 0.212967 7.89535 0.226618 7.9597 0.253225C8.02405 0.279833 8.08253 0.318875 8.13177 0.368115C8.18101 0.417355 8.22005 0.475825 8.24665 0.540178C8.27326 0.60453 8.28691 0.673499 8.28683 0.743135V5.23534C8.28683 5.37593 8.23098 5.51076 8.13157 5.61017C8.03216 5.70957 7.89733 5.76542 7.75675 5.76542C7.61616 5.76542 7.48133 5.70958 7.38192 5.61017C7.28251 5.51076 7.22666 5.37593 7.22666 5.23534L7.22741 2.02117L1.61688 7.6317C1.5176 7.73098 1.38294 7.78676 1.24253 7.78676C1.10212 7.78676 0.967464 7.73098 0.86818 7.6317Z" fill="white"/>
+                            </svg>                                
+                        </span>
+                    </p>
+                </a>
+            </li>
+            <li class="news-card-list__item">
+                <a href="#!" class="slide-blog swiper-slide">
+                    <div class="slide-blog__info">
+                        <time class="element-data" datetime="21-05-2024">
+                            21.05.24
+                        </time>
+                    </div>
+                    <picture class="slide-blog__picture">
+                        <img src="local/templates/mains/assets/images/slider/blog/4.png" alt="">
+                    </picture>
+                    <p class="slide-blog__title">
+                        Бодрящая свежесть и<br> чувственная теплота: топ Бодрящая свежесть и чувственная теплота: топ
+                    </p>
+                    <p class="slide-blog__link">
+                        <span>Читать далее</span>
+                        <span class="slide-blog__link-decor">
+                            <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.86818 7.6317C0.768896 7.53242 0.713119 7.39776 0.713119 7.25735C0.713119 7.11694 0.768896 6.98228 0.86818 6.883L6.47871 1.27247L3.26454 1.27322C3.12395 1.27322 2.98912 1.21737 2.88971 1.11796C2.7903 1.01855 2.73446 0.883721 2.73446 0.743135C2.73446 0.602549 2.79031 0.467721 2.88971 0.368312C2.98912 0.268902 3.12395 0.213055 3.26454 0.213055L7.75675 0.213055C7.82638 0.212967 7.89535 0.226618 7.9597 0.253225C8.02405 0.279833 8.08253 0.318875 8.13177 0.368115C8.18101 0.417355 8.22005 0.475825 8.24665 0.540178C8.27326 0.60453 8.28691 0.673499 8.28683 0.743135V5.23534C8.28683 5.37593 8.23098 5.51076 8.13157 5.61017C8.03216 5.70957 7.89733 5.76542 7.75675 5.76542C7.61616 5.76542 7.48133 5.70958 7.38192 5.61017C7.28251 5.51076 7.22666 5.37593 7.22666 5.23534L7.22741 2.02117L1.61688 7.6317C1.5176 7.73098 1.38294 7.78676 1.24253 7.78676C1.10212 7.78676 0.967464 7.73098 0.86818 7.6317Z" fill="white"/>
+                            </svg>                                
+                        </span>
+                    </p>
                 </a>
             </li>
         </ul>
-        <div class="blog-pagination blog-pagination_mb-118">
-            <button class="catalog__btn-show-more catalog__btn-show-more_max-width-970 catalog__btn-show-more_mb-31" type="button">Показать еще</button>
+        <div class="blog-pagination blog-pagination_mb-124">
             <div class="catalog__pagination catalog__pagination_mb">
                 <button class="catalog__pagination-btn catalog__pagination-next" type="button" aria-label="Показать предыдущие эллементы каталога">
                     <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -545,7 +632,7 @@
         </div>
     </div>
     <div class="contacts bg-gray">
-        <div class="contacts__inner contacts__blog-inner container">
+        <div class="contacts__inner contacts__news-inner container">
             <div class="contacts__box">
                 <strong class="contacts__title">Лучшие новости для Вас</strong>
                 <p class="contacts__description">Не пропустите наши акции, новинки, и персональные предложения</p>
