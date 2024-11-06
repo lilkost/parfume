@@ -172,6 +172,23 @@ const modal = () => {
                 itm.classList.remove('is-active');
             })
         });
+
+        document.addEventListener( 'click', (e) => {
+            if(e.composedPath().includes(modalBth)) return;
+            const withinBoundaries = e.composedPath().includes(modal);
+
+            console.log(e.composedPath().includes(modal))
+            if ( ! withinBoundaries) {
+                modal.classList.remove('is-open');
+                modalBth.classList.remove('is-active'); 
+                if(modalBth.classList.contains('is-active')) {
+                    modalBth.innerHTML = isCloseHTML;
+                }else {
+                    modalBth.innerHTML = isActiveHTML;
+                }
+            // скрываем элемент т к клик был за его пределами
+            }
+        });
     } 
 
     if(document.querySelector('.modal-card') && document.querySelector('.slide__btn-basket')) {
@@ -180,6 +197,7 @@ const modal = () => {
         const modalInner = document.querySelector('.modal-card__inner');
         const modalClose = document.querySelector('.modal-card__btn-close');
         const modalFavorites = document.querySelector('.modal-card__btn-favorites');
+        const modalImage = document.querySelector('.modal-card__img');
         const stars = document.querySelectorAll('.modal-card__stars svg');
         const countNode = document.querySelector('.modal-card__controll-count');
         const btnMinus = document.querySelector('.modal-card__controll-btn_minus');
@@ -188,18 +206,29 @@ const modal = () => {
 
         basketBtns.forEach(btn => {
             btn.addEventListener('click', ()=> {
-                toggleOpen()
+                toggleOpen();
+                modalImage.scr = '';
                 const parent = btn.closest('.slide')
                 if(!parent) return;
+                const parentImg = parent.querySelector('.slide__picture img');
+
                 const parentStars = Number(parent.getAttribute('data-stars'));
                 
+                // const parentPrice = parent.querySelector('.slide__price strong').innerText.replaceAll('от', '');
+                // const parentSale = parent.querySelector('.slide__price span').innerText;
+
+                // parent.querySelector('.modal-card__price-item_price strong').innerHTML = parentPrice;
+                // parent.querySelector('.modal-card__price-item_sale strong').innerHTML = String(parentSale);
+                // console.log(parentPrice, parentSale)
+
+                modalImage.src = parentImg.src;
+
                 stars.forEach((item, key) => {
                     if(key < parentStars) {
                         item.classList.add('is-star')
                     }
                 });
             });
-            
         });
 
         const toggleOpen = () => {
@@ -261,6 +290,109 @@ const modal = () => {
                 btnMinus.classList.remove('is-active')
             }
         })
+    }
+
+    if(document.querySelector('.order-modal')) {
+        const modal = document.querySelector('.order-modal');
+        const buttonsOpen = document.querySelectorAll('.order__accordion-button');
+        
+        const buttonCloseTop = document.querySelector('.order-modal__close');
+        const modalCloseBtn = document.querySelector('.order-modal__form-btn');
+
+        const toggleOpenStateModal = () => {
+            if(window.innerWidth <= 480) {
+                document.querySelector('body').style.overflow = 'hidden';
+                document.querySelector('.header').classList.add('is-fixed-to-modal');
+            }
+
+            modal.classList.add('is-open');
+        }
+
+        const toggleCloseStateModal = () => {
+            modal.classList.remove('is-open');
+            document.querySelector('body').style.overflow = '';
+            document.querySelector('.header').classList.remove('is-fixed-to-modal');
+        }
+
+        buttonsOpen.forEach(btn=> {
+            btn.addEventListener("click", ()=> {
+                toggleOpenStateModal();
+            });
+        });
+
+        buttonCloseTop.addEventListener('click', ()=> toggleCloseStateModal());
+        modalCloseBtn.addEventListener('click', ()=> toggleCloseStateModal());
+
+        
+        window.addEventListener('click', (e)=> {
+            if(e.target === modal) {
+                toggleCloseStateModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if( e.keyCode == 27 ){ 
+                toggleCloseStateModal()
+            }
+        });
+    }
+
+    if(document.querySelector('.modal-feedback')) {
+        const modal = document.querySelector('.modal-feedback');
+        const modalOpen = document.querySelector('.feedback-btn-open');
+        const modalCloseBtn = document.querySelector('.modal-feedback__close-btn');
+        const modalInner = modal.querySelector('.modal-feedback__inner');
+
+        const starsParent = document.querySelector('.modal-feedback__stars');
+        const stars = starsParent.querySelectorAll('svg');
+        
+        stars.forEach(star=> {
+            star.addEventListener("click", ()=> {
+                const dataCount = Number(star.getAttribute('data-count'));
+
+                stars.forEach(st=> st.classList.remove('is-star'));
+                star.classList.add('is-star');
+
+                for(let i = 0; i<= dataCount; i++) {
+                    stars[i].classList.add('is-star');
+                    console.log(i, stars[i]);
+                }
+            });
+        });
+
+        if(!modalOpen) return;
+        
+        modalOpen.addEventListener('click', ()=> {
+            modal.classList.add('is-open');
+            setTimeout(()=>{
+                modalInner.classList.add('is-open')
+            },100);
+        });
+
+        modalCloseBtn.addEventListener('click', ()=> {
+            modal.classList.remove('is-open');
+            setTimeout(()=>{
+                modalInner.classList.remove('is-open')
+            },100);
+        })
+
+        window.addEventListener('click', (e)=> {
+            if(e.target === modal) {
+                modal.classList.remove('is-open')
+                setTimeout(()=> {
+                    modalInner.classList.remove('is-open')
+                },100)
+            }
+        })
+
+        document.addEventListener('keydown', function(e) {
+            if( e.keyCode == 27 ){ 
+                modal.classList.remove('is-open')
+                setTimeout(()=> {
+                    modalInner.classList.remove('is-open')
+                },100)
+            }
+        });
     }
 }
 

@@ -8,6 +8,10 @@ import stars from "./components/slide.js";
 import { useDynamicAdapt } from './components/dynamicAdapt.js';
 import scrollPositionMobileButton from "./components/scrollMobileButtons.js";
 import catalog from "./components/catalog.js";
+import basketJs from "./components/basket.js";
+import copyText from "./components/copyText.js";
+import textResize from "./components/textResize.js";
+import CalendarFnCreate from "./components/calendar.js";
 
 useDynamicAdapt();
 createSlider();
@@ -19,3 +23,7 @@ dropDown();
 stars();
 scrollPositionMobileButton();
 catalog();
+basketJs();
+copyText();
+textResize();
+CalendarFnCreate();
