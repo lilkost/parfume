@@ -1,4 +1,4 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -352,6 +352,9 @@
         </div>
     </header>
 <style>
+    .bread-crumbs {
+        padding-bottom: 24px;
+    }
     @media(max-width: 480px){
         .header__row.header__row_center{
             display: flex !important;
@@ -360,7 +363,7 @@
 </style>
 <main class="main">
     <div class="catalog-mobile-top">
-        <h1 class="catalog-mobile-top__title">
+        <h2 class="catalog-mobile-top__title">
             <button class="catalog-mobile-top__back-btn" type="button" aria-label="Кнопка выбора категории">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15 18L9 12L15 6" stroke="#090B18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -377,7 +380,7 @@
                 </svg>                    
             </button>
             <span></span>
-        </h1>
+        </h2>
         <search class="catalog-mobile-top__search">
             <form action="#!">
                 <input type="text" placeholder="Поиск...">
@@ -460,7 +463,7 @@
         </ul>
     </div> -->
 
-    <div class="catalog">
+    <div class="catalog catalog_no-filter">
         <div class="catalog__inner catalog__inner_mb-153 container">
             <aside class="catalog__aside">
                 <button class="catalog__aside-close" type="button">
